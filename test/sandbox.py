@@ -30,7 +30,7 @@ from time import time
 num_symbols = dm.vocab+dm.start_idx
 embedding_size = 200
 cell_num = 64
-dropout_keep_prob = 0.2
+dropout_keep_prob = 0.8
 layer_num = 2
 epochs = 25
 
