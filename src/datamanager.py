@@ -79,7 +79,7 @@ class AttDataManager(DataManager):
         X = pad_sequences(X, maxlen=self.max_seq_len, padding='post', truncating='post')
         X = [X[:, i].astype('int32') for i in range(X.shape[1])]
 
-        asp = _df[self.aspcol].apply(lambda w: [int32(self.w_idx[w])]).values.tolist()
+        asp = _df[self.aspcol].apply(lambda w: int32(self.w_idx[w])).values.tolist()
 
         y = get_dummies(_df[self.clscol].astype(str)).values.astype('float32')
 
