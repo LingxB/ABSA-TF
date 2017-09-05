@@ -66,10 +66,10 @@ with tf.variable_scope('encoder'):
     enc_output, enc_state = rnn.static_rnn(cell, emb_inputs, dtype='float32')
 
 with tf.name_scope('attention'):
-    H = tf.stack(enc_output, axis=1) #[batch,N,d]
+    H = tf.stack(enc_output, axis=1) #[batch, N, d]
     _H = tf.reshape(tf.stack(enc_output, axis=1), shape=(-1, cell_num)) #[batch*N, d]
-    Wh = tf.get_variable('Wh', shape=(cell_num, cell_num), dtype=tf.float32, initializer=initializer) #[d,d]
-    Wv = tf.get_variable('Wv', shape=(embedding_size, embedding_size), dtype=tf.float32, initializer=initializer) #[da,da]
+    Wh = tf.get_variable('Wh', shape=(cell_num, cell_num), dtype=tf.float32, initializer=initializer) #[d, d]
+    Wv = tf.get_variable('Wv', shape=(embedding_size, embedding_size), dtype=tf.float32, initializer=initializer) #[da, da]
     w = tf.get_variable('w', shape=(cell_num+embedding_size, 1), dtype=tf.float32, initializer=initializer)
 
     WhH = tf.reshape(tf.matmul(_H, Wh), (-1, seq_len, cell_num)) #[batch, N, d]
@@ -83,13 +83,13 @@ with tf.name_scope('attention'):
 
     r = tf.matmul(tf.transpose(H, [0,2,1]), alpha) #[batch, d, 1]
 
-    Wp = tf.get_variable('Wp', shape=(cell_num, cell_num), dtype=tf.float32, initializer=initializer) #[d,d]
-    Wx = tf.get_variable('Wx', shape=(cell_num, cell_num), dtype=tf.float32, initializer=initializer) #[d,d]
+    Wp = tf.get_variable('Wp', shape=(cell_num, cell_num), dtype=tf.float32, initializer=initializer) #[d, d]
+    Wx = tf.get_variable('Wx', shape=(cell_num, cell_num), dtype=tf.float32, initializer=initializer) #[d, d]
 
     _r = tf.reshape(r, (-1, cell_num)) #[batch, d]
-    hN = enc_output[-1] #[batch,d] TODO: Cehck hN is the last hidden state or last lstm output
+    hN = enc_output[-1] #[batch, d] TODO: Cehck hN is the last hidden state or last lstm output
 
-    h_star = tf.tanh(tf.add(tf.matmul(_r, Wp),tf.matmul(hN, Wx))) #[batch,d]
+    h_star = tf.tanh(tf.add(tf.matmul(_r, Wp),tf.matmul(hN, Wx))) #[batch, d]
 
 
 with tf.variable_scope('output'):
