@@ -14,6 +14,7 @@ class DataManager(object):
         self.clscol = clscol
         self.start_idx = start_idx
         self.ready = None
+        assert self.start_idx > 2, 'Start index > 2 for padding with 0 and rest for out of vocabulary words.'
 
     def set_max_len(self, maxlen):
         self.max_seq_len = maxlen
@@ -24,11 +25,19 @@ class DataManager(object):
         _df['TLEN'] = _df['TOKENS'].apply(lambda x: len(x))
         return _df
 
-    def init(self, dataset):
-        """Must initialize with complete dataset"""
+    def init(self, dataset, embedding_frame=None):
+        """
+        Must initialize with complete dataset.
+        embedding_frame is a dataframe with word as index, word vector as data. Out of vocabulary word will be dropped
+        if exist. In the embedding_frame, word index is ordered as freq distribution in the corpus.
+        """
         _df = self.tokenize(dataset)
-        self.freq_dist = freq_dist(_df['TOKENS'].append(Series([_df[self.aspcol].unique().tolist()]),True))
-        self.w_idx = w_index(self.freq_dist, self.start_idx)
+        if embedding_frame is not None:
+            self.w_idx = {w:i+self.start_idx for i,w in enumerate(embedding_frame.dropna().index.values)}
+            self.use_pretrained_embedding = True
+        else:
+            self.freq_dist = freq_dist(_df['TOKENS'].append(Series([_df[self.aspcol].unique().tolist()]),True))
+            self.w_idx = w_index(self.freq_dist, self.start_idx)
         self.vocab = len(self.w_idx)
         print('Longest sent length: %i' %_df['TLEN'].max())
         _df['TLEN'].plot('hist')
@@ -39,7 +48,7 @@ class DataManager(object):
             _df = self.tokenize(df)
         else:
             _df = df.copy()
-        X = _df['TOKENS'].apply(lambda x: [self.w_idx[w] for w in x]).values # Use w_idx to get word index
+        X = _df['TOKENS'].apply(lambda x: [self.w_idx[w] if w in self.w_idx else 1 for w in x]).values # Use w_idx to get word index
         X = pad_sequences(X, maxlen=self.max_seq_len, padding='post', truncating='post') # Pad sequences
         X = [X[:, i].astype('int32') for i in range(X.shape[1])] # Reshape data into [[batch,feats_t1], [batch,feats_t2], ...]
         y = get_dummies(_df[self.clscol].astype(str)).values.astype('float32') # Create one-hot encoded labels
@@ -75,7 +84,7 @@ class AttDataManager(DataManager):
             _df = self.tokenize(df)
         else:
             _df = df.copy()
-        X = _df['TOKENS'].apply(lambda x: [self.w_idx[w] for w in x]).values
+        X = _df['TOKENS'].apply(lambda x: [self.w_idx[w] if w in self.w_idx else 1 for w in x]).values
         X = pad_sequences(X, maxlen=self.max_seq_len, padding='post', truncating='post')
         X = [X[:, i].astype('int32') for i in range(X.shape[1])]
 

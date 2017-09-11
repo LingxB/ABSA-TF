@@ -2,7 +2,7 @@
 import pandas as pd
 from src.datamanager import AttDataManager
 
-
+embedding_path = 'data/glove_840B_300d/semeval14_glove.840B.300d.txt'
 train_path = 'data/ATAE-LSTM/train.csv'
 test_path = 'data/ATAE-LSTM/test.csv'
 dev_path = 'data/ATAE-LSTM/dev.csv'
@@ -15,10 +15,11 @@ dataset = pd.concat([train,test,dev])
 
 dm = AttDataManager(batch_size=25)
 
-dataset = dm.init(dataset)
+embedding_frame = pd.read_csv(embedding_path, sep=' ', header=None, index_col=[0])
+
+dataset = dm.init(dataset, embedding_frame=embedding_frame)
 
 dm.set_max_len(25)
-
 
 
 import numpy as np
@@ -62,7 +63,15 @@ cell = rnn.MultiRNNCell(cells)
 
 
 with tf.variable_scope('encoder'):
-    embedding = tf.get_variable("embedding", [num_symbols, embedding_size])
+    if dm.use_pretrained_embedding:
+        pre_trained_emb = embedding_frame.dropna().values.astype('float32')
+        pre_trained_embedding = tf.get_variable(name="pre_trained_embedding", shape=pre_trained_emb.shape,
+                                                initializer=tf.constant_initializer(pre_trained_emb), trainable=False)
+        pad_embedding = tf.get_variable('pad_embedding', (dm.start_idx, embedding_size), dtype=tf.float32, initializer=initializer)
+        embedding = tf.concat([pad_embedding, pre_trained_embedding], axis=0, name='embedding')
+    else:
+        embedding = tf.get_variable("embedding", (num_symbols, embedding_size), dtype=tf.float32, initializer=initializer)
+
     emb_inputs = [tf.nn.embedding_lookup(embedding, i) for i in inputs]
     asp_emb_inputs = tf.nn.embedding_lookup(embedding, asp_inputs)
     enc_output, enc_state = rnn.static_rnn(cell, emb_inputs, dtype='float32')
