@@ -117,6 +117,7 @@ with tf.name_scope('metrics'):
 
 # TODO: 1. Add L2 regularization using tf.trainable_variables()
 # TODO: 2. Add dropout to h_star, remove dropout between LSTM layers
+# TODO: 3. Add pre-trained embedding
 
 ##################
 # Debug
