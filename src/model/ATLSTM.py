@@ -80,12 +80,6 @@ class ATLSTM(object):
             h_star = tf.nn.dropout(h_star, self.dropout_keep_prob)
             return h_star
 
-    def _placeholder_init(self):
-        with tf.name_scope('inputs'):
-            self.inputs = [tf.placeholder(tf.int32, shape=(None, ), name='inp_token_t%i'%i) for i in range(self.seq_len)]
-            self.asp_inputs = tf.placeholder(tf.int32, shape=(None,), name='aspect_token')
-            self.labels = tf.placeholder(tf.float32, shape=(None, 3), name='labels')
-
     def _feed_dict(self, X, asp, y):
         fd = {self.inputs[t]: X[t] for t in range(self.seq_len)}
         fd.update({self.asp_inputs: asp})
@@ -104,7 +98,11 @@ class ATLSTM(object):
         self.graph = tf.Graph()
         with self.graph.as_default():
             # Placeholders
-            self._placeholder_init()
+            with tf.name_scope('inputs'):
+                self.inputs = [tf.placeholder(tf.int32, shape=(None,), name='inp_token_t%i' % i) for i in
+                               range(self.seq_len)]
+                self.asp_inputs = tf.placeholder(tf.int32, shape=(None,), name='aspect_token')
+                self.labels = tf.placeholder(tf.float32, shape=(None, 3), name='labels')
 
             # Cell
             cell = self._create_cell()
@@ -143,7 +141,7 @@ class ATLSTM(object):
     def train(self, train_data, epochs, val_data=None, verbose=1, **kwargs):
         self.optimizer = kwargs.get('optimizer', tf.train.AdagradOptimizer(0.01))
         if self.graph is None:
-            self.graph = self._create_graph()
+            self._create_graph()
 
         with tf.Session(graph=self.graph) as sess:
             init = tf.global_variables_initializer()

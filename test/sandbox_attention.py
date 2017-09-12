@@ -19,7 +19,7 @@ embedding_frame = pd.read_csv(embedding_path, sep=' ', header=None, index_col=[0
 
 dataset = dm.init(dataset, embedding_frame=embedding_frame)
 
-X, asp, y = dm.input_ready(train, True)
+#X, asp, y = dm.input_ready(train, True)
 
 dm.set_max_len(79)
 
