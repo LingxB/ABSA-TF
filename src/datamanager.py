@@ -36,9 +36,11 @@ class DataManager(object):
             self.w_idx = {w:i+self.start_idx for i,w in enumerate(embedding_frame.dropna().index.values)}
             self.use_pretrained_embedding = True
         else:
-            self.freq_dist = freq_dist(_df['TOKENS'].append(Series([_df[self.aspcol].unique().tolist()]),True))
-            self.w_idx = w_index(self.freq_dist, self.start_idx)
+            self.freq_dist = freq_dist(_df['TOKENS'])
+            self.w_idx = w_index(self.freq_dist, self.start_idx) # Word index starts from self.start_idx
+        self.asp_idx = {w:i for i,w in enumerate(sorted(_df[self.aspcol].unique()))} # Aspect idx starts from 0
         self.vocab = len(self.w_idx)
+        self.n_asp = _df[self.aspcol].unique().shape[0]
         print('Longest sent length: %i' %_df['TLEN'].max())
         _df['TLEN'].plot('hist')
         return _df
@@ -88,7 +90,7 @@ class AttDataManager(DataManager):
         X = pad_sequences(X, maxlen=self.max_seq_len, padding='post', truncating='post')
         X = [X[:, i].astype('int32') for i in range(X.shape[1])]
 
-        asp = _df[self.aspcol].apply(lambda w: int32(self.w_idx[w])).values.tolist()
+        asp = _df[self.aspcol].apply(lambda w: int32(self.asp_idx[w])).values.tolist()
 
         y = get_dummies(_df[self.clscol].astype(str)).values.astype('float32')
 
