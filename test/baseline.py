@@ -26,4 +26,7 @@ model = ATLSTM(dm, embedding_size=300, aspect_embedding_size=100, cell_num=300, 
 
 model.train(train_data=train, epochs=25, val_data=test)
 
+pred = model.predict(test_data=test)
+
+
 

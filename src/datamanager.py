@@ -33,11 +33,13 @@ class DataManager(object):
         """
         _df = self.tokenize(dataset)
         if embedding_frame is not None:
-            self.w_idx = {w:i+self.start_idx for i,w in enumerate(embedding_frame.dropna().index.values)}
             self.use_pretrained_embedding = True
+            self.embedding_words = embedding_frame.dropna().index.values.tolist()
+            self.w_idx = {w:i+self.start_idx for i,w in enumerate(self.embedding_words)}
             self.pretrained_embedding_values = embedding_frame.dropna().values.astype('float32')
         else:
             self.freq_dist = freq_dist(_df['TOKENS'])
+            self.embedding_words = [w for w,c in self.freq_dist.most_common()]
             self.w_idx = w_index(self.freq_dist, self.start_idx) # Word index starts from self.start_idx
         self.asp_idx = {w:i for i,w in enumerate(sorted(_df[self.aspcol].unique()))} # Aspect idx starts from 0
         self.vocab = len(self.w_idx)
@@ -75,6 +77,12 @@ class DataManager(object):
                 _y = y[current:next_batch, :]
             current = next_batch
             yield _X, _y
+
+    def write_embedding_tsv(self, path):
+        words = ['PAD'] + ['OVW']*(self.start_idx-1) + self.embedding_words
+        with open(path+'word_embedding.tsv', 'w', encoding='utf-8') as f:
+            for word in words:
+                f.write(word+'\n')
 
 
 class AttDataManager(DataManager):

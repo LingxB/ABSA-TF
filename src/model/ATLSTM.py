@@ -3,7 +3,8 @@ import numpy as np
 import tensorflow as tf
 from tensorflow.contrib import rnn
 from copy import deepcopy
-from time import time
+from time import time, ctime
+import os
 
 
 class ATLSTM(object):
@@ -26,6 +27,8 @@ class ATLSTM(object):
         self.epsilon = epsilon
         self.l2_param = l2_param
         self.initializer = tf.random_uniform_initializer(-self.epsilon, self.epsilon)
+        self.model_name = kwargs.pop('model_name', 'ATLSTM')
+        self.model_path = kwargs.pop('model_path', './models/')+'_'.join(ctime().replace(':','-').split())+'/'
         self.kwargs = kwargs
         self.graph = None
 
@@ -53,11 +56,17 @@ class ATLSTM(object):
         with tf.variable_scope('attention'):
             H = tf.stack(enc_outputs, axis=1)  # [batch, N, d]
             _H = tf.reshape(tf.stack(enc_outputs, axis=1), shape=(-1, self.cell_num))  # [batch*N, d]
+
             Wh = tf.get_variable('Wh', shape=(self.cell_num, self.cell_num), dtype=tf.float32, initializer=self.initializer)  # [d, d]
+            tf.summary.histogram('Wh', Wh)
+
             Wv = tf.get_variable('Wv', shape=(self.asp_embedding_size, self.asp_embedding_size), dtype=tf.float32,
                                  initializer=self.initializer)  # [da, da]
+            tf.summary.histogram('Wv', Wv)
+
             w = tf.get_variable('w', shape=(self.cell_num + self.asp_embedding_size, 1), dtype=tf.float32,
                                 initializer=self.initializer)  # [d+da, 1]
+            tf.summary.histogram('w', w)
 
             WhH = tf.reshape(tf.matmul(_H, Wh), (-1, self.seq_len, self.cell_num))  # [batch, N, d]
             Wvva = tf.reshape(tf.matmul(asp_emb_inputs, Wv), (-1, 1, self.asp_embedding_size))  # [batch, 1, da]
@@ -71,7 +80,10 @@ class ATLSTM(object):
             r = tf.matmul(tf.transpose(H, [0, 2, 1]), alpha)  # [batch, d, 1]
 
             Wp = tf.get_variable('Wp', shape=(self.cell_num, self.cell_num), dtype=tf.float32, initializer=self.initializer)  # [d, d]
+            tf.summary.histogram('Wp', Wp)
+
             Wx = tf.get_variable('Wx', shape=(self.cell_num, self.cell_num), dtype=tf.float32, initializer=self.initializer)  # [d, d]
+            tf.summary.histogram('Wx', Wx)
 
             _r = tf.reshape(r, (-1, self.cell_num))  # [batch, d]
             hN = enc_outputs[-1]  # [batch, d] state.h == output[-1]
@@ -118,8 +130,10 @@ class ATLSTM(object):
 
             # Output layer
             with tf.variable_scope('output'):
-                output = tf.layers.dense(h_star, units=3, name='dense')
-                pred = tf.nn.softmax(output, name='softmax')
+                output = tf.layers.dense(h_star, units=3, name='dense', kernel_initializer=self.initializer)
+                Wdense = [v for v in tf.trainable_variables() if 'dense/kernel:0' in v.name][0]
+                tf.summary.histogram('Wdense', Wdense)
+                self.pred = tf.nn.softmax(output, name='softmax')
 
             # Train ops
             with tf.name_scope('train_ops'):
@@ -127,47 +141,82 @@ class ATLSTM(object):
 
                 # L2 Regularizer
                 reg_params = [param for param in tf.trainable_variables() if not 'embedding' in param.name]
-                print(reg_params)
+                #print(reg_params)
                 regularizer = tf.add_n([tf.nn.l2_loss(p) for p in reg_params])
 
                 self.loss = cross_entropy + self.l2_param * regularizer
+                tf.summary.scalar('loss', self.loss)
 
-                self.train_op = tf.train.AdagradOptimizer(0.01).minimize(self.loss)
+                self.train_op = self.optimizer.minimize(self.loss)
 
             with tf.name_scope('metrics'):
-                correct_prediction = tf.equal(tf.argmax(pred, 1), tf.argmax(self.labels, 1))
+                correct_prediction = tf.equal(tf.argmax(self.pred, 1), tf.argmax(self.labels, 1))
                 self.accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32)) * 100
+                tf.summary.scalar('accuracy', self.accuracy)
+
+            self.summary_op = tf.summary.merge_all()
 
     def train(self, train_data, epochs, val_data=None, verbose=1, **kwargs):
         self.optimizer = kwargs.get('optimizer', tf.train.AdagradOptimizer(0.01))
+        # Create graph
         if self.graph is None:
             self._create_graph()
+        # Create save ckpt path
+        if not os.path.exists(self.model_path):
+            os.makedirs(self.model_path)
+        # TODO: add write_embedding_tsv method in datamanager
+        # self.dm.write_embedding_tsv(self.model_path)
 
         with tf.Session(graph=self.graph) as sess:
+            # Create train/val writer
+            train_writer = tf.summary.FileWriter(self.model_path + 'train', sess.graph)
+            val_writer = tf.summary.FileWriter(self.model_path + 'val')
+
             init = tf.global_variables_initializer()
             sess.run(init)
+            self.saver = tf.train.Saver()
+
             for epoch in range(epochs):
                 start = time()
-                print('Epoch %i' % (epoch + 1))
+                print('Epoch %i/%i' % (epoch+1, epochs))
                 # Training
                 generator = self.dm.batch_gen(train_data)
                 epoch_loss = []
                 epoch_acc = []
                 for _X, _asp, _y in generator:
-                    _, train_loss, train_acc = sess.run([self.train_op, self.loss, self.accuracy], feed_dict=self._feed_dict(_X, _asp, _y))
+                    _, train_summary, train_loss, train_acc = sess.run([self.train_op, self.summary_op, self.loss, self.accuracy], feed_dict=self._feed_dict(_X, _asp, _y))
                     epoch_loss.append(train_loss)
                     epoch_acc.append(train_acc)
-                print('Tain \tloss:%4.8f \tacc:%4.2f%%' % (np.mean(epoch_loss), np.mean(epoch_acc)))
+                    train_writer.add_summary(train_summary, epoch * self.dm.n_batchs + 1)
+                    if verbose==2:
+                        print('\rTain \tloss:%4.8f \tacc:%4.2f%%' % (train_loss, train_acc), end='')
+                if verbose==2:
+                    print('\n')
+
+                if verbose==1:
+                    print('Tain \tloss:%4.8f \tacc:%4.2f%%' % (np.mean(epoch_loss), np.mean(epoch_acc)))
 
                 # Testing
                 if val_data is not None:
                     X_, asp_, y_ = self.dm.input_ready(val_data, tokenize=True)
-                    test_loss, test_acc = sess.run([self.loss, self.accuracy], feed_dict=self._feed_dict(X_, asp_, y_))
+                    val_summary, test_loss, test_acc = sess.run([self.summary_op, self.loss, self.accuracy],
+                                                                feed_dict=self._feed_dict(X_, asp_, y_))
+                    val_writer.add_summary(val_summary, epoch*self.dm.n_batchs + 1)
                     print('Val \tloss:%4.8f \tacc:%4.2f%%' % (test_loss, test_acc))
 
                 end = time()
                 print('Epoch time: %is\n' % (end - start))
 
+    def predict(self, test_data, verbose=1):
+        with tf.Session(graph=self.graph) as sess:
+            ckpt = tf.train.get_checkpoint_state(self.model_path)
+            self.saver.restore(sess, ckpt.model_checkpoint_path)
+            X_test, asp_test, y_test = self.dm.input_ready(test_data, tokenize=True)
+            test_pred, test_loss, test_acc = sess.run([self.pred, self.loss, self.accuracy],
+                                                      feed_dict=self._feed_dict(X_test, asp_test, y_test))
+            if verbose==1:
+                print('Val \tloss:%4.8f \tacc:%4.2f%%' % (test_loss, test_acc))
+            return test_pred
 
 
 
