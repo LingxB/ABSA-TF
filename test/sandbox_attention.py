@@ -19,6 +19,8 @@ embedding_frame = pd.read_csv(embedding_path, sep=' ', header=None, index_col=[0
 
 dataset = dm.init(dataset, embedding_frame=embedding_frame)
 
+
+
 dm.set_max_len(25)
 
 
@@ -30,10 +32,12 @@ from copy import deepcopy
 from time import time
 
 num_symbols = dm.vocab+dm.start_idx
-embedding_size = 300 # da
+embedding_size = 300 # dw
+num_aspects = dm.n_asp
+asp_embedding_size = 100 #da
 cell_num = 300 # d
-dropout_keep_prob = 0.8
-layer_num = 1
+dropout_keep_prob = 0.5
+layer_num = 2
 epochs = 25
 seq_len = dm.max_seq_len
 epsilon = 0.01
@@ -60,35 +64,36 @@ cell = rnn.BasicLSTMCell(cell_num)
 cells = [deepcopy(cell) for i in range(layer_num)]
 cell = rnn.MultiRNNCell(cells)
 
-
-
-with tf.variable_scope('encoder'):
+with tf.name_scope('embedding'):
     if dm.use_pretrained_embedding:
         pre_trained_emb = embedding_frame.dropna().values.astype('float32')
         pre_trained_embedding = tf.get_variable(name="pre_trained_embedding", shape=pre_trained_emb.shape,
-                                                initializer=tf.constant_initializer(pre_trained_emb), trainable=False)
+                                                initializer=tf.constant_initializer(pre_trained_emb), trainable=True)
         pad_embedding = tf.get_variable('pad_embedding', (dm.start_idx, embedding_size), dtype=tf.float32, initializer=initializer)
-        embedding = tf.concat([pad_embedding, pre_trained_embedding], axis=0, name='embedding')
+        embedding = tf.concat([pad_embedding, pre_trained_embedding], axis=0, name='concat_embedding')
     else:
         embedding = tf.get_variable("embedding", (num_symbols, embedding_size), dtype=tf.float32, initializer=initializer)
-
     emb_inputs = [tf.nn.embedding_lookup(embedding, i) for i in inputs]
-    asp_emb_inputs = tf.nn.embedding_lookup(embedding, asp_inputs)
+
+    asp_embedding = tf.get_variable('asp_embedding', (num_aspects, asp_embedding_size), dtype=tf.float32, initializer=initializer)
+    asp_emb_inputs = tf.nn.embedding_lookup(asp_embedding, asp_inputs)
+
+with tf.variable_scope('encoder'):
     enc_output, enc_state = rnn.static_rnn(cell, emb_inputs, dtype='float32')
 
 with tf.variable_scope('attention'):
     H = tf.stack(enc_output, axis=1) #[batch, N, d]
     _H = tf.reshape(tf.stack(enc_output, axis=1), shape=(-1, cell_num)) #[batch*N, d]
     Wh = tf.get_variable('Wh', shape=(cell_num, cell_num), dtype=tf.float32, initializer=initializer) #[d, d]
-    Wv = tf.get_variable('Wv', shape=(embedding_size, embedding_size), dtype=tf.float32, initializer=initializer) #[da, da]
-    w = tf.get_variable('w', shape=(cell_num+embedding_size, 1), dtype=tf.float32, initializer=initializer)
+    Wv = tf.get_variable('Wv', shape=(asp_embedding_size, asp_embedding_size), dtype=tf.float32, initializer=initializer) #[da, da]
+    w = tf.get_variable('w', shape=(cell_num+asp_embedding_size, 1), dtype=tf.float32, initializer=initializer) #[d+da, 1]
 
     WhH = tf.reshape(tf.matmul(_H, Wh), (-1, seq_len, cell_num)) #[batch, N, d]
-    Wvva = tf.reshape(tf.matmul(asp_emb_inputs,Wv), (-1, 1, embedding_size)) #[batch, 1, da]
+    Wvva = tf.reshape(tf.matmul(asp_emb_inputs,Wv), (-1, 1, asp_embedding_size)) #[batch, 1, da]
     WvvaeN = tf.tile(Wvva, (1, 25, 1)) #[batch, N, da]
 
     M = tf.tanh(tf.concat([WhH,WvvaeN], axis=-1)) #[batch, N, d+da]
-    _M = tf.reshape(M, shape=(-1, cell_num+embedding_size)) #[batch*N, d+da]
+    _M = tf.reshape(M, shape=(-1, cell_num+asp_embedding_size)) #[batch*N, d+da]
 
     alpha = tf.reshape(tf.nn.softmax(tf.matmul(_M,w)), shape=(-1, seq_len, 1)) #[batch, N, 1]
 
@@ -98,7 +103,7 @@ with tf.variable_scope('attention'):
     Wx = tf.get_variable('Wx', shape=(cell_num, cell_num), dtype=tf.float32, initializer=initializer) #[d, d]
 
     _r = tf.reshape(r, (-1, cell_num)) #[batch, d]
-    hN = enc_output[-1] #[batch, d] TODO: Cehck hN is the last hidden state or last lstm output
+    hN = enc_output[-1] #[batch, d] state.h == output[-1]
 
     h_star = tf.tanh(tf.add(tf.matmul(_r, Wp),tf.matmul(hN, Wx))) #[batch, d]
     h_star = tf.nn.dropout(h_star, dropout_keep_prob)
@@ -124,10 +129,6 @@ with tf.name_scope('metrics'):
     accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))*100
 
 
-# TODO: 1. Add L2 regularization using tf.trainable_variables()
-# TODO: 2. Add dropout to h_star, remove dropout between LSTM layers
-# TODO: 3. Add pre-trained embedding
-
 ##################
 # Debug
 ##################
@@ -141,10 +142,13 @@ with tf.name_scope('metrics'):
 # init = tf.global_variables_initializer()
 # sess.run(init)
 #
-# emb_inputs[1].eval(feed_dict(_X,_asp,_y), sess)
+# enc_output[-1].eval(feed_dict(_X,_asp,_y), sess)
+# enc_state[-1].h.eval(feed_dict(_X,_asp,_y), sess)
+#
+#
+# embedding.eval(feed_dict(_X,_asp,_y), sess)[:6]
+# emb_inputs[0].eval(feed_dict(_X,_asp,_y), sess)
 # asp_emb_inputs.eval(feed_dict(_X,_asp,_y), sess)
-
-
 
 
 
@@ -173,3 +177,7 @@ with tf.Session() as sess:
         print('Epoch time: %is\n' % (end - start))
 
 
+# Epoch 18
+# Tain 	loss:1.20662487 	acc:80.22%
+# Val 	loss:1.24781418 	acc:80.58%
+# Epoch time: 31s
