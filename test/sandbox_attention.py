@@ -19,9 +19,9 @@ embedding_frame = pd.read_csv(embedding_path, sep=' ', header=None, index_col=[0
 
 dataset = dm.init(dataset, embedding_frame=embedding_frame)
 
+X, asp, y = dm.input_ready(train, True)
 
-
-dm.set_max_len(25)
+dm.set_max_len(79)
 
 
 import numpy as np
@@ -89,7 +89,7 @@ with tf.variable_scope('attention'):
 
     WhH = tf.reshape(tf.matmul(_H, Wh), (-1, seq_len, cell_num)) #[batch, N, d]
     Wvva = tf.reshape(tf.matmul(asp_emb_inputs,Wv), (-1, 1, asp_embedding_size)) #[batch, 1, da]
-    WvvaeN = tf.tile(Wvva, (1, 25, 1)) #[batch, N, da]
+    WvvaeN = tf.tile(Wvva, (1, dm.max_seq_len, 1)) #[batch, N, da]
 
     M = tf.tanh(tf.concat([WhH,WvvaeN], axis=-1)) #[batch, N, d+da]
     _M = tf.reshape(M, shape=(-1, cell_num+asp_embedding_size)) #[batch*N, d+da]
@@ -176,7 +176,8 @@ with tf.Session() as sess:
         print('Epoch time: %is\n' % (end - start))
 
 
-# Epoch 18
-# Tain 	loss:1.20662487 	acc:80.22%
-# Val 	loss:1.24781418 	acc:80.58%
-# Epoch time: 31s
+# Epoch 24
+# Tain 	loss:1.15001595 	acc:80.86%
+# Val 	loss:1.22192538 	acc:80.37%
+# Epoch time: 122s
+

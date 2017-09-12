@@ -35,12 +35,14 @@ class DataManager(object):
         if embedding_frame is not None:
             self.w_idx = {w:i+self.start_idx for i,w in enumerate(embedding_frame.dropna().index.values)}
             self.use_pretrained_embedding = True
+            self.pretrained_embedding_values = embedding_frame.dropna().values.astype('float32')
         else:
             self.freq_dist = freq_dist(_df['TOKENS'])
             self.w_idx = w_index(self.freq_dist, self.start_idx) # Word index starts from self.start_idx
         self.asp_idx = {w:i for i,w in enumerate(sorted(_df[self.aspcol].unique()))} # Aspect idx starts from 0
         self.vocab = len(self.w_idx)
         self.n_asp = _df[self.aspcol].unique().shape[0]
+        self.n_classes = _df[self.clscol].astype(str).unique().shape[0]
         print('Longest sent length: %i' %_df['TLEN'].max())
         _df['TLEN'].plot('hist')
         return _df
@@ -117,6 +119,47 @@ class AttDataManager(DataManager):
             yield _X, _asp, _y
 
 
+class BucketAttDataManager(DataManager):
+    # TODO: Finish the dynamic implementation
+
+    def __init__(self, **kwargs):
+        DataManager.__init__(self, **kwargs)
 
 
+    def input_ready(self, df, tokenize=False):
+        if tokenize:
+            _df = self.tokenize(df)
+        else:
+            _df = df.copy()
 
+        X = _df['TOKENS'].apply(lambda x: [self.w_idx[w] if w in self.w_idx else 1 for w in x]).values.tolist()
+
+        xlen = _df['TLEN'].values.astype('int32').tolist()
+
+        asp = _df[self.aspcol].apply(lambda w: int32(self.asp_idx[w])).values.tolist()
+
+        y = get_dummies(_df[self.clscol].astype(str)).values.astype('float32')
+
+        return X, xlen, asp, y
+
+    def batch_gen(self, df):
+        if self.ready is None:
+            self.ready = self.input_ready(df, tokenize=True)
+        X, xlen, asp, y = self.ready
+        size = len(X)
+        self.n_batchs = size// self.batch_size if size % self.batch_size == 0 else size // self.batch_size + 1
+        current = 0
+        for i in range(self.n_batchs):
+            next_batch = self.batch_size * (i + 1)
+            if i == self.n_batchs - 1:
+                _X = X[current,:]
+                _xlen = xlen[current,:]
+                _asp = asp[current:]
+                _y = y[current:, :]
+            else:
+                _X = X[current:next_batch]
+                _xlen = xlen[current:next_batch]
+                _asp = asp[current:next_batch]
+                _y = y[current:next_batch, :]
+            current = next_batch
+            yield _X, _xlen, _asp, _y
