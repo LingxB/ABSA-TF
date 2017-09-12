@@ -125,7 +125,7 @@ class ATLSTM(object):
 
             # Train ops
             with tf.name_scope('train_ops'):
-                cross_entropy = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(labels=labels, logits=output))
+                cross_entropy = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(labels=self.labels, logits=output))
 
                 # L2 Regularizer
                 reg_params = [param for param in tf.trainable_variables() if not 'embedding' in param.name]
@@ -162,7 +162,7 @@ class ATLSTM(object):
                 print('Tain \tloss:%4.8f \tacc:%4.2f%%' % (np.mean(epoch_loss), np.mean(epoch_acc)))
 
                 # Testing
-                if val_data is not None
+                if val_data is not None:
                     X_, asp_, y_ = self.dm.input_ready(val_data, tokenize=True)
                     test_loss, test_acc = sess.run([self.loss, self.accuracy], feed_dict=self._feed_dict(X_, asp_, y_))
                     print('Val \tloss:%4.8f \tacc:%4.2f%%' % (test_loss, test_acc))
