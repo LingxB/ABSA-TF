@@ -27,7 +27,6 @@ dm.set_max_len(25)
 import numpy as np
 import tensorflow as tf
 from tensorflow.contrib import rnn
-from tensorflow.python.ops import embedding_ops
 from copy import deepcopy
 from time import time
 
