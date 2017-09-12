@@ -164,8 +164,8 @@ class ATLSTM(object):
         # Create save ckpt path
         if not os.path.exists(self.model_path):
             os.makedirs(self.model_path)
-        # TODO: add write_embedding_tsv method in datamanager
-        # self.dm.write_embedding_tsv(self.model_path)
+        # Write word embedding tsv
+        self.dm.write_embedding_tsv(self.model_path)
 
         with tf.Session(graph=self.graph) as sess:
             # Create train/val writer
