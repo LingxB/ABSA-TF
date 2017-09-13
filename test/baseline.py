@@ -13,7 +13,6 @@ dev = pd.read_csv(dev_path)
 
 dataset = pd.concat([train,test,dev])
 
-
 dm = AttDataManager(batch_size=25)
 
 embedding_frame = pd.read_csv(embedding_path, sep=' ', header=None, index_col=[0])
