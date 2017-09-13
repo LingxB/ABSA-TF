@@ -41,7 +41,8 @@ class DataManager(object):
             self.freq_dist = freq_dist(_df['TOKENS'])
             self.embedding_words = [w for w,c in self.freq_dist.most_common()]
             self.w_idx = w_index(self.freq_dist, self.start_idx) # Word index starts from self.start_idx
-        self.asp_idx = {w:i for i,w in enumerate(sorted(_df[self.aspcol].unique()))} # Aspect idx starts from 0
+        self.aspect_words = sorted(_df[self.aspcol].unique())
+        self.asp_idx = {w:i for i,w in enumerate(self.aspect_words)} # Aspect idx starts from 0
         self.vocab = len(self.w_idx)
         self.n_asp = _df[self.aspcol].unique().shape[0]
         self.n_classes = _df[self.clscol].astype(str).unique().shape[0]
@@ -82,6 +83,9 @@ class DataManager(object):
         with open(path+'word_embedding.tsv', 'w', encoding='utf-8') as f:
             for word in self.embedding_words:
                 f.write(word+'\n')
+        with open(path+'aspect_embedding.tsv', 'w', encoding='utf-8') as f:
+            for aspect in self.aspect_words:
+                f.write(aspect+'\n')
 
 
 class AttDataManager(DataManager):
