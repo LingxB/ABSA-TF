@@ -217,7 +217,7 @@ class ATLSTM(object):
             test_pred, test_loss, test_acc = sess.run([self.pred, self.loss, self.accuracy],
                                                       feed_dict=self._feed_dict(X_test, asp_test, y_test))
             if verbose==1:
-                print('Val \tloss:%4.8f \tacc:%4.2f%%' % (test_loss, test_acc))
+                print('Test \tloss:%4.8f \tacc:%4.2f%%' % (test_loss, test_acc))
             return test_pred
 
 
