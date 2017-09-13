@@ -79,9 +79,8 @@ class DataManager(object):
             yield _X, _y
 
     def write_embedding_tsv(self, path):
-        words = ['PAD'] + ['OVW']*(self.start_idx-1) + self.embedding_words
         with open(path+'word_embedding.tsv', 'w', encoding='utf-8') as f:
-            for word in words:
+            for word in self.embedding_words:
                 f.write(word+'\n')
 
 
