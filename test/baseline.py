@@ -27,6 +27,10 @@ model.train(train_data=train, epochs=25, val_data=dev)
 
 pred = model.predict(test_data=test)
 
+test['PRED'] = pred.argmax(axis=1)-1
+test = test.join(pd.DataFrame(pred, columns=['P-1','P0','P+1']))
+test.to_csv(model.model_path+'test_results.csv', index=False)
+
 
 # Epoch 1/25
 # Tain 	loss:1.29749370 	acc:61.81%
