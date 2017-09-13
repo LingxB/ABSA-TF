@@ -77,7 +77,7 @@ with tf.name_scope('embedding'):
     asp_embedding = tf.get_variable('asp_embedding', (num_aspects, asp_embedding_size), dtype=tf.float32, initializer=initializer)
     asp_emb_inputs = tf.nn.embedding_lookup(asp_embedding, asp_inputs)
 
-with tf.variable_scope('encoder'):
+with tf.name_scope('encoder'):
     enc_output, enc_state = rnn.static_rnn(cell, emb_inputs, dtype='float32')
 
 with tf.variable_scope('attention'):
@@ -108,7 +108,7 @@ with tf.variable_scope('attention'):
     h_star = tf.nn.dropout(h_star, dropout_keep_prob)
 
 
-with tf.variable_scope('output'):
+with tf.name_scope('output'):
     output = tf.layers.dense(h_star, units=3, name='dense')
     pred = tf.nn.softmax(output, name='softmax')
 

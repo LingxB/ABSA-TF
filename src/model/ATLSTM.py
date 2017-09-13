@@ -33,7 +33,7 @@ class ATLSTM(object):
         self.graph = None
 
     def _embedding(self, X, asp):
-        with tf.name_scope('embedding'):
+        with tf.variable_scope('embedding'):
             if self.use_pretrained_embedding:
                 pre_trained_embedding = tf.get_variable(name="pre_trained_embedding", shape=self.embedding_values.shape,
                                                         initializer=tf.constant_initializer(self.embedding_values),
@@ -54,20 +54,23 @@ class ATLSTM(object):
 
     def _attention(self, enc_outputs, asp_emb_inputs):
         with tf.variable_scope('attention'):
+            # Reshape inputs
             H = tf.stack(enc_outputs, axis=1)  # [batch, N, d]
             _H = tf.reshape(tf.stack(enc_outputs, axis=1), shape=(-1, self.cell_num))  # [batch*N, d]
 
-            Wh = tf.get_variable('Wh', shape=(self.cell_num, self.cell_num), dtype=tf.float32, initializer=self.initializer)  # [d, d]
-            tf.summary.histogram('Wh', Wh)
-
+            # Attention variables
+            Wh = tf.get_variable('Wh', shape=(self.cell_num, self.cell_num), dtype=tf.float32,
+                                 initializer=self.initializer)  # [d, d]
             Wv = tf.get_variable('Wv', shape=(self.asp_embedding_size, self.asp_embedding_size), dtype=tf.float32,
                                  initializer=self.initializer)  # [da, da]
-            tf.summary.histogram('Wv', Wv)
-
             w = tf.get_variable('w', shape=(self.cell_num + self.asp_embedding_size, 1), dtype=tf.float32,
                                 initializer=self.initializer)  # [d+da, 1]
-            tf.summary.histogram('w', w)
+            Wp = tf.get_variable('Wp', shape=(self.cell_num, self.cell_num), dtype=tf.float32,
+                                 initializer=self.initializer)  # [d, d]
+            Wx = tf.get_variable('Wx', shape=(self.cell_num, self.cell_num), dtype=tf.float32,
+                                 initializer=self.initializer)  # [d, d]
 
+            # Attention operations
             WhH = tf.reshape(tf.matmul(_H, Wh), (-1, self.seq_len, self.cell_num))  # [batch, N, d]
             Wvva = tf.reshape(tf.matmul(asp_emb_inputs, Wv), (-1, 1, self.asp_embedding_size))  # [batch, 1, da]
             WvvaeN = tf.tile(Wvva, (1, self.seq_len, 1))  # [batch, N, da]
@@ -79,17 +82,13 @@ class ATLSTM(object):
 
             r = tf.matmul(tf.transpose(H, [0, 2, 1]), alpha)  # [batch, d, 1]
 
-            Wp = tf.get_variable('Wp', shape=(self.cell_num, self.cell_num), dtype=tf.float32, initializer=self.initializer)  # [d, d]
-            tf.summary.histogram('Wp', Wp)
-
-            Wx = tf.get_variable('Wx', shape=(self.cell_num, self.cell_num), dtype=tf.float32, initializer=self.initializer)  # [d, d]
-            tf.summary.histogram('Wx', Wx)
-
             _r = tf.reshape(r, (-1, self.cell_num))  # [batch, d]
             hN = enc_outputs[-1]  # [batch, d] state.h == output[-1]
 
             h_star = tf.tanh(tf.add(tf.matmul(_r, Wp), tf.matmul(hN, Wx)))  # [batch, d]
+
             h_star = tf.nn.dropout(h_star, self.dropout_keep_prob)
+
             return h_star
 
     def _feed_dict(self, X, asp, y):
@@ -129,10 +128,8 @@ class ATLSTM(object):
             h_star = self._attention(enc_outputs, asp_emb_inputs)
 
             # Output layer
-            with tf.variable_scope('output'):
+            with tf.name_scope('output'):
                 output = tf.layers.dense(h_star, units=3, name='dense', kernel_initializer=self.initializer)
-                Wdense = [v for v in tf.trainable_variables() if 'dense/kernel:0' in v.name][0]
-                tf.summary.histogram('Wdense', Wdense)
                 self.pred = tf.nn.softmax(output, name='softmax')
 
             # Train ops
@@ -154,6 +151,9 @@ class ATLSTM(object):
                 self.accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32)) * 100
                 tf.summary.scalar('accuracy', self.accuracy)
 
+            summary_weights = [w for w in tf.trainable_variables() if 'embedding' not in w.name]
+            for w in summary_weights:
+                tf.summary.histogram(w.name.strip(':0'), w)
             self.summary_op = tf.summary.merge_all()
 
     def train(self, train_data, epochs, val_data=None, verbose=1, **kwargs):
