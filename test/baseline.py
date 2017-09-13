@@ -22,9 +22,9 @@ dataset = dm.init(dataset, embedding_frame=embedding_frame)
 
 dm.set_max_len(79)
 
-model = ATLSTM(dm, embedding_size=300, aspect_embedding_size=100, cell_num=300, layer_num=1)
+model = ATLSTM(dm, embedding_size=300, aspect_embedding_size=100, cell_num=300, layer_num=1, trainable=True)
 
-model.train(train_data=train, epochs=25, val_data=test)
+model.train(train_data=train, epochs=25, val_data=dev)
 
 pred = model.predict(test_data=test)
 

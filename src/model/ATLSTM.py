@@ -207,6 +207,8 @@ class ATLSTM(object):
                 end = time()
                 print('Epoch time: %is\n' % (end - start))
 
+            self.saver.save(sess, self.model_path + self.model_name)
+
     def predict(self, test_data, verbose=1):
         with tf.Session(graph=self.graph) as sess:
             ckpt = tf.train.get_checkpoint_state(self.model_path)
