@@ -26,10 +26,16 @@ model = ATLSTM(dm, embedding_size=300, aspect_embedding_size=100, cell_num=300, 
 model.train(train_data=train, epochs=25, val_data=dev)
 
 pred = model.predict(test_data=test)
-
 test['PRED'] = pred.argmax(axis=1)-1
 test = test.join(pd.DataFrame(pred, columns=['P-1','P0','P+1']))
+test['T/F'] = test.CLS==test.PRED
 test.to_csv(model.model_path+'test_results.csv', index=False)
+
+dev_pred = model.predict(test_data=dev)
+dev['PRED'] = dev_pred.argmax(axis=1)-1
+dev = dev.join(pd.DataFrame(dev_pred, columns=['P-1','P0','P+1']))
+dev['T/F'] = dev.CLS==dev.PRED
+dev.to_csv(model.model_path+'dev_results.csv', index=False)
 
 
 # Epoch 1/25
