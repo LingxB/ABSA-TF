@@ -25,13 +25,16 @@ class DataManager(object):
         _df['TLEN'] = _df['TOKENS'].apply(lambda x: len(x))
         return _df
 
-    def init(self, dataset, embedding_frame=None):
+    def init(self, dataset, embedding_frame=None, lexicon_frame=None):
         """
         Must initialize with complete dataset.
         embedding_frame is a dataframe with word as index, word vector as data. Out of vocabulary word will be dropped
         if exist. In the embedding_frame, word index is ordered as freq distribution in the corpus.
         """
         _df = self.tokenize(dataset)
+        if lexicon_frame is not None:
+            self.lx_idx_code = {-1: 1, 0: 0, 1: 2} # 0, -1, 1 corresponds to embedding matrix row idx [0,1,2]
+            self.lx_idx = {w: self.lx_idx_code.get(v.values[0], 0) for w, v in lexicon_frame.iterrows()}
         if embedding_frame is not None:
             self.use_pretrained_embedding = True
             self.embedding_words = embedding_frame.dropna().index.values.tolist()
@@ -130,47 +133,101 @@ class AttDataManager(DataManager):
             yield _X, _asp, _y
 
 
-class BucketAttDataManager(DataManager):
-    # TODO: Finish the dynamic implementation
+class ATLXDataManager(DataManager):
 
     def __init__(self, **kwargs):
         DataManager.__init__(self, **kwargs)
-
 
     def input_ready(self, df, tokenize=False):
         if tokenize:
             _df = self.tokenize(df)
         else:
             _df = df.copy()
-
-        X = _df['TOKENS'].apply(lambda x: [self.w_idx[w] if w in self.w_idx else 1 for w in x]).values.tolist()
-
-        xlen = _df['TLEN'].values.astype('int32').tolist()
+        X = _df['TOKENS'].apply(lambda x: [self.w_idx.get(w, 1) for w in x]).values
+        X = pad_sequences(X, maxlen=self.max_seq_len, padding='post', truncating='post')
+        X = [X[:, i].astype('int32') for i in range(X.shape[1])]
 
         asp = _df[self.aspcol].apply(lambda w: int32(self.asp_idx[w])).values.tolist()
 
+        lx = _df['TOKENS'].apply(lambda x: [self.lx_idx.get(w, 0) for w in x]).values
+        lx = pad_sequences(lx, maxlen=self.max_seq_len, padding='post', truncating='post')
+        lx = [lx[:, i].astype('int32') for i in range(lx.shape[1])]
+
         y = get_dummies(_df[self.clscol].astype(str)).values.astype('float32')
 
-        return X, xlen, asp, y
+        return X, asp, lx, y
 
     def batch_gen(self, df):
         if self.ready is None:
             self.ready = self.input_ready(df, tokenize=True)
-        X, xlen, asp, y = self.ready
-        size = len(X)
+        X, asp, lx, y = self.ready
+        size = X[0].shape[0]
         self.n_batchs = size// self.batch_size if size % self.batch_size == 0 else size // self.batch_size + 1
         current = 0
         for i in range(self.n_batchs):
             next_batch = self.batch_size * (i + 1)
             if i == self.n_batchs - 1:
-                _X = X[current,:]
-                _xlen = xlen[current,:]
+                _X = [X[t][current:] for t in range(self.max_seq_len)]
                 _asp = asp[current:]
+                _lx = [lx[t][current:] for t in range(self.max_seq_len)]
                 _y = y[current:, :]
             else:
-                _X = X[current:next_batch]
-                _xlen = xlen[current:next_batch]
+                _X = [X[t][current:next_batch] for t in range(self.max_seq_len)]
                 _asp = asp[current:next_batch]
+                _lx = [lx[t][current:next_batch] for t in range(self.max_seq_len)]
                 _y = y[current:next_batch, :]
             current = next_batch
-            yield _X, _xlen, _asp, _y
+            yield _X, _asp, _lx, _y
+
+
+
+
+
+
+
+
+
+# class BucketAttDataManager(DataManager):
+#     # TODO: Finish the dynamic implementation
+#
+#     def __init__(self, **kwargs):
+#         DataManager.__init__(self, **kwargs)
+#
+#
+#     def input_ready(self, df, tokenize=False):
+#         if tokenize:
+#             _df = self.tokenize(df)
+#         else:
+#             _df = df.copy()
+#
+#         X = _df['TOKENS'].apply(lambda x: [self.w_idx[w] if w in self.w_idx else 1 for w in x]).values.tolist()
+#
+#         xlen = _df['TLEN'].values.astype('int32').tolist()
+#
+#         asp = _df[self.aspcol].apply(lambda w: int32(self.asp_idx[w])).values.tolist()
+#
+#         y = get_dummies(_df[self.clscol].astype(str)).values.astype('float32')
+#
+#         return X, xlen, asp, y
+#
+#     def batch_gen(self, df):
+#         if self.ready is None:
+#             self.ready = self.input_ready(df, tokenize=True)
+#         X, xlen, asp, y = self.ready
+#         size = len(X)
+#         self.n_batchs = size// self.batch_size if size % self.batch_size == 0 else size // self.batch_size + 1
+#         current = 0
+#         for i in range(self.n_batchs):
+#             next_batch = self.batch_size * (i + 1)
+#             if i == self.n_batchs - 1:
+#                 _X = X[current,:]
+#                 _xlen = xlen[current,:]
+#                 _asp = asp[current:]
+#                 _y = y[current:, :]
+#             else:
+#                 _X = X[current:next_batch]
+#                 _xlen = xlen[current:next_batch]
+#                 _asp = asp[current:next_batch]
+#                 _y = y[current:next_batch, :]
+#             current = next_batch
+#             yield _X, _xlen, _asp, _y
