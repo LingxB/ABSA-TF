@@ -25,7 +25,7 @@ class DataManager(object):
         _df['TLEN'] = _df['TOKENS'].apply(lambda x: len(x))
         return _df
 
-    def init(self, dataset, embedding_frame=None, lexicon_frame=None):
+    def init(self, dataset, embedding_frame=None, lexicon_frame=None, **kwargs):
         """
         Must initialize with complete dataset.
         embedding_frame is a dataframe with word as index, word vector as data. Out of vocabulary word will be dropped
@@ -33,7 +33,7 @@ class DataManager(object):
         """
         _df = self.tokenize(dataset)
         if lexicon_frame is not None:
-            self.lx_idx_code = {-1: 1, 0: 0, 1: 2} # 0, -1, 1 corresponds to embedding matrix row idx [0,1,2]
+            self.lx_idx_code =  kwargs.get('lx_idx_code', {-1: 1, 0: 0, 1: 2})# 0, -1, 1 corresponds to embedding matrix row idx [0,1,2]
             self.lx_idx = {w: self.lx_idx_code.get(v.values[0], 0) for w, v in lexicon_frame.iterrows()}
         if embedding_frame is not None:
             self.use_pretrained_embedding = True
