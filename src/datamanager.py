@@ -34,6 +34,7 @@ class DataManager(object):
         _df = self.tokenize(dataset)
         if lexicon_frame is not None:
             self.lx_idx_code =  kwargs.get('lx_idx_code', {-1: 1, 0: 0, 1: 2})# 0, -1, 1 corresponds to embedding matrix row idx [0,1,2]
+            assert self.lx_idx_code[0]==0, 'Neutral word / OOV word / Padding must share same symbol: 0'
             self.lx_idx = {w: self.lx_idx_code.get(v.values[0], 0) for w, v in lexicon_frame.iterrows()}
         if embedding_frame is not None:
             self.use_pretrained_embedding = True
