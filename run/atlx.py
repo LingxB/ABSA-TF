@@ -13,7 +13,7 @@ train = pd.read_csv(train_path)
 test = pd.read_csv(test_path)
 dev = pd.read_csv(dev_path)
 embedding_frame = pd.read_csv(embedding_path, sep=' ', header=None, index_col=[0])
-lexicon_frame = pd.read_csv('data/Lexicon/lexicon_sample500.csv', index_col=[0])
+lexicon_frame = pd.read_csv(lexicon_path, index_col=[0])
 dataset = pd.concat([train,test,dev])
 
 dm = ATLXDataManager(batch_size=25)
@@ -33,6 +33,7 @@ model = ATLXLSTM(datamanager=dm,
                  layer_num=1, trainable=True)
 
 model.train(train_data=train, epochs=25, val_data=dev)
+
 
 pred = model.predict(test_data=test)
 test['PRED'] = pred.argmax(axis=1)-1
