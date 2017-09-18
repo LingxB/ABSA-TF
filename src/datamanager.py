@@ -90,6 +90,8 @@ class DataManager(object):
         with open(path+'aspect_embedding.tsv', 'w', encoding='utf-8') as f:
             for aspect in self.aspect_words:
                 f.write(aspect+'\n')
+        with open(path+'polarity_embedding.tsv', 'w', encoding='utf-8') as f:
+            f.write('\n'.join(['NEUTRAL','NEGATIVE','POSITIVE']))
 
 
 class AttDataManager(DataManager):
