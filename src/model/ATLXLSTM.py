@@ -13,7 +13,7 @@ class ATLXLSTM(ATLSTM):
 
     def __init__(self, lx_embedding_size, **kwargs):
         ATLSTM.__init__(self, **kwargs)
-        self.model_name = ''
+        self.model_name = 'ATLXLSTM'
         self.lx_embedding_size = lx_embedding_size
         self.num_polarities = len(self.dm.lx_idx_code)
 
@@ -94,6 +94,7 @@ class ATLXLSTM(ATLSTM):
     def _feed_dict_with_lx(self, X, asp, lx, y):
         fd = {self.inputs[t]: X[t] for t in range(self.seq_len)}
         fd.update({self.asp_inputs: asp})
+        fd.update({self.lx_inputs[t]: lx[t] for t in range(self.seq_len)})
         fd.update({self.labels: y})
         return fd
 
@@ -182,9 +183,9 @@ class ATLXLSTM(ATLSTM):
                 generator = self.dm.batch_gen(train_data)
                 epoch_loss = []
                 epoch_acc = []
-                for train_inputs in generator:
+                for _X, _asp, _lx, _y in generator:
                     _, train_summary, train_loss, train_acc = sess.run([self.train_op, self.summary_op, self.loss, self.accuracy],
-                                                                       feed_dict=self._feed_dict_with_lx(*train_inputs))
+                                                                       feed_dict=self._feed_dict_with_lx(_X, _asp, _lx, _y))
                     epoch_loss.append(train_loss)
                     epoch_acc.append(train_acc)
                     train_writer.add_summary(train_summary, epoch * self.dm.n_batchs + 1)
@@ -198,9 +199,9 @@ class ATLXLSTM(ATLSTM):
 
                 # Testing
                 if val_data is not None:
-                    val_inputs = self.dm.input_ready(val_data, tokenize=True)
+                    X_, asp_, lx_, y_ = self.dm.input_ready(val_data, tokenize=True)
                     val_summary, test_loss, test_acc = sess.run([self.summary_op, self.loss, self.accuracy],
-                                                                feed_dict=self._feed_dict_with_lx(*val_inputs))
+                                                                feed_dict=self._feed_dict_with_lx(X_, asp_, lx_, y_))
                     val_writer.add_summary(val_summary, epoch * self.dm.n_batchs + 1)
                     print('Val \tloss:%4.8f \tacc:%4.2f%%' % (test_loss, test_acc))
 
@@ -214,9 +215,9 @@ class ATLXLSTM(ATLSTM):
         with tf.Session(graph=self.graph) as sess:
             ckpt = tf.train.get_checkpoint_state(self.model_path)
             self.saver.restore(sess, ckpt.model_checkpoint_path)
-            test_inputs = self.dm.input_ready(test_data, tokenize=True)
+            X_test, asp_test, lx_test, y_test = self.dm.input_ready(test_data, tokenize=True)
             test_pred, test_loss, test_acc = sess.run([self.pred, self.loss, self.accuracy],
-                                                      feed_dict=self._feed_dict_with_lx(*test_inputs))
+                                                      feed_dict=self._feed_dict_with_lx(X_test, asp_test, lx_test, y_test))
             if verbose == 1:
                 print('Test \tloss:%4.8f \tacc:%4.2f%%' % (test_loss, test_acc))
             return test_pred
