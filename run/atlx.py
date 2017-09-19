@@ -28,7 +28,7 @@ dm.set_max_len(79)
 model = ATLXLSTM(datamanager=dm,
                  embedding_size=300,
                  aspect_embedding_size=100,
-                 lx_embedding_size=50,
+                 lx_embedding_size=1,
                  cell_num=300,
                  layer_num=1, trainable=True)
 

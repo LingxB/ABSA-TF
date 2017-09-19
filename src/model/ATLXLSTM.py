@@ -46,48 +46,49 @@ class ATLXLSTM(ATLSTM):
 
     def _attention_with_lx(self, enc_outputs, asp_emb_inputs, lx_emb_inputs):
         # Reshape inputs
-        H = tf.stack(enc_outputs, axis=1)  # [batch, N, d]
-        _H = tf.reshape(tf.stack(enc_outputs, axis=1), shape=(-1, self.cell_num))  # [batch*N, d]
+        with tf.variable_scope('attention'):
+            H = tf.stack(enc_outputs, axis=1)  # [batch, N, d]
+            _H = tf.reshape(tf.stack(enc_outputs, axis=1), shape=(-1, self.cell_num))  # [batch*N, d]
 
-        L = tf.stack(lx_emb_inputs, axis=1) # [batch, N, dl]
-        _L = tf.reshape(L, shape=(-1, self.lx_embedding_size)) # [batch*N, dl]
+            L = tf.stack(lx_emb_inputs, axis=1) # [batch, N, dl]
+            _L = tf.reshape(L, shape=(-1, self.lx_embedding_size)) # [batch*N, dl]
 
-        # Attention variables
-        Wh = tf.get_variable('Wh', shape=(self.cell_num, self.cell_num), dtype=tf.float32,
-                             initializer=self.initializer)  # [d, d]
-        Wv = tf.get_variable('Wv', shape=(self.asp_embedding_size, self.asp_embedding_size), dtype=tf.float32,
-                             initializer=self.initializer)  # [da, da]
-        # add lexicon embedding projection variable
-        Wl = tf.get_variable('Wl', shape=(self.lx_embedding_size, self.lx_embedding_size), dtype=tf.float32,
-                             initializer=self.initializer) # [dl, dl]
+            # Attention variables
+            Wh = tf.get_variable('Wh', shape=(self.cell_num, self.cell_num), dtype=tf.float32,
+                                 initializer=self.initializer)  # [d, d]
+            Wv = tf.get_variable('Wv', shape=(self.asp_embedding_size, self.asp_embedding_size), dtype=tf.float32,
+                                 initializer=self.initializer)  # [da, da]
+            # add lexicon embedding projection variable
+            Wl = tf.get_variable('Wl', shape=(self.lx_embedding_size, self.lx_embedding_size), dtype=tf.float32,
+                                 initializer=self.initializer) # [dl, dl]
 
-        w = tf.get_variable('w', shape=(self.cell_num + self.lx_embedding_size + self.asp_embedding_size, 1), dtype=tf.float32,
-                            initializer=self.initializer)  # [d+da, 1]
-        Wp = tf.get_variable('Wp', shape=(self.cell_num, self.cell_num), dtype=tf.float32,
-                             initializer=self.initializer)  # [d, d]
-        Wx = tf.get_variable('Wx', shape=(self.cell_num, self.cell_num), dtype=tf.float32,
-                             initializer=self.initializer)  # [d, d]
+            w = tf.get_variable('w', shape=(self.cell_num + self.lx_embedding_size + self.asp_embedding_size, 1), dtype=tf.float32,
+                                initializer=self.initializer)  # [d+da, 1]
+            Wp = tf.get_variable('Wp', shape=(self.cell_num, self.cell_num), dtype=tf.float32,
+                                 initializer=self.initializer)  # [d, d]
+            Wx = tf.get_variable('Wx', shape=(self.cell_num, self.cell_num), dtype=tf.float32,
+                                 initializer=self.initializer)  # [d, d]
 
-        # Attention operations
-        WhH = tf.reshape(tf.matmul(_H, Wh), (-1, self.seq_len, self.cell_num))  # [batch, N, d]
-        Wvva = tf.reshape(tf.matmul(asp_emb_inputs, Wv), (-1, 1, self.asp_embedding_size))  # [batch, 1, da]
-        WvvaeN = tf.tile(Wvva, (1, self.seq_len, 1))  # [batch, N, da]
-        # add lexicon embedding projection
-        WlL = tf.reshape(tf.matmul(_L, Wl), (-1, self.seq_len, self.lx_embedding_size)) #[batch, N, dl]
+            # Attention operations
+            WhH = tf.reshape(tf.matmul(_H, Wh), (-1, self.seq_len, self.cell_num))  # [batch, N, d]
+            Wvva = tf.reshape(tf.matmul(asp_emb_inputs, Wv), (-1, 1, self.asp_embedding_size))  # [batch, 1, da]
+            WvvaeN = tf.tile(Wvva, (1, self.seq_len, 1))  # [batch, N, da]
+            # add lexicon embedding projection
+            WlL = tf.reshape(tf.matmul(_L, Wl), (-1, self.seq_len, self.lx_embedding_size)) #[batch, N, dl]
 
-        M = tf.tanh(tf.concat([WhH, WlL, WvvaeN], axis=-1))  # [batch, N, d+dl+da]
-        _M = tf.reshape(M, shape=(-1, self.cell_num + self.lx_embedding_size + self.asp_embedding_size))  # [batch*N, d+dl+da]
+            M = tf.tanh(tf.concat([WhH, WlL, WvvaeN], axis=-1))  # [batch, N, d+dl+da]
+            _M = tf.reshape(M, shape=(-1, self.cell_num + self.lx_embedding_size + self.asp_embedding_size))  # [batch*N, d+dl+da]
 
-        alpha = tf.reshape(tf.nn.softmax(tf.matmul(_M, w)), shape=(-1, self.seq_len, 1))  # [batch, N, 1]
+            alpha = tf.reshape(tf.nn.softmax(tf.matmul(_M, w)), shape=(-1, self.seq_len, 1))  # [batch, N, 1]
 
-        r = tf.matmul(tf.transpose(H, [0, 2, 1]), alpha)  # [batch, d, 1]
+            r = tf.matmul(tf.transpose(H, [0, 2, 1]), alpha)  # [batch, d, 1]
 
-        _r = tf.reshape(r, (-1, self.cell_num))  # [batch, d]
-        hN = enc_outputs[-1]  # [batch, d] state.h == output[-1]
+            _r = tf.reshape(r, (-1, self.cell_num))  # [batch, d]
+            hN = enc_outputs[-1]  # [batch, d] state.h == output[-1]
 
-        h_star = tf.tanh(tf.add(tf.matmul(_r, Wp), tf.matmul(hN, Wx)))  # [batch, d]
+            h_star = tf.tanh(tf.add(tf.matmul(_r, Wp), tf.matmul(hN, Wx)))  # [batch, d]
 
-        h_star = tf.nn.dropout(h_star, self.dropout_keep_prob)
+            h_star = tf.nn.dropout(h_star, self.dropout_keep_prob)
 
         return h_star
 
