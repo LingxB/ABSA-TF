@@ -29,7 +29,7 @@ class ATLSTM(object):
         self.initializer = tf.random_uniform_initializer(-self.epsilon, self.epsilon)
         self.model_name = kwargs.pop('model_name', 'ATLSTM')
         self.model_path = kwargs.pop('model_path', './models/')+'_'.join(ctime().replace(':','-').split())+'/'
-        self.seed = kwargs.get('seed', int(1000*time()))
+        self.seed = kwargs.get('seed', int(time()/1000))
         self.kwargs = kwargs
         self.graph = None
 
