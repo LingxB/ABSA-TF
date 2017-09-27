@@ -2,6 +2,9 @@
 import pandas as pd
 from src.datamanager import AttDataManager
 from src.model.ATLSTM import ATLSTM
+import random
+
+random.seed(4)
 
 embedding_path = 'data/glove_840B_300d/semeval14_glove.840B.300d.txt'
 train_path = 'data/ATAE-LSTM/train.csv'

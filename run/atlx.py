@@ -29,10 +29,11 @@ model = ATLXLSTM(datamanager=dm,
                  embedding_size=300,
                  aspect_embedding_size=100,
                  lx_embedding_size=1,
+                 lx_emb_initializer='fixed',
                  cell_num=300,
-                 layer_num=1, trainable=True)
+                 layer_num=1, trainable=False)
 
-model.train(train_data=train, epochs=25, val_data=dev)
+model.train(train_data=train, epochs=27, val_data=dev)
 
 
 pred = model.predict(test_data=test)

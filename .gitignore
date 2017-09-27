@@ -106,3 +106,6 @@ ENV/
 
 # Trined models
 models/
+
+# LREC2018
+#LREC2018/

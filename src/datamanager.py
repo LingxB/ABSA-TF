@@ -51,7 +51,7 @@ class DataManager(object):
         self.n_asp = _df[self.aspcol].unique().shape[0]
         self.n_classes = _df[self.clscol].astype(str).unique().shape[0]
         print('Longest sent length: %i' %_df['TLEN'].max())
-        _df['TLEN'].plot('hist')
+        #_df['TLEN'].plot('hist')
         return _df
 
     def input_ready(self, df, tokenize=False):

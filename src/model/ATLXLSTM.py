@@ -11,11 +11,13 @@ from time import time
 
 class ATLXLSTM(ATLSTM):
 
-    def __init__(self, lx_embedding_size, **kwargs):
+    def __init__(self, lx_embedding_size, lx_emb_initializer='random', **kwargs):
         ATLSTM.__init__(self, **kwargs)
         self.model_name = 'ATLXLSTM'
         self.lx_embedding_size = lx_embedding_size
+        self.lx_embedding_initilaizer = lx_emb_initializer
         self.num_polarities = len(self.dm.lx_idx_code)
+
 
     def _embedding_with_lx(self, X, asp, lx):
         with tf.variable_scope('embedding'):
@@ -37,8 +39,19 @@ class ATLXLSTM(ATLSTM):
                                             initializer=self.initializer)
             asp_emb_inputs = tf.nn.embedding_lookup(asp_embedding, asp)
             # Lexcion embedding
+            if self.lx_embedding_initilaizer == 'random':
+                lx_init = self.initializer
+                trainable = True
+            elif self.lx_embedding_initilaizer == 'fixed':
+                values = np.array([[0]*self.lx_embedding_size,[-1]*self.lx_embedding_size,[1]*self.lx_embedding_size], dtype='float32')
+                lx_init = tf.constant_initializer(values)
+                trainable = False
+            else:
+                raise KeyError('lx_emb_initializer %s not implemented.'%self.lx_embedding_initilaizer)
+
             lx_embedding = tf.get_variable('lx_embedding', (self.num_polarities, self.lx_embedding_size), dtype=tf.float32,
-                                           initializer=self.initializer)
+                                           initializer=lx_init,
+                                           trainable=trainable)
             lx_emb_inputs = [tf.nn.embedding_lookup(lx_embedding, i) for i in lx]
 
             return emb_inputs, asp_emb_inputs, lx_emb_inputs
