@@ -31,7 +31,9 @@ model = ATLXLSTM(datamanager=dm,
                  lx_embedding_size=1,
                  lx_emb_initializer='fixed',
                  cell_num=300,
-                 layer_num=1, trainable=False)
+                 layer_num=1,
+                 trainable=True,
+                 seed=44)
 
 model.train(train_data=train, epochs=27, val_data=dev)
 
