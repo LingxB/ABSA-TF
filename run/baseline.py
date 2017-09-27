@@ -2,9 +2,7 @@
 import pandas as pd
 from src.datamanager import AttDataManager
 from src.model.ATLSTM import ATLSTM
-import random
 
-random.seed(4)
 
 embedding_path = 'data/glove_840B_300d/semeval14_glove.840B.300d.txt'
 train_path = 'data/ATAE-LSTM/train.csv'
@@ -24,9 +22,9 @@ dataset = dm.init(dataset, embedding_frame=embedding_frame)
 
 dm.set_max_len(79)
 
-model = ATLSTM(dm, embedding_size=300, aspect_embedding_size=100, cell_num=300, layer_num=1, trainable=True)
+model = ATLSTM(dm, embedding_size=300, aspect_embedding_size=100, cell_num=300, layer_num=1, trainable=True, seed=44)
 
-model.train(train_data=train, epochs=25, val_data=dev)
+model.train(train_data=train, epochs=25, val_data=dev, ramdom_shuffle=True)
 
 pred = model.predict(test_data=test)
 test['PRED'] = pred.argmax(axis=1)-1
