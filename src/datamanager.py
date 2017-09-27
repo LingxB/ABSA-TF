@@ -25,7 +25,7 @@ class DataManager(object):
         _df['TLEN'] = _df['TOKENS'].apply(lambda x: len(x))
         return _df
 
-    def init(self, dataset, embedding_frame=None, lexicon_frame=None, **kwargs):
+    def init(self, dataset, embedding_frame=None, lexicon_frame=None, test_lexicon_frame=None, **kwargs):
         """
         Must initialize with complete dataset.
         embedding_frame is a dataframe with word as index, word vector as data. Out of vocabulary word will be dropped
@@ -35,7 +35,11 @@ class DataManager(object):
         if lexicon_frame is not None:
             self.lx_idx_code =  kwargs.get('lx_idx_code', {-1: 1, 0: 0, 1: 2})# 0, -1, 1 corresponds to embedding matrix row idx [0,1,2]
             assert self.lx_idx_code[0]==0, 'Neutral word / OOV word / Padding must share same symbol: 0'
-            self.lx_idx = {w: self.lx_idx_code.get(v.values[0], 0) for w, v in lexicon_frame.iterrows()}
+            self.lx_idx = {w: self.lx_idx_code.get(v.values[0], 0) for w,v in lexicon_frame.iterrows()}
+            if test_lexicon_frame is not None:
+                self.test_lx_idx = {w: self.lx_idx_code.get(v.values[0], 0) for w,v in test_lexicon_frame.iterrows()}
+            else:
+                self.test_lx_idx = None
         if embedding_frame is not None:
             self.use_pretrained_embedding = True
             self.embedding_words = embedding_frame.dropna().index.values.tolist()
@@ -54,7 +58,7 @@ class DataManager(object):
         #_df['TLEN'].plot('hist')
         return _df
 
-    def input_ready(self, df, tokenize=False):
+    def input_ready(self, df, tokenize=False, **kwargs):
         if tokenize:
             _df = self.tokenize(df)
         else:
@@ -100,7 +104,7 @@ class AttDataManager(DataManager):
         DataManager.__init__(self, **kwargs)
 
 
-    def input_ready(self, df, tokenize=False):
+    def input_ready(self, df, tokenize=False, **kwargs):
         if tokenize:
             _df = self.tokenize(df)
         else:
@@ -141,7 +145,7 @@ class ATLXDataManager(DataManager):
     def __init__(self, **kwargs):
         DataManager.__init__(self, **kwargs)
 
-    def input_ready(self, df, tokenize=False):
+    def input_ready(self, df, tokenize=False, **kwargs):
         if tokenize:
             _df = self.tokenize(df)
         else:
@@ -152,7 +156,12 @@ class ATLXDataManager(DataManager):
 
         asp = _df[self.aspcol].apply(lambda w: int32(self.asp_idx[w])).values.tolist()
 
-        lx = _df['TOKENS'].apply(lambda x: [self.lx_idx.get(w, 0) for w in x]).values
+        use_2nd_lex = kwargs.get('use_second_lexicon', False)
+        if use_2nd_lex:
+            lx = _df['TOKENS'].apply(lambda x: [self.test_lx_idx.get(w, 0) for w in x]).values
+            print('Using second lexicon.')
+        else:
+            lx = _df['TOKENS'].apply(lambda x: [self.lx_idx.get(w, 0) for w in x]).values
         lx = pad_sequences(lx, maxlen=self.max_seq_len, padding='post', truncating='post')
         lx = [lx[:, i].astype('int32') for i in range(lx.shape[1])]
 

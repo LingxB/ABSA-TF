@@ -1,0 +1,974 @@
+ASP,CLS,SENT,PRED,P-1,P0,P+1,T/F
+food,1,the bread is top notch as well .,1,0.010784431360661983,0.015720222145318985,0.9734953045845032,True
+service,1,i have to say they have one of the fastest delivery times in the city .,1,0.01177529338747263,0.15781421959400177,0.8304104804992676,True
+food,1,food is always fresh and hot- ready to eat !,1,0.0028920709155499935,0.0018503385363146663,0.995257556438446,True
+food,1,did i mention that the coffee is outstanding ?,1,0.34430593252182007,0.10586120933294296,0.5498328804969788,True
+ambience,1,"certainly not the best sushi in new york , however , it is always fresh , and the place is very clean , sterile .",1,0.020804451778531075,0.0057294853031635284,0.9734660387039185,True
+miscellaneous,1,"i trust the people at go sushi , it never disappoints .",1,0.3831925690174103,0.1079646572470665,0.5088428258895874,True
+food,1,"straight-forward , no surprises , very decent japanese food .",1,0.11692889779806137,0.06719385832548141,0.8158773183822632,True
+food,1,"best spicy tuna roll , great asian salad .",1,0.005296307150274515,0.006002300884574652,0.988701343536377,True
+food,1,try the rose roll ( not on menu ) .,1,0.2733377516269684,0.1545514464378357,0.5721108317375183,True
+food,1,"i love the drinks , esp lychee martini , and the food is also very good .",1,0.0014649489894509315,0.0020751485135406256,0.9964599013328552,True
+food,-1,"in fact , this was not a nicoise salad and was barely eatable .",-1,0.8350370526313782,0.021180005744099617,0.1437828540802002,True
+food,1,"while there 's a decent menu , it should n't take ten minutes to get your drinks and 45 for a dessert pizza .",1,0.19626058638095856,0.026168130338191986,0.7775713205337524,True
+service,-1,"while there 's a decent menu , it should n't take ten minutes to get your drinks and 45 for a dessert pizza .",1,0.3433452546596527,0.023570755496621132,0.6330840587615967,False
+food,1,"once we sailed , the top-notch food and live entertainment sold us on a unforgettable evening .",1,0.0026718920562416315,0.009909982793033123,0.9874181747436523,True
+ambience,1,"once we sailed , the top-notch food and live entertainment sold us on a unforgettable evening .",1,0.004078749567270279,0.015470398589968681,0.9804508686065674,True
+service,-1,our waiter was horrible ; so rude and disinterested .,-1,0.9819814562797546,0.007492381613701582,0.010526123456656933,True
+food,-1,the sangria 's - watered down .,-1,0.49107787013053894,0.11929772794246674,0.38962429761886597,True
+food,-1,"menu - uneventful , small .",1,0.4170449674129486,0.1379358470439911,0.4450191855430603,False
+food,1,anytime and everytime i find myself in the neighborhood i will go to sushi rose for fresh sushi and great portions all at a reasonable price .,1,0.0015366618754342198,0.00192118005361408,0.9965421557426453,True
+price,1,anytime and everytime i find myself in the neighborhood i will go to sushi rose for fresh sushi and great portions all at a reasonable price .,1,0.004389842972159386,0.005231768824160099,0.9903783798217773,True
+food,1,great food but the service was dreadful !,1,0.2131962776184082,0.005113451741635799,0.7816902995109558,True
+service,-1,great food but the service was dreadful !,1,0.3126868009567261,0.003963538445532322,0.683349609375,False
+food,0,the portions of the food that came out were mediocre .,-1,0.9164466261863708,0.040625669062137604,0.04292776435613632,False
+service,-1,the two waitress 's looked like they had been sucking on lemons .,-1,0.7519000768661499,0.033037349581718445,0.21506252884864807,True
+service,1,"from the beginning , we were met by friendly staff memebers , and the convienent parking at chelsea piers made it easy for us to get to the boat .",1,0.05949268490076065,0.005865859799087048,0.9346414804458618,True
+miscellaneous,1,"from the beginning , we were met by friendly staff memebers , and the convienent parking at chelsea piers made it easy for us to get to the boat .",1,0.09756936132907867,0.004887604154646397,0.8975430727005005,True
+food,1,we enjoyed ourselves thoroughly and will be going back for the desserts ... .,1,0.006804225035011768,0.0032401110511273146,0.9899556636810303,True
+miscellaneous,1,we enjoyed ourselves thoroughly and will be going back for the desserts ... .,1,0.007293065078556538,0.0029742452315986156,0.9897326827049255,True
+food,1,desserts are almost incredible : my personal favorite is their tart of the day .,1,0.03212781623005867,0.008847637102007866,0.9590245485305786,True
+miscellaneous,1,i am surprised at the lower reviews because it is definitely better than other places i have tried with higher ratings .,1,0.3026235103607178,0.2127426266670227,0.4846339225769043,True
+miscellaneous,1,maybe the secret was that we went on a sunday night and everything was great .,1,0.008763154968619347,0.11128212511539459,0.8799546957015991,True
+food,1,"the food was extremely tasty , creatively presented and the wine excellent .",1,0.0037656715139746666,0.0021263882517814636,0.9941079616546631,True
+miscellaneous,0,we ended up in little italy in late afternoon .,0,0.02978910133242607,0.8804407715797424,0.08977014571428299,True
+miscellaneous,1,we were pleasantly surprised with our choice .,1,0.07230616360902786,0.041183412075042725,0.8865103721618652,True
+food,1,the lasagna was probably the best i have tasted .,1,0.02152780257165432,0.015034304931759834,0.9634378552436829,True
+food,1,harumi sushi has the freshest and most delicious array of sushi in nyc .,1,0.0005462091648951173,0.002612318377941847,0.9968414306640625,True
+food,1,"i highly recommend it for not just its superb cuisine , but also for its friendly owners and staff .",1,0.002707881387323141,0.002191597130149603,0.9951005578041077,True
+service,1,"i highly recommend it for not just its superb cuisine , but also for its friendly owners and staff .",1,0.004148395732045174,0.008998741395771503,0.9868529438972473,True
+food,1,"if you 're craving some serious indian food and desire a cozy ambiance , this is quite and exquisite choice .",1,0.018632594496011734,0.014222737401723862,0.9671447277069092,True
+ambience,1,"if you 're craving some serious indian food and desire a cozy ambiance , this is quite and exquisite choice .",1,0.017600063234567642,0.004461938049644232,0.9779379367828369,True
+food,1,i definitely enjoyed the food as well .,1,0.0036104489117860794,0.010201985016465187,0.9861875772476196,True
+miscellaneous,1,have always had a great time here .,1,0.01885826699435711,0.02050643600523472,0.9606353640556335,True
+ambience,1,"it was pleasantly uncrowded , the service was delightful , the garden adorable , the food ( from appetizers to entrees ) was delectable .",1,0.005189955234527588,0.0011427189456298947,0.9936673045158386,True
+service,1,"it was pleasantly uncrowded , the service was delightful , the garden adorable , the food ( from appetizers to entrees ) was delectable .",1,0.0012742355465888977,0.0007490298012271523,0.9979767203330994,True
+food,1,"it was pleasantly uncrowded , the service was delightful , the garden adorable , the food ( from appetizers to entrees ) was delectable .",1,0.001308508450165391,0.0009481738088652492,0.9977433681488037,True
+miscellaneous,1,you will be very happy with the experience .,1,0.00862912554293871,0.003707127645611763,0.9876636862754822,True
+food,1,"the food is surprisingly good , and the decor is nice .",1,0.01242615096271038,0.004791489336639643,0.9827824234962463,True
+ambience,1,"the food is surprisingly good , and the decor is nice .",1,0.00716728949919343,0.002872797194868326,0.9899598360061646,True
+food,-1,how pretentious and inappropriate for mj grill to claim that it provides power lunch and dinners !,-1,0.7167999744415283,0.01311289519071579,0.2700871527194977,True
+food,-1,two wasted steaks -- what a crime !,-1,0.840973436832428,0.05241192504763603,0.1066146045923233,True
+service,-1,the staff should be a bit more friendly .,1,0.11526448279619217,0.01466373074799776,0.8700717687606812,False
+miscellaneous,1,i absolutely suggest this place .,1,0.15014013648033142,0.08132122457027435,0.7685385942459106,True
+food,1,i think the meatball parm is good .,1,0.0035771443508565426,0.038373928517103195,0.9580488801002502,True
+food,1,"if you want good tasting , well seasoned latin food eat at cabana and you ca n't go wrong .",1,0.02027517929673195,0.012417824938893318,0.9673069715499878,True
+food,1,definitely try the taglierini with truffles - it was incredible .,1,0.018499037250876427,0.007971079088747501,0.9735298752784729,True
+service,1,"also , the staff is very attentive and really personable .",1,0.0025290062185376883,0.0014521211851388216,0.9960188269615173,True
+miscellaneous,1,"overall , this is a great new restaurant that has been consistently good every time i have been .",1,0.0124461455270648,0.005532426759600639,0.9820214509963989,True
+food,1,the gnocchi literally melts in your mouth !,1,0.07912733405828476,0.013415493071079254,0.9074572324752808,True
+service,1,had a great experience at trio ... staff was pleasant ; food was tasty and large in portion size - i would highly recommend the portobello/gorgonzola/sausage appetizer and the lobster risotto .,1,0.0017733097774907947,0.0014363755472004414,0.99679034948349,True
+food,1,had a great experience at trio ... staff was pleasant ; food was tasty and large in portion size - i would highly recommend the portobello/gorgonzola/sausage appetizer and the lobster risotto .,1,0.0024591218680143356,0.0009065755875781178,0.996634304523468,True
+food,0,"entrees include classics like lasagna , fettuccine alfredo and chicken parmigiana .",1,0.007888423278927803,0.06545151770114899,0.9266600608825684,False
+food,1,"the food is good , the teriyaki i recommend .",1,0.003964181058108807,0.024835381656885147,0.9712004661560059,True
+food,-1,meal was very expensive for what you get .,1,0.4847407639026642,0.01783272996544838,0.4974265396595001,False
+price,-1,meal was very expensive for what you get .,-1,0.5894317626953125,0.027961276471614838,0.38260701298713684,True
+food,1,try the peanut butter sorbet and the pizza with soy cheese !,0,0.08712213486433029,0.4807174503803253,0.43216046690940857,False
+food,1,"good food at the right price , what more can you ask for .",1,0.13447828590869904,0.07907415181398392,0.7864475250244141,True
+price,1,"good food at the right price , what more can you ask for .",1,0.3288194537162781,0.1130635067820549,0.5581170916557312,True
+miscellaneous,1,"we love it , and took buses and cabs to get there .",1,0.021629611030220985,0.026848088949918747,0.9515222907066345,True
+miscellaneous,1,"if you ' re in new york , you do not want to miss this place .",1,0.12327181547880173,0.11818394064903259,0.7585443258285522,True
+food,1,"the food is top notch , the service is attentive , and the atmosphere is great .",1,0.006932861637324095,0.006499520968645811,0.9865676164627075,True
+service,1,"the food is top notch , the service is attentive , and the atmosphere is great .",1,0.002774999476969242,0.001746783615089953,0.9954782128334045,True
+ambience,1,"the food is top notch , the service is attentive , and the atmosphere is great .",1,0.004330058582127094,0.001528501627035439,0.9941413998603821,True
+miscellaneous,1,"i 've been coming here on and off for the past five years and i have to say that la lanterna has never , ever dissapointed me .",1,0.3766695261001587,0.0949956476688385,0.5283347964286804,True
+food,1,"great food , great waitstaff , great atmosphere , and best of all great beer !",1,0.00207213475368917,0.0009236116311512887,0.9970042109489441,True
+service,1,"great food , great waitstaff , great atmosphere , and best of all great beer !",1,0.0018633013824000955,0.0009017355623655021,0.9972350001335144,True
+ambience,1,"great food , great waitstaff , great atmosphere , and best of all great beer !",1,0.00460417103022337,0.0018484455067664385,0.9935473799705505,True
+food,1,this is still one of my most favorite restaurants in the area the food is inexpensive but very good ( kimono shrimp special was excellent ) and has a great atmosphere .,1,0.014191653579473495,0.004466771148145199,0.9813416004180908,True
+price,1,this is still one of my most favorite restaurants in the area the food is inexpensive but very good ( kimono shrimp special was excellent ) and has a great atmosphere .,1,0.014064581133425236,0.006014589220285416,0.9799208045005798,True
+ambience,1,this is still one of my most favorite restaurants in the area the food is inexpensive but very good ( kimono shrimp special was excellent ) and has a great atmosphere .,1,0.010745787061750889,0.0010039014741778374,0.9882503747940063,True
+miscellaneous,1,"my husband and i moved to nolita 6 years ago and for as long as we have lived here , peasant has been our favorite !",1,0.001965263858437538,0.053818363696336746,0.9442163705825806,True
+miscellaneous,1,the whole experience was satisfying .,1,0.03208927437663078,0.010214393958449364,0.9576963782310486,True
+miscellaneous,1,"however , it was worth the visit .",1,0.4328763782978058,0.07880986481904984,0.4883136749267578,True
+food,1,the menu is interesting and quite reasonably priced .,1,0.04036794975399971,0.014744153246283531,0.9448878765106201,True
+price,1,the menu is interesting and quite reasonably priced .,1,0.026060232892632484,0.015367181971669197,0.9585726261138916,True
+food,1,the food was delicious and clearly fresh ingredients were used .,1,0.021776622161269188,0.007477387320250273,0.9707459807395935,True
+food,-1,this made it obvious that the food was n't cooked fresh ; it was obviously made before hand and then reheated .,-1,0.8336215615272522,0.0026318614836782217,0.16374656558036804,True
+food,1,appetizer are excellent here ; you can make a great ( and inexpensive ) meal out of them .,1,0.015647757798433304,0.004236116539686918,0.9801161289215088,True
+price,1,appetizer are excellent here ; you can make a great ( and inexpensive ) meal out of them .,1,0.0041531906463205814,0.0012031892547383904,0.9946435689926147,True
+food,1,the spicy mussels are a highlight .,1,0.028851527720689774,0.031634263694286346,0.9395142793655396,True
+food,1,also get the onion rings -- best we 've ever had .,1,0.01580416038632393,0.005496496334671974,0.9786993265151978,True
+price,-1,would not return for the amount we paid .,-1,0.7416940331459045,0.03421822190284729,0.22408774495124817,True
+food,-1,"however , being foodies , we were utterly disappointed with the food .",1,0.38474589586257935,0.02794211357831955,0.5873119831085205,False
+food,1,"huge portions , great and attentive service , and pretty good prices .",1,0.0034795377869158983,0.0010824069613590837,0.9954380393028259,True
+service,1,"huge portions , great and attentive service , and pretty good prices .",1,0.016850842162966728,0.002673029899597168,0.9804761409759521,True
+price,1,"huge portions , great and attentive service , and pretty good prices .",1,0.010792768560349941,0.003624160075560212,0.9855830669403076,True
+service,-1,i was highly disappointed by their service and food .,1,0.4214964210987091,0.03850332275032997,0.5400002598762512,False
+food,-1,i was highly disappointed by their service and food .,1,0.4669339060783386,0.04153567925095558,0.4915304481983185,False
+service,-1,"i complained to the waiter and then to the manager , but the intensity of rudeness from them just went up .",-1,0.9812812209129333,0.004385594744235277,0.014333163388073444,True
+food,1,the food is great and the milkshakes are even better !,1,0.004716157913208008,0.0022885275539010763,0.9929953217506409,True
+ambience,-1,stay away if you 're claustrophobic,-1,0.6090254187583923,0.03054211102426052,0.3604324758052826,True
+miscellaneous,1,"if you 're in the 'hood , definitely stop in .",1,0.20885194838047028,0.07404953241348267,0.7170984745025635,True
+food,1,the mushroom barley soup is amazing .,1,0.00337694538757205,0.012976055964827538,0.9836469292640686,True
+miscellaneous,0,"on the recommendation of a friend , i checked out arezzo with my wife .",0,0.003170629730448127,0.7933468222618103,0.20348256826400757,True
+food,1,"i 'm glad i did as the food was very good and the staff was friendly , courteous and efficient .",1,0.0021012171637266874,0.001405139802955091,0.9964936375617981,True
+service,1,"i 'm glad i did as the food was very good and the staff was friendly , courteous and efficient .",1,0.0030352717731148005,0.0017082876292988658,0.9952563643455505,True
+food,1,their duck here is also absolutely delicious .,1,0.008023126982152462,0.003945798613131046,0.9880310893058777,True
+miscellaneous,1,this is definitely one of the places that i have continued to come back to over the years .,1,0.10243391990661621,0.010474071837961674,0.8870919942855835,True
+ambience,-1,"while it was large and a bit noisy , the drinks were fantastic , and the food was superb .",1,0.09224912524223328,0.003611320862546563,0.9041395783424377,False
+food,1,"while it was large and a bit noisy , the drinks were fantastic , and the food was superb .",1,0.050925228744745255,0.002011560369282961,0.9470632672309875,True
+food,-1,one caveat : some of the curried casseroles can be a trifle harsh .,-1,0.8604215979576111,0.016776006668806076,0.12280238419771194,True
+food,-1,i was n't impressed and it was n't spicey ? ? ? ?,-1,0.9347609877586365,0.008653386496007442,0.056585654616355896,True
+food,1,the food was almost always excellent .,1,0.015375329181551933,0.008578352630138397,0.9760463833808899,True
+food,1,i was pleasently surprised at the taste .,1,0.29958245158195496,0.058001209050416946,0.6424163579940796,True
+food,1,"a nice space , as long as it does n't get too crowded and a singleminded devotion to its chosen cuisine make mare a great choice for seafood lovers .",1,0.020281461998820305,0.004654788412153721,0.9750637412071228,True
+food,0,i never had an orange donut before so i gave it a shot .,-1,0.5641888380050659,0.044271353632211685,0.3915398120880127,False
+ambience,1,"they really provide a relaxing , laid-back atmosphere .",1,0.002511316444724798,0.002476457739248872,0.9950122237205505,True
+food,-1,this particular location certainly uses substandard meats .,-1,0.8527772426605225,0.06928161531686783,0.07794108241796494,True
+miscellaneous,0,i stumbled upon this resteraunt on my way home from the subway .,1,0.3120925724506378,0.22182857990264893,0.46607881784439087,False
+service,-1,the management was less than accomodating .,1,0.45296427607536316,0.03493786230683327,0.5120978355407715,False
+ambience,1,the ambience is also more laid-back and relaxed .,1,0.0028359342832118273,0.007094401400536299,0.9900696873664856,True
+food,1,the teas are great and all the sweets are homemade .,1,0.0014283983036875725,0.00451390165835619,0.9940576553344727,True
+food,1,mojitos and the service are the best part in there,1,0.006439066492021084,0.0023546668235212564,0.9912062287330627,True
+service,1,mojitos and the service are the best part in there,1,0.011432867497205734,0.0031618440989404917,0.9854052662849426,True
+food,1,"sandwiches , burgers and salads , like the lemon-dressed cobb , are classic successes .",1,0.0026349162217229605,0.005081894341856241,0.9922831654548645,True
+miscellaneous,1,this restaurant is absolutely beautiful .,1,0.01696278713643551,0.0075950417667627335,0.9754422307014465,True
+ambience,1,the design is very intimate and romantic .,1,0.008254111744463444,0.03063199669122696,0.9611139297485352,True
+food,1,the food was wonderful and imaginative .,1,0.0022776208352297544,0.004346123896539211,0.9933763146400452,True
+service,1,the staff is very sharp and they look good too .,1,0.036642760038375854,0.0037523156497627497,0.9596049189567566,True
+food,-1,the worst though was the taste .,-1,0.9518182873725891,0.01156193483620882,0.03661978989839554,True
+food,-1,"they were dry , stale and pretty flavorless .",-1,0.985908567905426,0.004329799674451351,0.009761616587638855,True
+food,-1,the fajita we tried was tasteless and burned and the mole sauce was way too sweet .,-1,0.9461479187011719,0.001946538919582963,0.0519055500626564,True
+food,1,stay with the roasted chickens and you 'll be fine .,1,0.003630515420809388,0.020673280581831932,0.9756962656974792,True
+ambience,1,"the atmosphere is warm , comfortable , artsy and sexy .",1,0.0034476814325898886,0.008447565138339996,0.9881047606468201,True
+food,1,"the food is great ( big selection , reasonable prices ) and the drinks are really good .",1,0.007968555204570293,0.0020389629062265158,0.9899924397468567,True
+price,1,"the food is great ( big selection , reasonable prices ) and the drinks are really good .",1,0.018877863883972168,0.0037725665606558323,0.977349579334259,True
+food,1,the steak melted in my mouth .,-1,0.4513355791568756,0.17769943177700043,0.37096500396728516,False
+price,1,"most importantly , it is reasonably priced .",1,0.0289433803409338,0.0068260300904512405,0.9642306566238403,True
+food,1,"the selection of food is excellent ( i 'm not used to having much choice at restaurants ) , and the atmosphere is great .",1,0.14030583202838898,0.024488264694809914,0.8352059125900269,True
+ambience,1,"the selection of food is excellent ( i 'm not used to having much choice at restaurants ) , and the atmosphere is great .",1,0.12353459000587463,0.024862121790647507,0.8516032695770264,True
+food,-1,"only suggestion is that you skip the dessert , it was overpriced and fell short on taste .",-1,0.8964699506759644,0.01103625725954771,0.09249381721019745,True
+price,-1,"only suggestion is that you skip the dessert , it was overpriced and fell short on taste .",-1,0.8839712738990784,0.00952313281595707,0.10650553554296494,True
+food,1,"food was decent , but not great .",1,0.14396001398563385,0.057940468192100525,0.7980995178222656,True
+miscellaneous,1,i have no idea why this restaurant is so often overlooked .,-1,0.5970472097396851,0.11412495374679565,0.2888278365135193,False
+miscellaneous,1,"from the moment you walk in , you feel like you 're in the perfect place .",1,0.119967021048069,0.014105205424129963,0.8659278154373169,True
+food,-1,i dont know what some people who rave about this hot dog are talking about .,0,0.04466569051146507,0.4790544807910919,0.4762798547744751,False
+food,1,it is a hidden delight complete with a quaint bar and good food .,1,0.0029042051173746586,0.005658550187945366,0.9914372563362122,True
+ambience,1,it is a hidden delight complete with a quaint bar and good food .,1,0.0030834535136818886,0.011114797554910183,0.9858017563819885,True
+miscellaneous,1,"i find that most kosher restaurants are average to good , but this has been the best i 've eaten so far .",1,0.023814141750335693,0.11996512115001678,0.8562207818031311,True
+service,-1,the waiters always look angry and even ignore their high-tipping regulars .,-1,0.6208992004394531,0.013364570215344429,0.3657362759113312,True
+ambience,1,"the atmosphere is very nice , and a welcome escape from the rest of the si mall .",1,0.01708734594285488,0.011361759155988693,0.9715508222579956,True
+price,-1,"yes , they 're a bit more expensive then typical , but then again , so is their food .",-1,0.7519152760505676,0.06069784611463547,0.1873868852853775,True
+food,1,"yes , they 're a bit more expensive then typical , but then again , so is their food .",-1,0.6773357391357422,0.08496007323265076,0.23770420253276825,False
+miscellaneous,-1,"not terrible , but not the restaurant in the reviews of 2002 .",-1,0.8605719804763794,0.02945597842335701,0.10997205972671509,True
+food,1,"i can say that the wraps , burgers and salads were all fresh , tasty and the mango margareta at $ 9 was well worth the money .",1,0.0036513933446258307,0.0010693810181692243,0.9952791929244995,True
+price,1,"i can say that the wraps , burgers and salads were all fresh , tasty and the mango margareta at $ 9 was well worth the money .",1,0.006015536841005087,0.0017860600491985679,0.9921984076499939,True
+food,1,it was delicious and large !,1,0.008844529278576374,0.003675188170745969,0.9874802231788635,True
+price,1,"anywhere else , the prices would be 3x as high !",1,0.4108061194419861,0.016919583082199097,0.5722743272781372,True
+service,1,the service we experienced was friendly and good .,1,0.004532426595687866,0.004608660005033016,0.9908589720726013,True
+ambience,-1,the folding chair i was seated at was uncomfortable .,-1,0.9669688940048218,0.006303694099187851,0.02672732248902321,True
+miscellaneous,-1,as we waited i watched 3 seperate groups of diners discuss how dissapointed they also were .,-1,0.5649009346961975,0.3139893710613251,0.12110966444015503,True
+miscellaneous,1,an excellent choice in midtown .,1,0.010276633314788342,0.01616925746202469,0.9735541343688965,True
+service,1,service was among the best i have ever had in nyc .,1,0.0017693951958790421,0.005708127282559872,0.9925224184989929,True
+food,1,the fettucino alfredo was amazing .,1,0.015865683555603027,0.01877150684595108,0.9653627872467041,True
+food,1,the food was very good and i was pleasantly surprised to see so many vegan options .,1,0.03100569173693657,0.009001923725008965,0.9599923491477966,True
+food,-1,i know real indian food and this was n't it .,1,0.11858626455068588,0.308063805103302,0.5733500123023987,False
+food,1,"be sure to try the smoked trout ... lamb chops , veal chops , rabbit , the potato gratin , on and on and on ...",1,0.0008754194714128971,0.0028443497139960527,0.9962802529335022,True
+food,1,"even when the chef is not in the house , the food and service are right on target .",1,0.3123232424259186,0.1336112916469574,0.554065465927124,True
+service,1,"even when the chef is not in the house , the food and service are right on target .",1,0.39711806178092957,0.05791619420051575,0.5449657440185547,True
+food,1,everything from the eggs benedict to the mussels and even the hamburger were done well and very tasty .,1,0.006892579607665539,0.0018056087428703904,0.9913017749786377,True
+service,1,"the waiters were very professional , courteous and attentive .",1,0.0040279836393892765,0.0075509860180318356,0.9884210824966431,True
+miscellaneous,1,my boyfriend and i went here last night and loved it !,1,0.008817973546683788,0.015892544761300087,0.9752894639968872,True
+food,1,"i highly reccomend the grand marnier shrimp , it 's insanely good .",1,0.004758985713124275,0.008082258515059948,0.9871587753295898,True
+food,1,"we been there and we really enjoy the food , was areally great food , and the service was really good .",1,0.004315609112381935,0.003938750363886356,0.99174565076828,True
+service,1,"we been there and we really enjoy the food , was areally great food , and the service was really good .",1,0.004529068246483803,0.002459476934745908,0.9930114150047302,True
+food,0,desserts include flan and sopaipillas .,1,0.36324045062065125,0.2439059168100357,0.39285361766815186,False
+food,-1,i was starving and the small portions were driving me crazy !,-1,0.905284583568573,0.04173900559544563,0.05297631770372391,True
+service,-1,the wait staff was loud and inconsiderate .,-1,0.9796513915061951,0.003923262469470501,0.016425328329205513,True
+food,-1,"however , the food and service and dramatically lacking .",-1,0.8995267748832703,0.025334900245070457,0.07513824105262756,True
+service,-1,"however , the food and service and dramatically lacking .",-1,0.778060793876648,0.037951886653900146,0.1839873045682907,True
+food,-1,the sushi is cut in blocks bigger than my cell phone .,0,0.4412069022655487,0.5212846398353577,0.03750844672322273,False
+service,1,"the service is great , my soup always arrives nice and hot .",1,0.003875056281685829,0.0033846453297883272,0.9927403330802917,True
+food,1,"the service is great , my soup always arrives nice and hot .",1,0.006933057680726051,0.0017713606357574463,0.991295576095581,True
+food,1,it had been awhile and i forgot just how delicious crepes can be .,1,0.003048767801374197,0.005980947520583868,0.990970253944397,True
+food,1,montparnasse 's desserts -- especially the silken creme brulee and paper-thin apple tart -- are good enough on their own to make the restaurant worth the trip .,1,0.10076809674501419,0.004262751899659634,0.89496910572052,True
+miscellaneous,0,my friend told me about this restaurant for a year before he finally took me this weekend .,1,0.2913171052932739,0.21711674332618713,0.49156609177589417,False
+food,1,i had a delicious shrimp creole .,0,0.022484777495265007,0.4932648539543152,0.4842503070831299,False
+food,1,the chicken dinner was real good .,1,0.020214561372995377,0.05834734067320824,0.9214380383491516,True
+food,-1,beware of the chili signed food items not unless you want to call the fire department to douse the flames in your mouth .,-1,0.7071194052696228,0.008445239625871181,0.2844353914260864,True
+ambience,0,the decor is designed in a contemporary japanese style restaurant .,0,0.028001435101032257,0.5531914234161377,0.41880714893341064,True
+food,1,but the food was delicious .,1,0.01978107914328575,0.0206720232963562,0.9595468640327454,True
+food,1,"try the ribs , sizzling beef and couple it with coconut rice .",1,0.013276191428303719,0.02456427738070488,0.9621595144271851,True
+price,-1,the only drawback is that it 's a little pricey .,-1,0.7708916664123535,0.052379999309778214,0.17672833800315857,True
+miscellaneous,1,everything about this place was wonderful .,1,0.019546614959836006,0.01919461600482464,0.9612587690353394,True
+food,1,the avocado salad is a personal fave .,1,0.00766168674454093,0.0226009301841259,0.9697373509407043,True
+food,1,"and , the honey bbq rib tips are yummy !",1,0.002542349277064204,0.004620294086635113,0.9928373694419861,True
+food,1,the best chinese food uptown !,1,0.009816697798669338,0.06897955387830734,0.9212036728858948,True
+service,1,service is known for bending over backwards to make everyone happy .,1,0.060826510190963745,0.02922607958316803,0.9099474549293518,True
+service,1,the staff is very friendly .,1,0.0041735814884305,0.0034516246523708105,0.992374837398529,True
+service,1,waiters are very friendly and the pasta is out of this world .,1,0.008214188739657402,0.004350997041910887,0.9874348044395447,True
+food,1,waiters are very friendly and the pasta is out of this world .,1,0.0067418417893350124,0.0024769725278019905,0.9907811284065247,True
+food,1,great wine list and great cocktail menu .,1,0.0038065509870648384,0.004412712994962931,0.991780698299408,True
+food,1,the crab cakes are delicious and the bbq rib was perfect .,1,0.0015908204950392246,0.0021054858807474375,0.9963036775588989,True
+food,1,"the food is wonderful , artfully done and simply delicious .",1,0.0030238281469792128,0.003449536394327879,0.9935266971588135,True
+service,1,tiny restaurant with very fast service .,1,0.07523538917303085,0.119188591837883,0.8055760264396667,True
+ambience,0,tiny restaurant with very fast service .,1,0.058001160621643066,0.0911974310874939,0.8508013486862183,False
+service,1,my husband and i have been there at least 6 times and we 've always been given the highest service and often free desserts .,1,0.0551304928958416,0.05927286669611931,0.8855966329574585,True
+price,1,my husband and i have been there at least 6 times and we 've always been given the highest service and often free desserts .,1,0.06088675186038017,0.08002439141273499,0.8590888977050781,True
+ambience,1,"a beautiful atmosphere , perfect for drinks and/or appetizers .",1,0.00386697961948812,0.005981323774904013,0.9901517033576965,True
+miscellaneous,0,curioni 's pizza has been around since the 1920 's .,0,0.09964467585086823,0.614576518535614,0.28577879071235657,True
+food,1,they make the best pizza in new jersey .,1,0.006419965531677008,0.008807339705526829,0.9847726821899414,True
+miscellaneous,0,i recently visited over this past summer after being away for a year .,-1,0.7089362144470215,0.09886713325977325,0.19219669699668884,False
+service,1,"what a difference , the service was very comforting and the food was better than average , but what really standed out was such a dynamic and extensive beer list .",1,0.18502837419509888,0.02920535020530224,0.7857662439346313,True
+food,1,"what a difference , the service was very comforting and the food was better than average , but what really standed out was such a dynamic and extensive beer list .",1,0.18840345740318298,0.033252179622650146,0.7783443927764893,True
+food,-1,"frankly , the chinese food here is something i can make better at home .",0,0.3567386865615845,0.38817521929740906,0.2550860643386841,False
+service,-1,there was only one waiter for the whole restaurant upstairs .,-1,0.573870062828064,0.2353813797235489,0.19074852764606476,True
+food,0,we started with the scallops and asparagus and also had the soft shell crab as well as the cheese plate .,1,0.01091760117560625,0.017537156119942665,0.9715452194213867,False
+service,1,"not to be overlooked , the service is excellent .",1,0.18009354174137115,0.012853376567363739,0.8070530891418457,True
+food,-1,this without question is one of the worst hotdogs i have ever had .,-1,0.7800173163414001,0.016986018046736717,0.20299670100212097,True
+service,1,"the staff is unbelievably friendly , and i dream about their saag gosht ... so good .",1,0.000982966972514987,0.0021076009143143892,0.9969094395637512,True
+food,1,"the staff is unbelievably friendly , and i dream about their saag gosht ... so good .",1,0.0021088160574436188,0.0016937025357037783,0.9961974620819092,True
+food,1,i also recommend the garlic knots .,1,0.012690164148807526,0.1434059888124466,0.8439037799835205,True
+food,1,best indian food i have ever eaten .,1,0.006328626070171595,0.03146655112504959,0.9622047543525696,True
+miscellaneous,1,you wo n't be dissapointed .,-1,0.6840967535972595,0.04157804325222969,0.2743252217769623,False
+food,1,this place has the best pizza .,1,0.029336677864193916,0.01937955431640148,0.9512838125228882,True
+miscellaneous,1,culinaria is a welcome addition to the garment district- far better than any restaurant in the area .,1,0.04049419239163399,0.10108652710914612,0.8584192991256714,True
+ambience,-1,the music which is sometimes a little too heavy for my taste .,-1,0.5716273784637451,0.13290546834468842,0.2954671382904053,True
+service,1,the service is excellent and always informative without an air .,1,0.010663134045898914,0.005613985471427441,0.9837228655815125,True
+service,1,the owner and staff go to great lengths to make you feel comfortable .,1,0.051165442913770676,0.0029216911643743515,0.9459128975868225,True
+ambience,-1,i ca n't stand this dungeon .,-1,0.5902827382087708,0.044218722730875015,0.3654986023902893,True
+food,1,the sushi is always fresh and yummy and the menu is pretty varied .,1,0.0019225485157221556,0.001994574209675193,0.9960829019546509,True
+food,1,"the food was great - sushi was good , but the cooked food amazed us .",1,0.0017888961592689157,0.0024525250773876905,0.995758593082428,True
+food,1,their dinner specials are fantastic .,1,0.006703496444970369,0.014809276908636093,0.9784871935844421,True
+food,1,delish and made to your liking !,1,0.009378524497151375,0.002892045769840479,0.9877293705940247,True
+food,1,"great food , great drinks , nice dining atmosphere .",1,0.0030133004765957594,0.009695379063487053,0.9872913956642151,True
+ambience,1,"great food , great drinks , nice dining atmosphere .",1,0.0021347689907997847,0.0023740336764603853,0.9954912066459656,True
+price,-1,"for the price you pay for the food here , you 'd expect it to be at least on par with other japanese restaurants .",1,0.3902134299278259,0.20315557718276978,0.4066310226917267,False
+food,-1,"for the price you pay for the food here , you 'd expect it to be at least on par with other japanese restaurants .",1,0.339804470539093,0.20949891209602356,0.4506966769695282,False
+food,-1,food portion was small and below average .,-1,0.7562382817268372,0.21908025443553925,0.024681473150849342,True
+miscellaneous,-1,do yourself a favor and avoid this place at all cost !,-1,0.8596919178962708,0.010757709853351116,0.12955045700073242,True
+miscellaneous,1,since the first time i came here i 've been hooked .,1,0.016039133071899414,0.28547370433807373,0.6984871625900269,True
+ambience,1,sit back in one of those comfortable chairs .,1,0.07909569144248962,0.011267384514212608,0.909636914730072,True
+miscellaneous,1,"people in the neighborhood seem to love it , too .",1,0.0374143160879612,0.16596099734306335,0.7966247200965881,True
+miscellaneous,-1,"in conclusion , this place sucks ! ! !",1,0.060016702860593796,0.003730796743184328,0.9362524747848511,False
+food,1,my favs here are the tacos pastor and the tostada de tinga ...,1,0.03050433099269867,0.33191895484924316,0.637576699256897,True
+miscellaneous,1,"nick stef 's is one of the only places worthy of going in the area , so if you happen to be by madison square garden or herald 's square check it out !",1,0.06020601466298103,0.12211396545171738,0.8176800012588501,True
+miscellaneous,-1,have to tell you : not at all impressed .,1,0.33381012082099915,0.06885778158903122,0.5973320603370667,False
+service,1,"the bartenders and the managers are really nice and the decor is very comfy and laid-back , all the while being trendy .",1,0.021408291533589363,0.0015960503369569778,0.9769957065582275,True
+ambience,1,"the bartenders and the managers are really nice and the decor is very comfy and laid-back , all the while being trendy .",1,0.010682430118322372,0.0007194381323643029,0.988598108291626,True
+food,1,"for a savory take on the soup and sandwich meal , try the hot and sour soup .",1,0.00884876400232315,0.009937349706888199,0.9812139272689819,True
+food,1,"this bar has it all - great drinks , cool atmosphere , excellent service and delicious food .",1,0.003817513817921281,0.0051623135805130005,0.991020143032074,True
+ambience,1,"this bar has it all - great drinks , cool atmosphere , excellent service and delicious food .",1,0.0026437300257384777,0.001311297994107008,0.996044933795929,True
+service,1,"this bar has it all - great drinks , cool atmosphere , excellent service and delicious food .",1,0.0016966006951406598,0.0009151662816293538,0.9973883032798767,True
+food,1,"also , the chick peas with shrimp ( appetizer ) is divine .",1,0.0038686455227434635,0.11617307364940643,0.8799582719802856,True
+service,-1,"finally , i got sick of the bad service , obnoxious smirks , and snotty back talk .",-1,0.9299732446670532,0.0038257017731666565,0.06620099395513535,True
+miscellaneous,1,how have i never been to agave before ?,-1,0.6342930197715759,0.23315976560115814,0.13254715502262115,False
+food,1,we ordered lamb which was perfectly cooked and tasted awesome .,1,0.0013887578388676047,0.002608510432764888,0.996002733707428,True
+food,1,i especially like their soft shell crab sandwich with fries .,1,0.021284539252519608,0.014386245980858803,0.964329183101654,True
+food,1,"if you 're looking for authentic hong kong-style food , look no further .",1,0.10791648924350739,0.12361451238393784,0.7684690356254578,True
+miscellaneous,0,my wife i lived on the west side and found this while visiting firends on the ues .,0,0.006944466382265091,0.518308699131012,0.47474685311317444,True
+food,1,good food good wine that 's it .,1,0.007324472535401583,0.017301736399531364,0.9753738045692444,True
+miscellaneous,1,a nice find in the neighborhood .,1,0.002813518512994051,0.03270906209945679,0.9644774198532104,True
+service,1,the staff was extremely friendly and pleasant .,1,0.013914710842072964,0.0056769768707454205,0.9804083108901978,True
+service,-1,"and as soon as one person is done , she asked to pick up the plate immediately .",1,0.19268818199634552,0.025112923234701157,0.7821989059448242,False
+miscellaneous,0,"this place is italian , not french .",1,0.14714084565639496,0.10464277118444443,0.7482163310050964,False
+miscellaneous,0,"after so many great reviews here , my bf and i went to esca to celebrate my birthday last nite .",1,0.003760164137929678,0.17331917583942413,0.8229206800460815,False
+food,1,"while their kitchen food is delicious , their sushi is out of this world .",1,0.009262009523808956,0.014529349282383919,0.9762086868286133,True
+ambience,-1,"there was a heat problem to boot , so it was about 40 degrees in the restaurant -- we had to request to uncheck our coats !",-1,0.896537184715271,0.09322204440832138,0.010240782983601093,True
+service,1,"everything is scrumptious , from the excellent service by cute waitresses , to the extremely lush atmosphere .",1,0.0021214496809989214,0.0009462404996156693,0.9969322681427002,True
+ambience,1,"everything is scrumptious , from the excellent service by cute waitresses , to the extremely lush atmosphere .",1,0.0029229167848825455,0.0007074601599015296,0.9963696002960205,True
+food,1,"it 's traditional , simple italian food .",0,0.017586084082722664,0.5500706434249878,0.4323432147502899,False
+miscellaneous,0,my girlfriend and i just spent our 10 month anniversary at lou lou .,1,0.07379486411809921,0.3483433723449707,0.5778617858886719,False
+food,1,"the food is all-around good , with the rolls usually excellent and the sushi/sashimi not quite on the same level .",1,0.004571245517581701,0.0026368366088718176,0.9927918910980225,True
+food,-1,( the sashimi is cut a little thinly .,-1,0.6492675542831421,0.2546268105506897,0.09610569477081299,True
+miscellaneous,1,"bay terrace mall is nothing ( ok , almost nothing ) without it !",1,0.26915764808654785,0.27475905418395996,0.4560832977294922,True
+price,-1,could have had better for 1/3 the price in chinatown .,1,0.298961877822876,0.12088243663311005,0.5801556706428528,False
+miscellaneous,1,my husband and i had a blast .,1,0.0351734384894371,0.4626193642616272,0.5022071599960327,True
+miscellaneous,-1,personally i say save your money .,1,0.24169939756393433,0.05156916379928589,0.7067314386367798,False
+food,1,"in addition to great hot dogs , dotp has wonderful breakfast sandwiches that feature , in addition to great things like tator tots and english muffins , a delicious nj-based pork product know to us jersey girls and boys as taylor ham .",1,0.0026227422058582306,0.002037032973021269,0.9953402280807495,True
+miscellaneous,1,"believe me , they live up to the name .",0,0.03455611318349838,0.6795762777328491,0.2858675718307495,False
+service,-1,"well , it happened because of a graceless manager and a rude bartender who had us waiting 20 minutes for drinks , and then tells us to chill out .",-1,0.872931957244873,0.008464704267680645,0.11860338598489761,True
+service,1,"not only is the service great , but forming conversation around a table is so easy beacuse the atmosphere can be both romantic and comfortable .",1,0.07903532683849335,0.009167374111711979,0.911797285079956,True
+ambience,1,"not only is the service great , but forming conversation around a table is so easy beacuse the atmosphere can be both romantic and comfortable .",1,0.05377384275197983,0.00802542082965374,0.9382006525993347,True
+food,-1,"when the dish arrived it was blazing with green chillis , definitely not edible by a human .",1,0.42721155285835266,0.03328350558876991,0.539504885673523,False
+service,-1,the absolute worst service i 've ever experienced and the food was below average ( when they actually gave people the meals they ordered ) .,-1,0.8658164143562317,0.009187695570290089,0.12499579042196274,True
+food,-1,the absolute worst service i 've ever experienced and the food was below average ( when they actually gave people the meals they ordered ) .,-1,0.8961983323097229,0.012856769375503063,0.09094495326280594,True
+price,0,it 's about $ 7 for lunch and they have take-out or dine-in .,-1,0.5690635442733765,0.3896613121032715,0.04127516224980354,False
+service,0,it 's about $ 7 for lunch and they have take-out or dine-in .,-1,0.5430907011032104,0.4100345969200134,0.04687468335032463,False
+miscellaneous,1,they are by far the best past in new york .,1,0.0225896667689085,0.2529379427433014,0.7244724035263062,True
+miscellaneous,0,i have eaten here several times before attending an afternoon performance .,0,0.08069124817848206,0.7134782671928406,0.2058304101228714,True
+price,1,everything is very cheap .,1,0.06394653022289276,0.06937328726053238,0.8666802048683167,True
+food,1,be sure to accompany your food with one of their fresh juice concoctions .,1,0.004111021291464567,0.00618903199210763,0.9896999597549438,True
+food,1,the food is great and the prices are reasonable .,1,0.0070818690583109856,0.007210435811430216,0.985707700252533,True
+price,1,the food is great and the prices are reasonable .,1,0.02182968705892563,0.011342938058078289,0.9668273329734802,True
+ambience,1,"the place is clean , and if you like soul food , then this is the place to be !",1,0.0708535760641098,0.004870696924626827,0.9242756962776184,True
+food,1,"the place is clean , and if you like soul food , then this is the place to be !",1,0.029426248744130135,0.003871025750413537,0.9667026996612549,True
+miscellaneous,0,you 'll see a lot of people eating there after church .,0,0.10265188664197922,0.5059850215911865,0.3913630545139313,True
+food,0,i had roast chicken and a salad .,1,0.0751134380698204,0.31212180852890015,0.6127647757530212,False
+miscellaneous,0,i 've been a regular customer at juice generation for the last 3 months - my office moved to the film center on ninth avenue and they are on the next block .,0,0.08277680724859238,0.5223014950752258,0.3949217200279236,True
+food,1,they have a very good chicken with avocado and good tuna as well .,1,0.0020738074090331793,0.0045071919448673725,0.9934189915657043,True
+miscellaneous,1,it 's the kind of place i like to support !,1,0.06137101352214813,0.040991317480802536,0.897637665271759,True
+food,-1,but the meals were terrible .,-1,0.9374851584434509,0.012083807960152626,0.050430942326784134,True
+food,-1,my chicken was completely dried out and on the cold side and the sauce was not very flavorful .,-1,0.9623321294784546,0.0022177458740770817,0.03545005992054939,True
+food,1,malted milk ball gelato - have you ever in your life heard of anything so ridiculously wonderful ?,1,0.013626812025904655,0.0016384596237912774,0.9847347736358643,True
+miscellaneous,1,just walk by the window and see all the unbiased positive reviews in all the major nyc publications .,1,0.0186440609395504,0.3359723389148712,0.6453835964202881,True
+price,-1,way too much money for such a terrible meal .,-1,0.7801733016967773,0.018015194684267044,0.2018115222454071,True
+food,-1,way too much money for such a terrible meal .,-1,0.857495129108429,0.02816527895629406,0.11433960497379303,True
+miscellaneous,-1,would not recommend anyone to go .,1,0.3773498833179474,0.07430342584848404,0.5483466982841492,False
+service,-1,"however , the service is absolutely horrible .",-1,0.6771300435066223,0.009315787814557552,0.31355422735214233,True
+service,-1,a con was the slow bar service .,0,0.19629651308059692,0.5533776879310608,0.2503258287906647,False
+food,1,dessert was also to die for !,-1,0.66904616355896,0.0662522166967392,0.26470160484313965,False
+service,1,"btw , the service is very good .",1,0.01551080122590065,0.022421950474381447,0.9620672464370728,True
+miscellaneous,1,we loved it and will go back !,1,0.014738666824996471,0.004274208564311266,0.9809870719909668,True
+miscellaneous,1,i came again weeks later with my boyfriend and again had a very nice experience .,1,0.008690610527992249,0.016302447766065598,0.9750069975852966,True
+food,0,it 's eaten with black vinegar and shredded ginger .,1,0.13520140945911407,0.25848233699798584,0.6063162088394165,False
+ambience,-1,"the unattractive lighting made me want to gag , the food was overpriced , there was the most awful disco pop duo performing-and my escargot looked like it might crawl off the plate .",-1,0.9575767517089844,0.002340779872611165,0.04008248448371887,True
+price,-1,"the unattractive lighting made me want to gag , the food was overpriced , there was the most awful disco pop duo performing-and my escargot looked like it might crawl off the plate .",-1,0.9263145327568054,0.003772380528971553,0.0699130967259407,True
+food,-1,"the unattractive lighting made me want to gag , the food was overpriced , there was the most awful disco pop duo performing-and my escargot looked like it might crawl off the plate .",-1,0.9008045196533203,0.009555898606777191,0.08963960409164429,True
+miscellaneous,1,we 'll definitly be back again !,1,0.05535481125116348,0.009547753259539604,0.9350974559783936,True
+miscellaneous,1,this is the best italian restaurant in the city .,1,0.005658851470798254,0.0307295098900795,0.9636116027832031,True
+ambience,1,it is a cozy place to go with a couple of friends .,1,0.0010393643751740456,0.11214414238929749,0.8868164420127869,True
+service,1,"the service is always great , and the owner walks around to make sure you enjoy .",1,0.0024232834111899137,0.0013767642667517066,0.996199905872345,True
+service,-1,because the waiters need severe attitue adjustments .,-1,0.9127771258354187,0.0544324666261673,0.0327904187142849,True
+miscellaneous,0,"there are numerous shavue restaurants in la , but few out here .",0,0.01918218843638897,0.726830244064331,0.2539876401424408,True
+miscellaneous,-1,horrible experience - stay away !,-1,0.8956682085990906,0.006386326160281897,0.0979454517364502,True
+miscellaneous,1,"if this restaurant was in manhattan , i would definitely go more often .",1,0.3608070909976959,0.06360533088445663,0.5755875110626221,True
+food,1,the food is delicious and highly recommended .,1,0.004702392965555191,0.00498906010761857,0.9903085827827454,True
+service,-1,"when it came time to take the order the waiter gave us a hard time , walked away then came back with a paper and pen for us to write down what we wanted ... excuse me but is n't that his job ? ? ?",-1,0.9365692138671875,0.01801595278084278,0.04541482776403427,True
+miscellaneous,1,one of my fav spots in the city .,1,0.010319171473383904,0.018986307084560394,0.9706944823265076,True
+price,-1,"over priced , overrated ... .stay away !",-1,0.7732922434806824,0.011707300320267677,0.21500036120414734,True
+miscellaneous,-1,"over priced , overrated ... .stay away !",-1,0.8405203223228455,0.00886914599686861,0.15061059594154358,True
+miscellaneous,-1,do not go to this restaurant .,-1,0.769208550453186,0.06768912822008133,0.16310226917266846,True
+miscellaneous,0,"since i was in the neighborhood , we made sure to give this a try .",1,0.019502120092511177,0.17083002626895905,0.8096678853034973,False
+miscellaneous,1,all i can say is they are fantastic .,1,0.004271226469427347,0.006951435934752226,0.9887773394584656,True
+food,1,dieters stick to salads or indulge in vegetarian platters .,1,0.052511341869831085,0.45893341302871704,0.48855525255203247,True
+food,1,so for a filling and healthy meal give it a go .,1,0.007057016249746084,0.006741836201399565,0.9862011075019836,True
+miscellaneous,-1,i ca n't imagine how much worse it would have been if we 'd gone at a prime time !,-1,0.5916496515274048,0.03127405792474747,0.37707632780075073,True
+miscellaneous,1,i have dined at mammino several times now and each time it gets bettter .,1,0.05260385945439339,0.2069072425365448,0.7404889464378357,True
+miscellaneous,1,definitely something to come down and check out .,1,0.07004443556070328,0.17320705950260162,0.7567484974861145,True
+miscellaneous,0,"since i cook for a living , i 'm very fussy about the food i eat in restaurants .",0,0.002267868723720312,0.5639283061027527,0.433803915977478,True
+service,1,the service was outstanding .,1,0.029581574723124504,0.026981739327311516,0.9434366822242737,True
+miscellaneous,0,i went for restaurant week .,0,0.03488724306225777,0.9211454391479492,0.043967355042696,True
+miscellaneous,0,my friends and i stop here for pizza before hitting the kips bay movie theater .,1,0.00583328353241086,0.36728760600090027,0.626879096031189,False
+food,1,we always enjoy the pizza .,1,0.008488825522363186,0.020794373005628586,0.9707167744636536,True
+service,1,the service is pretty good .,1,0.03940948471426964,0.019716428592801094,0.9408741593360901,True
+miscellaneous,1,i went there with a few friends and will return .,1,0.011011557653546333,0.46454107761383057,0.5244473218917847,True
+miscellaneous,0,this place has been around for a few years .,-1,0.4087075889110565,0.3011161983013153,0.2901762127876282,False
+food,1,"yum , the chicken is great here .",1,0.0018086478812620044,0.006545964162796736,0.9916453957557678,True
+miscellaneous,1,i highly recommend this restaurant ! !,1,0.015187336131930351,0.008304919116199017,0.9765077829360962,True
+miscellaneous,1,you will find everything about trio to your liking !,1,0.046542633324861526,0.04750961437821388,0.905947744846344,True
+miscellaneous,-1,this place was the worst .,-1,0.8931365013122559,0.023470884189009666,0.08339259773492813,True
+miscellaneous,0,i ordered from here last week .,0,0.2199796885251999,0.6005693674087524,0.1794508844614029,True
+miscellaneous,1,"this is a nice sushi restaurant in brooklyn that 's located on 86 street , right underneath the train station .",0,0.007459966465830803,0.6162915825843811,0.37624841928482056,False
+food,1,"the food here was great , a treat from beginning to end .",1,0.04550318419933319,0.0306868776679039,0.9238099455833435,True
+service,1,the host ( owner ) and servers are personable and caring .,1,0.002686545252799988,0.003994212485849857,0.9933192729949951,True
+miscellaneous,0,i decided to try out this place after hearing about it in many magazines .,1,0.05509938299655914,0.24290403723716736,0.7019966244697571,False
+food,1,"it 's just everything ... the food , the atmosphere ... the incrediby kind and gracious hostess .",1,0.0034143587108701468,0.005647056270390749,0.9909385442733765,True
+ambience,1,"it 's just everything ... the food , the atmosphere ... the incrediby kind and gracious hostess .",1,0.0017910487949848175,0.0018252396257594228,0.9963836669921875,True
+service,1,"it 's just everything ... the food , the atmosphere ... the incrediby kind and gracious hostess .",1,0.0061040958389639854,0.006469895131886005,0.9874260425567627,True
+miscellaneous,1,having moved i truly miss this place .,1,0.011829623952507973,0.02490914613008499,0.9632612466812134,True
+food,1,the food is very good and the service is great .,1,0.007607190404087305,0.0026601050049066544,0.9897326827049255,True
+service,1,the food is very good and the service is great .,1,0.0027366371359676123,0.0023625981993973255,0.9949007034301758,True
+food,0,i usually get one the vietnamese beef noodle soup .,0,0.14613944292068481,0.660780131816864,0.19308044016361237,True
+miscellaneous,1,"sum it : local investment bankers like it , try for yourself at least once .",0,0.2039038985967636,0.5809729695320129,0.21512308716773987,False
+miscellaneous,1,i started going to dosa hut more after that .,0,0.05278662592172623,0.7369431853294373,0.2102702409029007,False
+miscellaneous,-1,we were wondering why they were there to make our dining experience miserable ?,-1,0.9435771107673645,0.018476121127605438,0.03794670104980469,True
+food,1,"this place has the best indian food in new york , hands down .",1,0.004157980438321829,0.017410483211278915,0.9784315228462219,True
+service,1,the waiters are very friendly and helpful and if you frequent they will remember you .,1,0.06647934764623642,0.0026630517095327377,0.9308576583862305,True
+ambience,1,intimate but charming interior with extremely friendly and attentive service .,1,0.0023217559792101383,0.006387116387486458,0.9912911653518677,True
+service,1,intimate but charming interior with extremely friendly and attentive service .,1,0.0016937009058892727,0.004194903187453747,0.9941113591194153,True
+food,1,the food was as creative as the decor and both worked .,1,0.008180554024875164,0.008101390674710274,0.9837179780006409,True
+ambience,1,the food was as creative as the decor and both worked .,1,0.014401402324438095,0.010140230879187584,0.9754583239555359,True
+miscellaneous,1,siam square is fairly new to the neighborhood and i think in time will gain the recognition it deserves .,1,0.007452209014445543,0.18723662197589874,0.8053112030029297,True
+miscellaneous,1,my first experience at siam square was very pleasant .,1,0.011950123123824596,0.025499878451228142,0.9625500440597534,True
+miscellaneous,1,i have gone back to siam square many times since and everytime i am very satisfied overall .,1,0.01593727618455887,0.020584948360919952,0.9634777903556824,True
+food,1,"the menu is great , with a good selection , and everything that i have tried is absolutely delicious .",1,0.0009229587158188224,0.0031205490231513977,0.9959564805030823,True
+miscellaneous,1,we had our christmas party at dos caminos and it was wonderful .,1,0.0013933118898421526,0.008851611986756325,0.9897550940513611,True
+miscellaneous,1,my personal favorite is nick and joe 's .,1,0.014198742806911469,0.03207038715481758,0.9537309408187866,True
+food,1,the sauce is zesty and flavorful and the crust is nice and crispy .,1,0.002595155732706189,0.0014655430568382144,0.9959393739700317,True
+food,1,this place has the best sushi in the city .,1,0.005276614334434271,0.01804663985967636,0.9766767024993896,True
+food,1,they have an excellent selection ( the rolls with crab are really great ) .,1,0.004977217875421047,0.005433027166873217,0.9895897507667542,True
+service,1,"everyone who works there ( the host , the bartender , the servers ) is so helpful .",1,0.008676446974277496,0.019976679235696793,0.9713468551635742,True
+food,1,and the food is fantastic .,1,0.01680918037891388,0.01651071384549141,0.9666800498962402,True
+food,1,favourites include : potato spinach gnocchi and the lamb .,1,0.007669723127037287,0.04424406588077545,0.9480862021446228,True
+price,1,another great thing about glechik-everything is very cheap !,1,0.017405929043889046,0.010041900910437107,0.9725521802902222,True
+miscellaneous,-1,"unfortunately , we chose this spot for lunch as we had done a lot of walking and ended up at the south st seaport .",1,0.05450305715203285,0.17391692101955414,0.7715800404548645,False
+food,1,but regulars know that the sandwiches are the real star here .,1,0.02255617454648018,0.11673109233379364,0.8607127666473389,True
+food,1,the skillfully chosen portuguese cheese cart paired with quality port provides the perfect iberian ending .,1,0.006195317953824997,0.00830130372196436,0.9855034351348877,True
+food,1,my friend had a burger and i had these wonderful blueberry pancakes .,1,0.0035037577617913485,0.015195764601230621,0.9813004732131958,True
+food,1,we were so happy with our food and were even more thrilled when we saw the bill .,1,0.05283408239483833,0.0318308062851429,0.9153351187705994,True
+price,1,we were so happy with our food and were even more thrilled when we saw the bill .,1,0.039538510143756866,0.03168199583888054,0.9287794828414917,True
+miscellaneous,1,i would definitely come back to this restaurant .,1,0.11431223154067993,0.03368363156914711,0.8520041704177856,True
+miscellaneous,-1,the place just is n't ready for prime time .,1,0.33406680822372437,0.047446005046367645,0.6184871792793274,False
+food,1,"all toppings are so fresh you 'd think they had their own vegetable garden and the crust is so perfect , that one actually thinks of how it was made .",1,0.09651738405227661,0.005587675608694553,0.8978949785232544,True
+miscellaneous,1,quartino is my favoriate resturant in nyc .,1,0.004674607887864113,0.014612233266234398,0.9807131290435791,True
+service,1,we 've always gotten amazing service and we love the food .,1,0.005377178080379963,0.004624537657946348,0.9899982810020447,True
+food,1,we 've always gotten amazing service and we love the food .,1,0.002337538870051503,0.0028039084281772375,0.9948586225509644,True
+service,1,"the waitstaff is solicitous and friendly and always seems glad to see us , and the food is wonderful , if not stunningly creative .",1,0.014011656865477562,0.0028969612903892994,0.983091413974762,True
+food,1,"the waitstaff is solicitous and friendly and always seems glad to see us , and the food is wonderful , if not stunningly creative .",1,0.007032988127321005,0.000660815101582557,0.9923061728477478,True
+food,1,i 'm in love with the lobster ravioli !,1,0.002921486971899867,0.009434220381081104,0.9876442551612854,True
+service,1,my order is on my table even on a busy friday night within 10 minutes ( at the most ) of hanging up the phone .,-1,0.6358078122138977,0.16016796231269836,0.20402421057224274,False
+food,1,we came across this restaurant by accident while at a dumbo art festival and thoroughly enjoyed our meal .,1,0.0027716467157006264,0.015967104583978653,0.9812612533569336,True
+service,1,"service is excellent , no wait , and you get a lot for the price .",1,0.342435359954834,0.035421222448349,0.6221434473991394,True
+price,1,"service is excellent , no wait , and you get a lot for the price .",1,0.23995374143123627,0.03198736160993576,0.7280588746070862,True
+food,1,"service is excellent , no wait , and you get a lot for the price .",1,0.17989659309387207,0.05025167390704155,0.7698517441749573,True
+price,-1,i thought the food is n't cheap at all compared to chinatown .,0,0.11296317726373672,0.6374650597572327,0.24957171082496643,False
+miscellaneous,1,and you never get the feeling that you need to leave .,1,0.32021138072013855,0.024362675845623016,0.6554259657859802,True
+miscellaneous,0,we did n't know if we should order a drink or leave ?,-1,0.9075523614883423,0.030460240319371223,0.06198744848370552,False
+miscellaneous,1,great neighbhorhood spot .,1,0.012851910665631294,0.02042989246547222,0.9667181968688965,True
+miscellaneous,1,bobb v 's is a great place to take your friends and family !,1,0.0027015232481062412,0.008443376049399376,0.9888550639152527,True
+price,1,") it 's not the best japanese restaurant in the east village , but it 's a pretty solid one for its modest prices , and worth repeat visits .",1,0.22828426957130432,0.11220331490039825,0.6595124006271362,True
+food,1,the food is so good and so popular that waiting can really be a nightmare .,1,0.29116320610046387,0.022972121834754944,0.6858646869659424,True
+service,-1,the food is so good and so popular that waiting can really be a nightmare .,1,0.15203449130058289,0.01864604279398918,0.8293194770812988,False
+miscellaneous,1,"here 's the thing , you 're in the best city in the world for restaurants .",1,0.03491348773241043,0.047267746180295944,0.9178187251091003,True
+miscellaneous,0,go spend your money somewhere that really wows you .,1,0.3846721053123474,0.03367770090699196,0.5816501975059509,False
+miscellaneous,1,this is a real gem of a place .,1,0.023061279207468033,0.04595021530985832,0.9309885501861572,True
+miscellaneous,1,i think this a a wonderful place .,1,0.015934864059090614,0.06420233845710754,0.9198628067970276,True
+ambience,1,first walking in the place seemed to have great ambience .,1,0.00708363763988018,0.008566666394472122,0.9843496680259705,True
+miscellaneous,0,i went to kitchenette this weekend for brunch .,0,0.015451058745384216,0.5996717810630798,0.38487720489501953,True
+miscellaneous,1,"this place does n't get the publicity that sylvias soul food restaurant does , but it should .",-1,0.7826829552650452,0.034888990223407745,0.1824280470609665,False
+miscellaneous,-1,just because p diddy had a party at butter does n't mean we should be automatically impressed .,-1,0.5899641513824463,0.0795615166425705,0.3304743766784668,True
+food,1,even for two very hungry people there is plenty of food left to be taken home ( it reheats really well also ) .,1,0.11948630213737488,0.08854655921459198,0.7919671535491943,True
+miscellaneous,1,"like i said , nick and joe 's may not be everyone 's favorite , but it 's mine .",1,0.10711284726858139,0.055754274129867554,0.8371328711509705,True
+service,1,the help was extremely nice and did not rush us .,1,0.4442169964313507,0.01299944706261158,0.5427836179733276,True
+food,-1,"then they somehow made a dry and burnt crust , around a raw and cold inside .",-1,0.9771355390548706,0.004354830831289291,0.0185096375644207,True
+food,1,"it 's just good food , nothing more and that 's all we want !",1,0.05173710361123085,0.04665176570415497,0.9016111493110657,True
+miscellaneous,1,do n't know what the others on the block were like but we were pleased with our choice .,1,0.3326207399368286,0.11357943713665009,0.5537998080253601,True
+food,-1,average cake thats been courted by a lot of hype .,-1,0.43123170733451843,0.30772891640663147,0.2610394060611725,True
+miscellaneous,1,it 's cute and simple and i loved it .,1,0.00360490451566875,0.00197407603263855,0.9944210648536682,True
+miscellaneous,1,my wife and i recently visited the bistro for dinner and had a wonderful experience .,1,0.001484895939938724,0.012414132244884968,0.986100971698761,True
+service,1,the service is perfect too nothing wrong in this italian/french restaurant,-1,0.5614022016525269,0.03064572997391224,0.4079519808292389,False
+miscellaneous,1,the service is perfect too nothing wrong in this italian/french restaurant,-1,0.6351972222328186,0.03479257598519325,0.33001014590263367,False
+miscellaneous,0,my fiance and i recently wanted to see the city and deceided to take a dinner cruise .,0,0.004619559273123741,0.5661910772323608,0.4291892945766449,True
+food,-1,the $ 72 delmonico steak had to be sent back because it was not cooked to order .,-1,0.9428293108940125,0.007806614972651005,0.049364008009433746,True
+price,-1,the $ 72 delmonico steak had to be sent back because it was not cooked to order .,-1,0.9440887570381165,0.006354110781103373,0.04955711215734482,True
+food,-1,everytime i go there i ca n't pick anything to eat and not because the menu is filled with great things to eat .,1,0.027936214581131935,0.030693931505084038,0.9413698315620422,False
+price,1,half a chicken with a mountain of rice and beans for $ 6.25 .,0,0.012732441537082195,0.5696396827697754,0.41762787103652954,False
+service,1,"the service is really fast and friendly , and the value is great .",1,0.0031001477036625147,0.0026400417555123568,0.9942598342895508,True
+price,1,"the service is really fast and friendly , and the value is great .",1,0.0024816226214170456,0.004558614920824766,0.9929596781730652,True
+food,1,we were very impressed with the food and value .,1,0.011643726378679276,0.009932606481015682,0.9784236550331116,True
+price,1,we were very impressed with the food and value .,1,0.011061635799705982,0.020039215683937073,0.9688991904258728,True
+food,1,you must try the garlic soup !,1,0.02420259453356266,0.021666351705789566,0.9541310667991638,True
+food,1,"casablanca servces delicious falafel , tabouleh , humus and other mediterranean delights , which are all very inexpensive .",1,0.003274680580943823,0.008037514053285122,0.9886878132820129,True
+price,1,"casablanca servces delicious falafel , tabouleh , humus and other mediterranean delights , which are all very inexpensive .",1,0.0047223628498613834,0.003997127525508404,0.9912804961204529,True
+food,1,"the pizza 's are made fresh , crispy , and ready to serve .",1,0.0038794600404798985,0.004714312497526407,0.9914062023162842,True
+miscellaneous,1,"there are many french bistros in the midtown area , and i wholheartedly recommend this one .",1,0.00572985177859664,0.030482664704322815,0.9637874960899353,True
+service,1,staff is accomodating make sure you are satified .,1,0.03186045587062836,0.009334081783890724,0.9588054418563843,True
+food,1,chef waldy 's always measures up .,1,0.08848375082015991,0.2224113643169403,0.6891049146652222,True
+miscellaneous,1,this diamond in the ruff is definitely worth my 10-minute walk from the 6 train .,1,0.19213441014289856,0.026505062356591225,0.7813605070114136,True
+miscellaneous,1,"being a vegan myself , i 've made a point of trying all the vegan restaurants in manhattan -- and zen palate is easily my favorite .",1,0.0035343400668352842,0.06632674485445023,0.930138885974884,True
+miscellaneous,1,don pedro 's is one of my favorite restaurants .,0,0.047026000916957855,0.739018976688385,0.21395505964756012,False
+price,1,reasonably priced with very fresh sushi .,1,0.006190996617078781,0.007546484004706144,0.9862625598907471,True
+food,1,reasonably priced with very fresh sushi .,1,0.006972672417759895,0.014792348258197308,0.9782350063323975,True
+food,1,go for the seafood paella for two .,1,0.02590162679553032,0.2576095759868622,0.7164888381958008,True
+food,1,all of the apetizers are good and the sangria is very good .,1,0.002859387779608369,0.003114607185125351,0.9940259456634521,True
+miscellaneous,1,cantinetta is a real treasure in a see of mediocre italian restaurants .,1,0.09230311214923859,0.1881365180015564,0.719560444355011,True
+service,1,"the one positive thing i can say is that the service was prompt , we got seated right away and the server was very friendly .",1,0.018404413014650345,0.010474320501089096,0.9711213111877441,True
+service,1,the staff greeted me warmly at the door and i was seated promptly and the food was excellent .,1,0.005457388702780008,0.00035625798045657575,0.994186282157898,True
+food,1,the staff greeted me warmly at the door and i was seated promptly and the food was excellent .,1,0.00941678136587143,0.0017656541895121336,0.988817572593689,True
+miscellaneous,0,whether one pizza place is better than another is often very subjective .,-1,0.5133708715438843,0.07279384136199951,0.4138352870941162,False
+miscellaneous,1,really nice restaurant to go with a group or on a date .,1,0.04159391671419144,0.34306520223617554,0.6153408288955688,True
+service,1,service is usually pretty good .,1,0.0857662782073021,0.04173392057418823,0.8724997639656067,True
+service,-1,host and hostess was quite rude .,-1,0.887473464012146,0.02707156166434288,0.08545494824647903,True
+miscellaneous,-1,you will not be missing anything .,-1,0.8087531328201294,0.046445563435554504,0.14480134844779968,True
+miscellaneous,0,i discovered applebees when i went away to college in va .,0,0.01817975379526615,0.7322068214416504,0.24961340427398682,True
+service,1,"the wait staff is very friendly , if your not rude or picky ... ... .our meal at leon last weekend was great - .",1,0.28580671548843384,0.006739187985658646,0.7074540853500366,True
+food,1,"the wait staff is very friendly , if your not rude or picky ... ... .our meal at leon last weekend was great - .",1,0.27702823281288147,0.004661118146032095,0.7183106541633606,True
+food,1,i recommend any of their salmon dishes ... ...,1,0.015910716727375984,0.35358962416648865,0.6304996013641357,True
+food,1,the foie gras was sweet and luscious .,1,0.005015522241592407,0.002544374205172062,0.9924401044845581,True
+food,0,"the menu , which changes seasonally , shows both regional and international influences .",0,0.010030461475253105,0.9117583632469177,0.0782112404704094,True
+food,1,but their mac cheese was yummy !,1,0.009244583547115326,0.0067403134889900684,0.9840151071548462,True
+food,1,their brunch menu had something for everyone .,1,0.061308201402425766,0.27938300371170044,0.6593087315559387,True
+ambience,1,jazz singer had a nice voice + she made us all get up to dance to shake some cals to eat some more .,1,0.0027143105398863554,0.14688104391098022,0.8504046201705933,True
+miscellaneous,-1,"i often find myself with time to kill in times square , which is a shame since i do n't love this area .",1,0.2738175094127655,0.1788356453180313,0.547346830368042,False
+service,1,they have very quick service which is great when you do n't have much time .,1,0.23124191164970398,0.015603061765432358,0.753154993057251,True
+food,0,"the food is average : breakfast food , soups , salads , sandwiches , etc .",1,0.01949179731309414,0.047259461134672165,0.93324875831604,False
+food,-1,i was highly disappointed by the food .,-1,0.46906834840774536,0.11845724284648895,0.4124744236469269,True
+food,-1,"the banana pudding they serve has never seen an oven , the crabcakes are way over salted and do n't get me started on the very greasy mac and cheese .",-1,0.6243231296539307,0.0022700512781739235,0.3734067678451538,True
+service,-1,"the staff is arrogant , the prices are way high for brooklyn .",1,0.42303720116615295,0.025894716382026672,0.5510680675506592,False
+price,-1,"the staff is arrogant , the prices are way high for brooklyn .",-1,0.53927081823349,0.03037629835307598,0.43035295605659485,True
+miscellaneous,-1,this place is average ... at best .,1,0.24436098337173462,0.11309850215911865,0.6425405144691467,False
+service,1,the service is prompt friendly .,1,0.005622408352792263,0.015335243195295334,0.9790423512458801,True
+miscellaneous,1,whatever the reason it is definitely the place to be .,1,0.372915118932724,0.0413040965795517,0.5857807993888855,True
+food,1,this is literally a hot spot when it comes to the food .,1,0.14548011124134064,0.022511189803481102,0.8320087194442749,True
+ambience,1,the downstairs bar scene is very cool and chill ...,1,0.01709171012043953,0.016925862058997154,0.9659824371337891,True
+food,1,"the food was definitely good , but when all was said and done , i just could n't justify it for the price ( including 2 drinks , $ 100/person ) ...",-1,0.5570586919784546,0.028346925973892212,0.4145943522453308,False
+price,-1,"the food was definitely good , but when all was said and done , i just could n't justify it for the price ( including 2 drinks , $ 100/person ) ...",-1,0.5342538952827454,0.061114102602005005,0.40463200211524963,True
+miscellaneous,1,i 've come here for casual lunches as well as for a friend 's birthday and i always enjoy myself .,1,0.002109815599396825,0.09072095900774002,0.9071691632270813,True
+food,1,if you are a tequila fan you will not be disappointed .,-1,0.5567573308944702,0.01739264465868473,0.4258500635623932,False
+food,1,"great beer selection too , something like 50 beers .",1,0.019999176263809204,0.01919783465564251,0.9608030319213867,True
+miscellaneous,0,"after reading the great reviews , i invited a die-hard downtown friend of mine to join me at taste .",1,0.0024879518896341324,0.49128592014312744,0.506226122379303,False
+service,-1,not to sound too negative but be wary of the delivary .,-1,0.836390495300293,0.06037658080458641,0.10323292016983032,True
+miscellaneous,1,feels like family when we go there .,1,0.08607859909534454,0.24367636442184448,0.6702449917793274,True
+food,1,"i found the food to be just as good as its owner , da silvano , just much less expensive .",-1,0.5517222285270691,0.07692931592464447,0.37134844064712524,False
+price,1,"i found the food to be just as good as its owner , da silvano , just much less expensive .",1,0.38851603865623474,0.06438597291707993,0.5470979809761047,True
+service,1,"i found the food to be just as good as its owner , da silvano , just much less expensive .",1,0.4397294521331787,0.0698235034942627,0.49044710397720337,True
+food,1,they have homemade pastas of all kinds -- i recommend the gnocchi -- yum !,1,0.000897735299076885,0.004408424254506826,0.9946938157081604,True
+food,-1,"my vegetable risotto was burnt , and infused totally in a burnt flavor .",-1,0.5120786428451538,0.005730910692363977,0.48219045996665955,True
+miscellaneous,1,what a pleasant surprise !,1,0.011133082211017609,0.022288139909505844,0.9665788412094116,True
+price,1,the main draw of this place is the price .,1,0.24582266807556152,0.11472134292125702,0.639456033706665,True
+service,-1,how can hope to stay in business with service like this ?,1,0.1569032073020935,0.0664062425494194,0.7766905426979065,False
+food,1,"but dinner here is never disappointing , even if the prices are a bit over the top .",-1,0.5085363984107971,0.03558653965592384,0.4558771252632141,False
+price,-1,"but dinner here is never disappointing , even if the prices are a bit over the top .",-1,0.8339745402336121,0.018206434324383736,0.14781899750232697,True
+food,1,"not only did they have amazing , sandwiches , soup , pizza etc , but their homemade sorbets are out of this world !",1,0.04390691593289375,0.0016831279499456286,0.9544099569320679,True
+food,1,"the homemade guacamole , the unbelievable entree , and thee most amazing deserts .",1,0.002069623675197363,0.0014337552711367607,0.9964966177940369,True
+food,1,the sushi is reasonably priced and fresh .,1,0.011553600430488586,0.013853448443114758,0.974592924118042,True
+price,1,the sushi is reasonably priced and fresh .,1,0.00649171182885766,0.011235964484512806,0.9822723865509033,True
+food,1,"it 's no-fuss , fast and delicious .",1,0.002097525168210268,0.001790801528841257,0.9961116909980774,True
+service,1,"it 's no-fuss , fast and delicious .",1,0.003002836834639311,0.003704484784975648,0.9932926893234253,True
+ambience,1,"it 's no-fuss , fast and delicious .",1,0.003429369768127799,0.006435933988541365,0.9901346564292908,True
+food,1,save room for deserts - they 're to die for .,-1,0.700912594795227,0.026668645441532135,0.272418737411499,False
+food,1,best things to order are from the grill ( churrasco and ribs ) .,1,0.05865122377872467,0.11125431209802628,0.8300943970680237,True
+food,1,the traditional italian items are great - cheap and served in a cozy setting .,1,0.005213971249759197,0.0030515380203723907,0.991734504699707,True
+price,1,the traditional italian items are great - cheap and served in a cozy setting .,1,0.005145028233528137,0.0041338372975587845,0.9907211065292358,True
+ambience,1,the traditional italian items are great - cheap and served in a cozy setting .,1,0.0064259967766702175,0.0050986954011023045,0.9884753227233887,True
+food,1,whether your choose the iced blended mocha or the hot white mocha you are sure to be extremely happy .,1,0.254641056060791,0.003655940992757678,0.7417029738426208,True
+miscellaneous,0,last tuesday for a late lunch with a friend .,0,0.023679634556174278,0.8740844130516052,0.10223602503538132,True
+food,1,it was delish and i did n't feel bad eating it .,1,0.41307544708251953,0.021526040509343147,0.5653985142707825,True
+service,-1,another friend had to ask 3 times for parmesan cheese .,0,0.020004451274871826,0.8747702836990356,0.10522525757551193,False
+service,-1,"our waitress had apparently never tried any of the food , and there was no one to recommend any wine .",-1,0.8042896389961243,0.02368422970175743,0.1720261126756668,True
+service,-1,"the service was a bit slow and the portions are a bit small so if you are hungry and in a rush , this is not the place for you .",-1,0.7514388561248779,0.03306502848863602,0.21549615263938904,True
+food,-1,"the service was a bit slow and the portions are a bit small so if you are hungry and in a rush , this is not the place for you .",-1,0.5220279693603516,0.08279070258140564,0.3951813876628876,True
+miscellaneous,-1,"the service was a bit slow and the portions are a bit small so if you are hungry and in a rush , this is not the place for you .",-1,0.4922935962677002,0.04138956964015961,0.466316819190979,True
+miscellaneous,1,"no doubt the next time we want to go out for a special occasion or are entertaining guests from out of town , spirit and bateaux will be our destination .",1,0.09322212636470795,0.03171658515930176,0.8750612735748291,True
+miscellaneous,-1,i would recommend jewel bako if you want to feel like you were kicked in the groin and had to pay for it too .,1,0.25066572427749634,0.020660419017076492,0.7286738157272339,False
+miscellaneous,-1,"the ambiance was pretty cool , but not worth the hassle .",-1,0.5358264446258545,0.017368145287036896,0.4468054175376892,True
+service,-1,the unfortunate lady next to us thought she had ordered a salad ( including asking for salad dressing ) and was instead given a quesedilla .,-1,0.963355302810669,0.011610605753958225,0.025034045800566673,True
+food,1,"el nidos one of the best restaurants in new york which i 've ever been to , has a great variety of tasty , mouth watering pizza 's .",1,0.0008283264469355345,0.008820895105600357,0.9903507828712463,True
+miscellaneous,1,"el nidos one of the best restaurants in new york which i 've ever been to , has a great variety of tasty , mouth watering pizza 's .",1,0.0007511576404795051,0.0024986015632748604,0.9967502355575562,True
+service,-1,"the service was pretty poor all around , the food was well below average relative to the cost , and outside there is a crazy bum who harasses every customer who leaves the place .",-1,0.7809140086174011,0.005446939263492823,0.21363909542560577,True
+food,-1,"the service was pretty poor all around , the food was well below average relative to the cost , and outside there is a crazy bum who harasses every customer who leaves the place .",-1,0.8017389178276062,0.006744798738509417,0.19151625037193298,True
+price,-1,"the service was pretty poor all around , the food was well below average relative to the cost , and outside there is a crazy bum who harasses every customer who leaves the place .",-1,0.8319682478904724,0.004288965370506048,0.163742795586586,True
+miscellaneous,-1,"the service was pretty poor all around , the food was well below average relative to the cost , and outside there is a crazy bum who harasses every customer who leaves the place .",-1,0.8435261845588684,0.004445867612957954,0.15202799439430237,True
+food,1,although i moved uptown i try to stop in as often as possible for the great cheap food and to pay the friendly staff a visit .,1,0.0042501999996602535,0.002584669506177306,0.9931650757789612,True
+price,1,although i moved uptown i try to stop in as often as possible for the great cheap food and to pay the friendly staff a visit .,1,0.004323202185332775,0.013439470902085304,0.9822372794151306,True
+service,1,although i moved uptown i try to stop in as often as possible for the great cheap food and to pay the friendly staff a visit .,1,0.0041818940080702305,0.013597063720226288,0.9822210669517517,True
+miscellaneous,0,i had to wait for my friend at the bar for a few minutes,0,0.07907413691282272,0.7529482245445251,0.1679777204990387,True
+food,1,"chef vincenzo , always there if you need him , is a real talent and a real roman .",1,0.004866740200668573,0.015459435060620308,0.9796738028526306,True
+food,1,"if you 're looking to taste some great indian food and want good service , definitely visit curry leaf .",1,0.014566033147275448,0.0028964588418602943,0.982537567615509,True
+service,1,"if you 're looking to taste some great indian food and want good service , definitely visit curry leaf .",1,0.015438742935657501,0.007535362150520086,0.9770259261131287,True
+food,1,"you must try odessa stew or rabbit stew ; salads-all good ; and kompot is soo refreshing during the hot summer day ( they make it the way my mom does , reminds me of home a lot ) .",1,0.0764809101819992,0.0040359278209507465,0.9194831848144531,True
+miscellaneous,1,"you must try odessa stew or rabbit stew ; salads-all good ; and kompot is soo refreshing during the hot summer day ( they make it the way my mom does , reminds me of home a lot ) .",1,0.05467269569635391,0.0032684942707419395,0.942058801651001,True
+food,1,my daughter and i left feeling satisfied ( not stuffed ) and it felt good to know we had a healthy lunch .,1,0.0072401235811412334,0.0025730524212121964,0.9901868104934692,True
+miscellaneous,1,i 'm almost tempted to give this place a bad review so i can keep the crowds away ... been going there on and off for a year now and it 's really my fave hang out in the city .,1,0.269360214471817,0.08857326209545135,0.6420665383338928,True
+service,0,"when she complained , the waitress said , sorry .",-1,0.9611086249351501,0.028256647288799286,0.010634667240083218,False
+food,-1,the quality of the meat was on par with your local grocery store .,1,0.15341824293136597,0.06853005290031433,0.7780516743659973,False
+food,1,they specialize in smoothies and fresh juices .,1,0.009156466461718082,0.013093649409711361,0.9777498841285706,True
+food,-1,"it first came well done , and i politely sent it back .",1,0.02552119642496109,0.09293965995311737,0.8815391063690186,False
+food,1,"i recommend the black roasted codfish , it was the best dish of the evening .",1,0.004446776118129492,0.015048293396830559,0.9805049300193787,True
+service,-1,the manager then told us we could order from whatever menu we wanted but by that time we were so annoyed with the waiter and the resturant that we let and went some place else .,-1,0.5752997398376465,0.06804505735635757,0.3566552400588989,True
+miscellaneous,-1,the manager then told us we could order from whatever menu we wanted but by that time we were so annoyed with the waiter and the resturant that we let and went some place else .,1,0.44147995114326477,0.08940864354372025,0.4691114127635956,False
+food,-1,"in mi burrito , here was nothing but dark chicken that had that cooked last week and just warmed up in a microwave taste .",-1,0.7427526116371155,0.17710962891578674,0.08013767749071121,True
+miscellaneous,0,"during busy hrs , i recommend that you make a reservation .",1,0.11340565234422684,0.1824912428855896,0.7041030526161194,False
+miscellaneous,-1,do n't waste your time or your money .,-1,0.8172722458839417,0.0200919471681118,0.16263580322265625,True
+miscellaneous,1,it was a very warm experience .,1,0.019408201798796654,0.01441196445375681,0.9661798477172852,True
+miscellaneous,1,i went to common stock for brunch and i was so impressed .,1,0.013214229606091976,0.15715812146663666,0.8296276926994324,True
+food,0,"now called nikki sushi , sushi is ok .",0,0.0038409410044550896,0.9589815735816956,0.03717752546072006,True
+food,1,the food is also outstanding and is served quite quickly .,1,0.007321961689740419,0.0020846326369792223,0.9905933737754822,True
+service,1,the food is also outstanding and is served quite quickly .,1,0.007120190653949976,0.007146408781409264,0.9857333898544312,True
+miscellaneous,1,i just have nothing to say about this place that is negative except that it 's not a cheap night out ... but it 's so worth it .,-1,0.5017713904380798,0.1386437714099884,0.359584778547287,False
+food,1,"from the erbazzone emiliana to the mostarda on the cheese plate , the dishes at this restaurant are all handled with delicate care .",1,0.17251849174499512,0.03667004778981209,0.7908114790916443,True
+food,1,the food is delicious and the bar has a great vibe .,1,0.0013819949235767126,0.0032200475689023733,0.9953979849815369,True
+ambience,1,the food is delicious and the bar has a great vibe .,1,0.0012949168449267745,0.0032622830476611853,0.9954427480697632,True
+miscellaneous,0,expectations were real hi reading the '10 's ' .,0,0.008441032841801643,0.775746762752533,0.21581223607063293,True
+ambience,0,there 's candlelight and music .,0,0.050165805965662,0.6854884624481201,0.26434576511383057,True
+miscellaneous,1,it 's nice to find a place that is open 24 hours ( especially in downtown brooklyn ) .,1,0.004789634607732296,0.1084270179271698,0.8867833614349365,True
+food,1,simple healthy unglamorous food cheap .,1,0.04090947285294533,0.033363427966833115,0.925727128982544,True
+price,1,simple healthy unglamorous food cheap .,1,0.0397653765976429,0.03488537296652794,0.925349235534668,True
+miscellaneous,1,"it was such a fantastic dining experience , that i returned again the same week .",1,0.0597827211022377,0.008209524676203728,0.9320077896118164,True
+food,1,"to be fair , the food still is good and the service is quick and attentative even though its usually very busy .",1,0.03371144458651543,0.0028570841532200575,0.9634314179420471,True
+service,1,"to be fair , the food still is good and the service is quick and attentative even though its usually very busy .",1,0.024948885664343834,0.0008644768386147916,0.9741865992546082,True
+ambience,1,the place is absolutely adorable and the food is delicious .,1,0.005600254517048597,0.0015236570034176111,0.9928761720657349,True
+food,1,the place is absolutely adorable and the food is delicious .,1,0.0014582289149984717,0.002965349005535245,0.9955763816833496,True
+food,0,i ordered the chicken teriyaki and my husband got garlic shrimp .,0,0.04740310087800026,0.7896517515182495,0.1629452258348465,True
+food,-1,i 've had better japanese food at a mall food court .,0,0.055332768708467484,0.9096280336380005,0.03503921255469322,False
+service,1,the staff members are extremely friendly and even replaced my drink once when i dropped it outside .,-1,0.6464166045188904,0.0071883234195411205,0.34639495611190796,False
+ambience,1,cool atmosphere but such a let down .,1,0.10423895716667175,0.08884220570325851,0.8069188594818115,True
+miscellaneous,-1,cool atmosphere but such a let down .,1,0.06386078894138336,0.0474121980369091,0.8887270092964172,False
+food,1,they have wheat crusted pizza made with really fresh and yummy ingredients .,1,0.0026199158746749163,0.0026282682083547115,0.9947518706321716,True
+food,1,"had a lovely dinner in this dedicated seafood joint , food was well-prepared and -presented and the service was pleasant and prompt .",1,0.0014099590480327606,0.0015685012331232429,0.997021496295929,True
+service,1,"had a lovely dinner in this dedicated seafood joint , food was well-prepared and -presented and the service was pleasant and prompt .",1,0.0016727502224966884,0.0015677779447287321,0.9967594742774963,True
+food,1,"the icing made this cake , it was fluffy , not ultra sweet , creamy and light .",1,0.05709688737988472,0.003319460665807128,0.9395837187767029,True
+price,-1,"finally let into the store 5 at a time , to buy expensive slices from a harried staff .",-1,0.9126482009887695,0.009648521430790424,0.07770329713821411,True
+service,-1,"finally let into the store 5 at a time , to buy expensive slices from a harried staff .",-1,0.9269942045211792,0.00881554838269949,0.06419025361537933,True
+miscellaneous,-1,"finally let into the store 5 at a time , to buy expensive slices from a harried staff .",-1,0.8866528272628784,0.010284341871738434,0.10306290537118912,True
+service,-1,we ended up having to just leave because we were essentially being ignored by the wait staff -- even though the rest of the restaurant was largely empty .,-1,0.9453761577606201,0.013286418281495571,0.0413375161588192,True
+miscellaneous,-1,we ended up having to just leave because we were essentially being ignored by the wait staff -- even though the rest of the restaurant was largely empty .,-1,0.8632603287696838,0.014584233053028584,0.12215539813041687,True
+food,1,"the wine list is extensive , well priced and covers alot of regions .",1,0.006016483996063471,0.032325584441423416,0.9616580009460449,True
+price,1,"the wine list is extensive , well priced and covers alot of regions .",1,0.0033720897044986486,0.019223568961024284,0.9774043560028076,True
+food,1,go here if you want fresh and tasty salads of any type you can imagine .,1,0.047916967421770096,0.015877487137913704,0.9362055659294128,True
+miscellaneous,1,everything about this place is adorable - even the bathroom !,1,0.17330516874790192,0.009831985458731651,0.8168628215789795,True
+ambience,1,everything about this place is adorable - even the bathroom !,1,0.11709428578615189,0.014614113606512547,0.8682916164398193,True
+service,1,"speedy delivers , great food , decent prices , and friendly service combine to ensure an enjoyable repast .",1,0.001784026506356895,0.0008657177677378058,0.9973502159118652,True
+food,1,"speedy delivers , great food , decent prices , and friendly service combine to ensure an enjoyable repast .",1,0.0031589653808623552,0.0016547010745853186,0.9951863884925842,True
+price,1,"speedy delivers , great food , decent prices , and friendly service combine to ensure an enjoyable repast .",1,0.0016591005260124803,0.0012875993270426989,0.9970532655715942,True
+miscellaneous,-1,they have waiters on the sidewalk trying to pull you in which made us suspicious .,-1,0.9291410446166992,0.0339662991464138,0.03689252585172653,True
+miscellaneous,0,it was our only opportunity to visit and wanted an authentic italian meal .,1,0.010944223962724209,0.018027596175670624,0.971028208732605,False
+food,1,it took 100 years for parisi to get around to making pizza ( at least i do n't think they ever made it before this year ) ... but it was worth the wait .,-1,0.7526266574859619,0.01062940713018179,0.2367439568042755,False
+food,0,i asked for a simple medium rare steak .,1,0.019537679851055145,0.4546443819999695,0.5258179306983948,False
+food,1,"generously garnished , organic grilled burgers are the most popular dish , but the jerusalem market-style falafel wraps and mediterranean salads -- layered with beets , goat cheese and walnuts -- are equally scrumptious .",1,0.0014253513654693961,0.005101834423840046,0.9934727549552917,True
+miscellaneous,-1,"probably my worst dining experience in new york , and i 'm a former waiter so i know what i 'm talking about .",1,0.03574308753013611,0.4436987638473511,0.5205581784248352,False
+food,1,"result ( red velvet ) : great texture , soft and velvety , nice hint of cocoa .",1,0.0015823838766664267,0.0007503874367102981,0.9976673126220703,True
+miscellaneous,1,ask for the round corner table next to the large window .,-1,0.5811651945114136,0.015034458599984646,0.4038003385066986,False
+food,1,"their twist on pizza is heatlhy , but full of flavor .",1,0.007119712885469198,0.006817230489104986,0.9860630631446838,True
+ambience,-1,the lack of ac and the fact that there are a million swarming bodies ( although everyone is polite and no one is pushing ) is a slight turn off .,-1,0.4878118634223938,0.3237714171409607,0.18841668963432312,True
+service,-1,"i love the little pie company as much as anyone else who has written reviews , but must discourage anyone from visiting the grand central location due to their rude service from two sales people .",0,0.26819920539855957,0.3878494203090668,0.34395140409469604,False
+food,-1,did n't seem like any effort was made to the display and quality of the food .,1,0.3175449073314667,0.015121573582291603,0.6673335433006287,False
+food,1,the food -- though mostly deep-fried -- is simple and satisfying .,1,0.03258316218852997,0.0488164909183979,0.9186003804206848,True
+miscellaneous,0,we live in the neighborhood and have been going there twice a week since the day they first opened .,0,0.011560854502022266,0.7464487552642822,0.24199041724205017,True
+food,1,"glechik might be way too tiny for a restaurant by russian standards , but it is cozy and the food is simply great .",1,0.19682157039642334,0.07108992338180542,0.732088565826416,True
+food,1,the food was excellent - authentic italian cuisine made absolutely fresh .,1,0.0010662657441571355,0.0030632331036031246,0.9958705306053162,True
+ambience,1,at night the atmoshere changes turning into this hidden jewel that is waiting to be discovered .,1,0.18043701350688934,0.011409732513129711,0.8081532120704651,True
+ambience,1,"the other times i 've gone it 's romantic date heaven , you can walk in get a booth by the windows , be treated like a vip in a not-crowded place , with great food and service .",1,0.008909479714930058,0.06448542326688766,0.9266051054000854,True
+food,1,"the other times i 've gone it 's romantic date heaven , you can walk in get a booth by the windows , be treated like a vip in a not-crowded place , with great food and service .",1,0.02229750156402588,0.07504013925790787,0.9026623368263245,True
+service,1,"the other times i 've gone it 's romantic date heaven , you can walk in get a booth by the windows , be treated like a vip in a not-crowded place , with great food and service .",1,0.01453725341707468,0.08331894874572754,0.9021438360214233,True
+food,1,i would only go for the coffee which is way better than starbucks or the like .,-1,0.5349016785621643,0.14920994639396667,0.3158884644508362,False
+miscellaneous,0,i used to be a regular costumer at pongal until dosa hut opened right next door to it .,1,0.2911889851093292,0.24109160900115967,0.4677194356918335,False
+food,-1,somewhat disappointing wine list ( only new vintages .,-1,0.6110551357269287,0.07159923017024994,0.31734561920166016,True
+food,-1,if your looking for nasty high priced food with a dash of ghetto scenery cheap bx a $ $ this is the place to be ! !,1,0.17644792795181274,0.008069327101111412,0.8154827952384949,False
+price,-1,if your looking for nasty high priced food with a dash of ghetto scenery cheap bx a $ $ this is the place to be ! !,1,0.3926628828048706,0.008231441490352154,0.5991057753562927,False
+ambience,-1,if your looking for nasty high priced food with a dash of ghetto scenery cheap bx a $ $ this is the place to be ! !,1,0.4821707308292389,0.008575535379350185,0.509253740310669,False
+food,1,"perfectly al dente pasta , not drowned in sauce -- generous portions .",1,0.015443147160112858,0.026462966576218605,0.9580938816070557,True
+price,-1,"i can understand the prices if it served better food , like some chinese restaurants in midtown/uptown area .",0,0.06690762937068939,0.6532954573631287,0.2797969877719879,False
+food,-1,"i can understand the prices if it served better food , like some chinese restaurants in midtown/uptown area .",0,0.04072260484099388,0.778151273727417,0.18112604320049286,False
+service,-1,service was awful - mostly because staff were overwhelmed on a saturday night .,-1,0.9576830267906189,0.017569299787282944,0.02474769949913025,True
+miscellaneous,-1,service was awful - mostly because staff were overwhelmed on a saturday night .,-1,0.8971410393714905,0.03331848978996277,0.06954045593738556,True
+miscellaneous,1,"to the owners ; good job guys , this place is a keeper !",1,0.019548160955309868,0.0019095836905762553,0.9785422086715698,True
+service,1,and the owner is simply lovely and friendly .,1,0.0070437039248645306,0.004746968392282724,0.9882093667984009,True
+ambience,1,this little place is wonderfully warm welcoming .,1,0.0033055630046874285,0.0019802325405180454,0.9947142004966736,True
+miscellaneous,1,perfect for a quick meal .,1,0.004195475019514561,0.014647242613136768,0.9811572432518005,True
+ambience,1,has the warmth of a family local yet it is a great place to watch sporting events .,1,0.001908221747726202,0.011412957683205605,0.9866787791252136,True
+service,1,"the service was great , and they have a whole great deal for birthdays .",1,0.0030749666038900614,0.0026840446516871452,0.9942409992218018,True
+price,1,"the service was great , and they have a whole great deal for birthdays .",1,0.00432122778147459,0.002202307339757681,0.9934764504432678,True
+service,1,the staff is 100 % italian and the food is as authentic as it gets .,1,0.0015914441319182515,0.0026914398185908794,0.9957171082496643,True
+food,1,the staff is 100 % italian and the food is as authentic as it gets .,1,0.00405152840539813,0.004825462121516466,0.9911229610443115,True
+miscellaneous,-1,my only complaint might be the fortune cookies - i 've never had a cookie predict bad luck for me before i visited kar .,1,0.44252458214759827,0.029887447133660316,0.5275879502296448,False
+miscellaneous,1,good for a quick sushi lunch .,1,0.009111704304814339,0.1298648566007614,0.861023485660553,True
+food,1,have a mojito and sit in the back patio .,1,0.03885047510266304,0.02098153904080391,0.9401679635047913,True
+ambience,1,have a mojito and sit in the back patio .,1,0.017101144418120384,0.00772507768124342,0.975173830986023,True
+service,-1,the service was dreadfully slow ( the place was only half full ) and a smile would have been nice ...,-1,0.5852227210998535,0.0019890996627509594,0.41278818249702454,True
+food,1,i went this past saturday and had a excellent meal of consisting of a braised lamb shank with mashed potatoes .,1,0.0027438835240900517,0.013192156329751015,0.984063982963562,True
+service,-1,the waitress came by to pick up the soy sauce while we were eating our lunch ! ! ! ! !,1,0.025841711089015007,0.008258586749434471,0.9658997058868408,False
+service,-1,"so we sat at the bar , the bartender did n't seem like he wanted to be there .",-1,0.892814576625824,0.028778301551938057,0.07840712368488312,True
+food,1,"i reccomend the fried pork dumplings , the orange chicken/beef , and the fried rice .",1,0.00722324475646019,0.0327434241771698,0.9600332975387573,True
+food,1,you will not be dissapointed by any of the choices in the menu .,-1,0.727695107460022,0.01744706928730011,0.25485777854919434,False
+food,1,the french fries -- with the kalmata dip were terrific !,1,0.013632437214255333,0.018840951845049858,0.9675266742706299,True
+service,-1,"would you ever believe that when you complain about over an hour wait , when they tell you it will be 20-30 minutes , the manager tells the bartender to spill the drinks you just paid for ?",-1,0.6240302920341492,0.00463590444996953,0.37133386731147766,True
+food,0,the boutique selection of wines covers a wide variety without being imposeing .,1,0.005227097775787115,0.005248024128377438,0.9895248413085938,False
+food,1,they also have a great assortment of wraps if your not in the mood for traditional mediterranean fare .,1,0.017064465209841728,0.01923893205821514,0.9636965990066528,True
+food,1,"fresh veggies , all sorts of middle eastern spreads , cheese and falafel , soup , fish , rice , root vegetables , a rice medley , some spinach thing , lamb kebabs , cheese baclava ... soooo much fooood , and all of it delicious .",1,0.000847197079565376,0.0035437175538390875,0.9956091046333313,True
+ambience,-1,in short the black sheep distinguishes itself from the midtown pub herd with a look that 's a mix of sports-bar butch and ornate kitsch .,1,0.009962344542145729,0.14653895795345306,0.843498706817627,False
+food,1,i would definitely go back -- if only for some of those exotic martinis on the blackboard .,1,0.32145583629608154,0.08954174071550369,0.5890024304389954,True
+miscellaneous,1,i would definitely go back -- if only for some of those exotic martinis on the blackboard .,1,0.27796670794487,0.11473444849252701,0.6072988510131836,True
+service,-1,then she made a fuss about not being able to add 1 or 2 chairs on either end of the table for additional people .,-1,0.8362663388252258,0.027370914816856384,0.13636276125907898,True
+miscellaneous,1,then she made a fuss about not being able to add 1 or 2 chairs on either end of the table for additional people .,-1,0.8654770851135254,0.04106784611940384,0.09345507621765137,False
+price,1,"the happy hour is so cheap , but that does not reflect the service or the atmosphere .",1,0.42436742782592773,0.0245636235922575,0.5510689616203308,True
+service,1,"the happy hour is so cheap , but that does not reflect the service or the atmosphere .",1,0.4530008137226105,0.05148462951183319,0.495514452457428,True
+ambience,1,"the happy hour is so cheap , but that does not reflect the service or the atmosphere .",1,0.4110528826713562,0.04976562783122063,0.5391814708709717,True
+service,-1,"after waiting for almost an hour , the waiter brusquely told us he 'd forgotten to give the kitchen our order .",-1,0.876152753829956,0.0057351537980139256,0.11811210215091705,True
+ambience,1,with all the mundane or mediocre places on 8th avenue it is nice to have one that is a step above in quaility and atmosphere .,1,0.12133537232875824,0.06921949982643127,0.8094451427459717,True
+miscellaneous,1,with all the mundane or mediocre places on 8th avenue it is nice to have one that is a step above in quaility and atmosphere .,1,0.22072644531726837,0.06111552193760872,0.7181581258773804,True
+ambience,-1,"a mix of students and area residents crowd into this narrow , barely there space for its quick , tasty treats at dirt-cheap prices .",1,0.08383925259113312,0.07480551302433014,0.8413552641868591,False
+food,1,"a mix of students and area residents crowd into this narrow , barely there space for its quick , tasty treats at dirt-cheap prices .",1,0.07959936559200287,0.054025840014219284,0.8663747906684875,True
+price,1,"a mix of students and area residents crowd into this narrow , barely there space for its quick , tasty treats at dirt-cheap prices .",1,0.1137533038854599,0.06711573898792267,0.8191309571266174,True
+food,0,"give it a try , menu is typical french but varied .",1,0.07438381761312485,0.11651067435741425,0.8091054558753967,False
+miscellaneous,1,"give it a try , menu is typical french but varied .",1,0.049280211329460144,0.13929462432861328,0.8114251494407654,True
+service,1,it gets crowded at lunchtime but there are lots of seats in back and everyone who works there is so nice .,1,0.26053380966186523,0.005997528787702322,0.7334687113761902,True
+price,1,"but for the value , it was a great affordable spot to enjoy a fun night out with small group .",1,0.0012760153040289879,0.0028565675020217896,0.9958674907684326,True
+ambience,1,"but for the value , it was a great affordable spot to enjoy a fun night out with small group .",1,0.002870853990316391,0.003173843491822481,0.9939553141593933,True
+service,1,the negative reviews on city search are probably from jealous competing restaurants who realize they ca n't compete with temple 's entire positive attitude about the proper way to treat their customers and deliver top quality food .,-1,0.5244606733322144,0.032115284353494644,0.4434240460395813,False
+food,1,the negative reviews on city search are probably from jealous competing restaurants who realize they ca n't compete with temple 's entire positive attitude about the proper way to treat their customers and deliver top quality food .,-1,0.5577396154403687,0.018786996603012085,0.42347338795661926,False
+service,-1,we ordered a glass of wine and were finished eating and paying before the wine came .,1,0.2595495283603668,0.056279540061950684,0.6841709017753601,False
+food,0,we ordered a glass of wine and were finished eating and paying before the wine came .,1,0.26728689670562744,0.03987390920519829,0.6928392648696899,False
+service,1,"overall , this is a nice place to take a few friends to hang out at and the service is excellent .",1,0.005533931311219931,0.0025138105265796185,0.9919522404670715,True
+ambience,1,"overall , this is a nice place to take a few friends to hang out at and the service is excellent .",1,0.02113236114382744,0.0023969756439328194,0.9764707088470459,True
+food,1,food is excellent quality for a good restaurant price .,1,0.009289365261793137,0.0032264706678688526,0.9874841570854187,True
+price,1,food is excellent quality for a good restaurant price .,1,0.008028547279536724,0.005329421255737543,0.9866420030593872,True
+miscellaneous,-1,"actually , everyone who worked there seemed to be annoyed .",-1,0.7783616185188293,0.029316440224647522,0.19232194125652313,True
+price,1,"for about eleven bucks you get a gigantic burrito ( or tacos ) , margarita , and dessert .",1,0.10616875439882278,0.42401906847953796,0.46981221437454224,True
+food,1,"for about eleven bucks you get a gigantic burrito ( or tacos ) , margarita , and dessert .",0,0.10855788737535477,0.4922575354576111,0.3991846442222595,False
+ambience,0,the space is traditional in feel .,1,0.23063120245933533,0.37211552262306213,0.39725321531295776,False
+service,-1,"the restaurant was completely empty , but she gave me a dirty look and asked , no reservations ?",-1,0.9351797103881836,0.02354280650615692,0.04127749800682068,True
+food,-1,the food was mediocre to be kind - the interior is small and average - the owners are a tag-team of unpleasantries - so rude and snotty i actually let out a hearty guffaw whilst dining .,-1,0.6622932553291321,0.0026435055769979954,0.3350631892681122,True
+ambience,-1,the food was mediocre to be kind - the interior is small and average - the owners are a tag-team of unpleasantries - so rude and snotty i actually let out a hearty guffaw whilst dining .,-1,0.8641458749771118,0.0028100309427827597,0.13304410874843597,True
+service,-1,the food was mediocre to be kind - the interior is small and average - the owners are a tag-team of unpleasantries - so rude and snotty i actually let out a hearty guffaw whilst dining .,-1,0.7428483366966248,0.006637713871896267,0.25051403045654297,True
+service,1,"good service , great food , good value , and never have to wait in line !",1,0.006874144542962313,0.0015823028516024351,0.9915435314178467,True
+food,1,"good service , great food , good value , and never have to wait in line !",1,0.005207320675253868,0.0020114462822675705,0.9927812218666077,True
+price,1,"good service , great food , good value , and never have to wait in line !",1,0.00524057587608695,0.0019343396415933967,0.9928250312805176,True
+food,0,offerings like hot cakes and the egg mcmuffin sandwich are available for breakfast .,1,0.09591446816921234,0.00828604307025671,0.8957995176315308,False
+service,0,"i have been going to this restaurant for years , in the past the service was average and the food inconsistant .",-1,0.9121590852737427,0.04721424728631973,0.0406266525387764,False
+food,-1,"i have been going to this restaurant for years , in the past the service was average and the food inconsistant .",-1,0.9335864186286926,0.0255874153226614,0.04082615301012993,True
+ambience,1,"the music was fascinating , but left room for conversation , and the bartender made superb drinks .",1,0.056998904794454575,0.005768775939941406,0.9372323155403137,True
+food,1,"the music was fascinating , but left room for conversation , and the bartender made superb drinks .",1,0.022534700110554695,0.0012100900057703257,0.9762552380561829,True
+food,1,rice dishes and noodle dishes rarely exceed $ 5 and add on a refreshing ice drink for $ 2 and you 're set for the night !,1,0.0046180058270692825,0.0026794469449669123,0.9927026033401489,True
+price,1,rice dishes and noodle dishes rarely exceed $ 5 and add on a refreshing ice drink for $ 2 and you 're set for the night !,1,0.0203231293708086,0.011748398654162884,0.9679284691810608,True
+price,-1,cuisine is billed as asian fusion - does n't meet the bill .,1,0.19571298360824585,0.3643359839916229,0.4399510324001312,False
+food,-1,cuisine is billed as asian fusion - does n't meet the bill .,1,0.2010016143321991,0.35137826204299927,0.44762009382247925,False
+food,1,creative dishes like king crab salad with passion fruit vinaigrette and fettuccine with grilled seafood in a rosemary-orange sauce are unexpected elements on an otherwise predictable bistro menu .,1,0.007057509385049343,0.005988393444567919,0.9869540333747864,True
+food,1,"dishes denoted as `` roy 's classics '' ( marked on the menu with asterisks ) are tried-and-true recipes , such as macadamia-crusted mahi mahi , or subtly sweet honey-mustard beef short ribs .",1,0.0025293328799307346,0.008567135781049728,0.9889035820960999,True
+food,1,"the cold sesame noodles , which are a freebie when you order $ 10+ , are delectable .",1,0.12106383591890335,0.06611035019159317,0.8128257989883423,True
+price,1,"the cold sesame noodles , which are a freebie when you order $ 10+ , are delectable .",1,0.1990882307291031,0.10654323548078537,0.6943685412406921,True
+ambience,-1,"i came to fresh expecting a great meal , and all i got was marginally so-so food served in a restaurant that was just so freezing we could n't enjoy eating .",1,0.03849286213517189,0.00543832266703248,0.9560688138008118,False
+food,-1,"i came to fresh expecting a great meal , and all i got was marginally so-so food served in a restaurant that was just so freezing we could n't enjoy eating .",1,0.012248154729604721,0.003019696567207575,0.9847321510314941,False
+price,-1,the lone argentine chorizo appetizer at $ 8.95 was a heavy fennel flavored italian sausage like the ones that sell for $ 2.99/lb at the store .,1,0.4197404980659485,0.09782405197620392,0.4824354648590088,False
+food,-1,the lone argentine chorizo appetizer at $ 8.95 was a heavy fennel flavored italian sausage like the ones that sell for $ 2.99/lb at the store .,-1,0.46798035502433777,0.10063046216964722,0.43138912320137024,True
+service,1,"best chinese on the upper east , prompt delivery , good value .",1,0.004437421914190054,0.018028726801276207,0.9775338768959045,True
+price,1,"best chinese on the upper east , prompt delivery , good value .",1,0.006451505236327648,0.016175847500562668,0.9773727059364319,True
+miscellaneous,1,"best chinese on the upper east , prompt delivery , good value .",1,0.00251335883513093,0.014555739238858223,0.9829309582710266,True
+food,1,most of the sandwiches are made with soy mayonaise which is actually pretty good .,1,0.0428110770881176,0.02298138104379177,0.9342074990272522,True
+service,-1,i went in one day asking for a table for a group and was greeted by a very rude hostess .,-1,0.4755585193634033,0.3188329339027405,0.2056085616350174,True
+miscellaneous,1,it 's worthwhile to take a cab to chelsea just for an awesome dinner at my chelsea .,1,0.0730658620595932,0.01804087869822979,0.9088932275772095,True
+food,1,"not only is the food authentic , but the staff here are practically off-the-boat , they are young and hip and know what they are doing when it comes to food and wine .",1,0.02188265696167946,0.001711966353468597,0.9764053821563721,True
+service,1,"not only is the food authentic , but the staff here are practically off-the-boat , they are young and hip and know what they are doing when it comes to food and wine .",1,0.015240884386003017,0.0027412353083491325,0.9820178747177124,True
+ambience,1,"it has good music , nice tapas , an interesting selection of wines ( primarily spanish ) and a lowkey hip neighborhood clientele .",1,0.0020648790523409843,0.05022294074296951,0.9477121829986572,True
+food,1,"it has good music , nice tapas , an interesting selection of wines ( primarily spanish ) and a lowkey hip neighborhood clientele .",1,0.003786945017054677,0.047386642545461655,0.9488264918327332,True
+food,1,"the food is great , i love their dumplings , cold sesame noodles , chicken and shrimp dishs .",1,0.00831811223179102,0.034513507038354874,0.9571683406829834,True
+food,1,"and the food , well the food will keep you coming back .",1,0.009979994036257267,0.006218813359737396,0.9838011860847473,True
+service,-1,waiting three hours before getting our entrees was a treat as well .,-1,0.6563723683357239,0.03609543666243553,0.30753225088119507,True
+ambience,1,it 's the conversations that make this a fun place to be .,1,0.07307993620634079,0.018003743141889572,0.9089163541793823,True
+food,1,"my gf 's duck confitte was very solid as well , although i have little base of reference .",1,0.04332742094993591,0.06712508201599121,0.8895474672317505,True
+food,1,"the wine list was superb , our tapas delightful , and the quiet atmosphere perfect for good conversation .",1,0.0017009074799716473,0.0020407475531101227,0.9962583780288696,True
+ambience,1,"the wine list was superb , our tapas delightful , and the quiet atmosphere perfect for good conversation .",1,0.0013157858047634363,0.0011079070391133428,0.9975762963294983,True
+food,1,you can eat gourmet food at a fast food price .,1,0.008238903246819973,0.07314622402191162,0.9186148643493652,True
+price,1,you can eat gourmet food at a fast food price .,1,0.005881624296307564,0.051780860871076584,0.9423374533653259,True
+food,1,"i 've eaten at all three locations and i always love , love the food , the service is always wonderful and the prices are really reasonable .",1,0.003140457207337022,0.003002430545166135,0.9938570857048035,True
+service,1,"i 've eaten at all three locations and i always love , love the food , the service is always wonderful and the prices are really reasonable .",1,0.0015799106331542134,0.0023670720402151346,0.9960529804229736,True
+price,1,"i 've eaten at all three locations and i always love , love the food , the service is always wonderful and the prices are really reasonable .",1,0.0015966634964570403,0.0034642203245311975,0.9949390888214111,True
+food,1,"not because i was pregnant , but the food here is always delicious .",1,0.25859567523002625,0.024555504322052002,0.7168488502502441,True
+food,1,had a great meal there this weekend before heading to the movies !,1,0.011297818273305893,0.013030946254730225,0.9756712913513184,True
+food,1,we had a birthday party here recently and the food and service was amazing .,1,0.009146885946393013,0.029201634228229523,0.9616515040397644,True
+service,1,we had a birthday party here recently and the food and service was amazing .,1,0.004810745362192392,0.024271957576274872,0.970917284488678,True
+food,1,"the dinner menu offers a variety of great entrees , including fresh seafood and huge steaks , there 's also a couple of non-meat alternatives .",1,0.0018639345653355122,0.0018745993729680777,0.9962614178657532,True
+food,-1,this place has the strangest menu and the restaurants tries too hard to make fancy food .,1,0.29034489393234253,0.008576828055083752,0.7010782361030579,False
+food,0,"the appetizers are ok , but the service is slow .",1,0.12079834938049316,0.37048861384391785,0.5087130069732666,False
+service,-1,"the appetizers are ok , but the service is slow .",1,0.13789835572242737,0.2910844683647156,0.5710172057151794,False
+price,-1,the food - not worth the price .,-1,0.5977293848991394,0.0411287397146225,0.3611419200897217,True
+food,-1,the food - not worth the price .,1,0.4539545178413391,0.04604463651776314,0.5000008344650269,False
+service,-1,"what can you say about a place where the waitress brings out the wrong entree , then verbally assaults your 80 year old grandmother and gives her lip about sending it back ( which she did politely , by the way ) .",-1,0.7101362943649292,0.008791201747953892,0.2810724377632141,True
+price,1,the prices are not terrible .,-1,0.9572634696960449,0.008535955101251602,0.0342005230486393,False
+price,-1,15 % gratuity automatically added to the bill .,-1,0.4762403070926666,0.4462261497974396,0.07753352075815201,True
+food,1,food is excellent and they also have empenadas and plaintains which are good for an afternoon snack .,1,0.0024295474868267775,0.008785378187894821,0.9887850284576416,True
+food,1,both a number of the appetizer and pasta specials were amazing .,1,0.008684631437063217,0.022067131474614143,0.9692482352256775,True
+food,1,"all-time favorites include the big mac , chicken mcnuggets , filet-o-fish sandwich and mcdonald 's famous french fries ; lighter options like entree-sized salads are also available .",1,0.008986049331724644,0.0013231047196313739,0.989690899848938,True
+ambience,0,"it 's a basic pizza joint , not much to look at , but the pizza is what i go for .",-1,0.5180103182792664,0.1037391945719719,0.37825050950050354,False
+food,1,"it 's a basic pizza joint , not much to look at , but the pizza is what i go for .",1,0.44895118474960327,0.09597211331129074,0.4550766348838806,True
+ambience,-1,"tables are close , so you better be comfortable bumping elbows with other patrons .",1,0.16773709654808044,0.034803420305252075,0.7974594831466675,False
+miscellaneous,1,was her monday for lunch - was working on a film in the area - and found this rare jewel .,1,0.050436150282621384,0.035626120865345,0.9139376878738403,True
+ambience,1,"not too much so , but enough that there 's a great scene .",1,0.3593764007091522,0.04694867506623268,0.5936748385429382,True
+miscellaneous,1,you feel like you made it to new york when you eat here .,1,0.05945371463894844,0.2179214358329773,0.7226248383522034,True
+miscellaneous,0,we 'd walked by it dozens of times and finally settled on a monday night .,0,0.006255732383579016,0.9107829332351685,0.082961305975914,True
+miscellaneous,1,"sum it : do n't read the '10 's ' reviews , try it to judge for yourself so you wo n't have as hi expectations , then you 'll be sure to enjoy it .",1,0.19013337790966034,0.2757810652256012,0.5340855717658997,True
+service,-1,"we went there , no one greeted us .",0,0.049393072724342346,0.7627185583114624,0.18788839876651764,False
+ambience,1,dug the blue bar area too .,1,0.1973368227481842,0.13124044239521027,0.6714227199554443,True
+ambience,-1,we spent so much time getting elbowed around while we waited we left .,-1,0.7545201182365417,0.04800361767411232,0.19747628271579742,True
+miscellaneous,0,"i got the opportunity to dine at your establishment again a few weeks ago , i was in your upstrairs dining area .",1,0.01079808734357357,0.4197499454021454,0.5694519281387329,False
+food,1,"meat-phobes are in luck with the extraordinary veggie burger , made from a distinctive blend of chickpeas , carrots and other vegetables and spices .",1,0.0008343113586306572,0.0021719536744058132,0.9969937801361084,True
+ambience,-1,"at peak times , the restaurant is overcrowded and tables are uncomfortably close .",-1,0.9087349772453308,0.018103454262018204,0.07316162437200546,True
+service,1,the service was on point - what else you would expect from a ritz ?,-1,0.8064059615135193,0.06548841297626495,0.12810562551021576,False
+food,0,"menus feature seasonal picks , like sweet corn-foie gras brulee .",1,0.015333677642047405,0.04093041643500328,0.9437358975410461,False
+food,1,"innovations are just as assured , from the simple carinthia cheese ravioli with wild mushrooms to the caviar-topped sturgeon , beautifully matched with a bright green spinach-vodka sauce .",1,0.0016772494418546557,0.002150059910491109,0.9961727261543274,True
+food,1,"and these are not small , wimpy fast food type burgers - these are real , full sized patties .",1,0.1844090074300766,0.07214303314685822,0.7434479594230652,True
+ambience,1,"there restaurant is very casual , but perfect for lunch , and their delivery service is always very fast .",1,0.02397061511874199,0.001374332350678742,0.9746549725532532,True
+service,1,"there restaurant is very casual , but perfect for lunch , and their delivery service is always very fast .",1,0.02864914946258068,0.002714937087148428,0.9686359167098999,True
+food,1,chinatown definitely has better quality with cheaper prices .,1,0.1598653495311737,0.01746785268187523,0.8226667642593384,True
+price,1,chinatown definitely has better quality with cheaper prices .,1,0.1298370361328125,0.010295637883245945,0.8598673343658447,True
+service,-1,i had to flag down a third staff person for a fork ... so now it 's goodbye little rude pie company .,-1,0.9095785021781921,0.06092534586787224,0.0294962115585804,True
+miscellaneous,1,i have been in nyc for over 10 years and could not find this delicacy east of the hudson .,1,0.011233670637011528,0.13368740677833557,0.855078935623169,True
+food,1,the pastas were pretty good .,1,0.013091274537146091,0.008874034509062767,0.9780346155166626,True
+ambience,-1,atmosphere is a bore .,0,0.27902546525001526,0.3743852376937866,0.3465893268585205,False
+ambience,1,the decor is what initially got me in the door .,-1,0.5225579738616943,0.09752357751131058,0.3799184560775757,False
+service,1,the wait staff was very attentive and polite .,1,0.009217067621648312,0.00293069239705801,0.9878522157669067,True
+food,1,"great restaurant , and even greater food !",1,0.00572239188477397,0.01458895392715931,0.9796887040138245,True
+miscellaneous,1,"great restaurant , and even greater food !",1,0.0103415846824646,0.01446791272610426,0.9751904606819153,True
+food,1,the dishes are remarkably tasty and such a cozy and intimate place !,1,0.006073876284062862,0.0037866346538066864,0.9901394248008728,True
+ambience,1,the dishes are remarkably tasty and such a cozy and intimate place !,1,0.005122664850205183,0.002123811049386859,0.9927534461021423,True
+food,1,save room for the desserts ! ; - ),1,0.267503559589386,0.023403074592351913,0.7090933322906494,True
+food,1,"i love the simplicity and respect which was given to the food , as well the staff was freindly and knowledgable .",1,0.0031397768761962652,0.003366244025528431,0.9934939742088318,True
+service,1,"i love the simplicity and respect which was given to the food , as well the staff was freindly and knowledgable .",1,0.0015977348666638136,0.002832170343026519,0.9955701231956482,True
+service,1,service was good and so was the atmosphere .,1,0.05847080051898956,0.004907445982098579,0.9366217255592346,True
+ambience,1,service was good and so was the atmosphere .,1,0.0603872686624527,0.005767375230789185,0.9338454008102417,True
+food,-1,my date and i both ordered the branzini and both felt the fish was very average .,1,0.030331077054142952,0.08168566972017288,0.8879832625389099,False
+miscellaneous,1,we were there march 7 and found maison very nice .,1,0.005215573590248823,0.17063702642917633,0.8241474032402039,True
+food,1,"the food was good , the service prompt , and the price very reasonable .",1,0.007606728933751583,0.0026630337815731764,0.9897302389144897,True
+service,1,"the food was good , the service prompt , and the price very reasonable .",1,0.009090397506952286,0.0025825214106589556,0.9883270859718323,True
+price,1,"the food was good , the service prompt , and the price very reasonable .",1,0.01020423136651516,0.0036714111920446157,0.9861243963241577,True
+food,1,"wonderful menu , warm inviting ambiance , great service the food keeps me coming back !",1,0.006715775467455387,0.0031388031784445047,0.9901453852653503,True
+ambience,1,"wonderful menu , warm inviting ambiance , great service the food keeps me coming back !",1,0.0025626011192798615,0.0008271648548543453,0.9966102242469788,True
+service,1,"wonderful menu , warm inviting ambiance , great service the food keeps me coming back !",1,0.005193274933844805,0.0011498540407046676,0.9936568140983582,True
+food,1,"great food , good wine and an excellent host .",1,0.0021478685084730387,0.0037789836060255766,0.994073212146759,True
+service,1,"great food , good wine and an excellent host .",1,0.0014466537395492196,0.004054699558764696,0.9944986701011658,True
+miscellaneous,0,went there last night with my coworker .,0,0.0691225677728653,0.8638381361961365,0.06703928858041763,True
+food,1,pizzas were excellent in addition to appetizers and main courses .,1,0.003971506841480732,0.01871396414935589,0.9773145318031311,True
+food,1,"definitely try the calamari , any pasta , or even the sliced steak entree .",1,0.05411393567919731,0.021383218467235565,0.9245028495788574,True
+food,1,the caeser salad was great .,1,0.027187682688236237,0.011202722787857056,0.9616096019744873,True
+food,1,the fried calamari was even better !,1,0.18466906249523163,0.02978050895035267,0.7855504155158997,True
+food,1,the food was good overall .,1,0.13521140813827515,0.04156176373362541,0.823226809501648,True
+food,1,the food was outstanding and the service was tops .,1,0.018637683242559433,0.006322707515209913,0.9750396013259888,True
+service,1,the food was outstanding and the service was tops .,1,0.028030669316649437,0.007975558750331402,0.9639937281608582,True
+food,1,the portions are very large and the service is fantastic ! !,1,0.009484071284532547,0.0014264675555750728,0.9890894293785095,True
+service,1,the portions are very large and the service is fantastic ! !,1,0.007557963486760855,0.0017531997291371226,0.9906888008117676,True
+food,1,i recomend the chicken milanese .,1,0.014813661575317383,0.11275125294923782,0.8724350929260254,True
+food,1,"excellent tapas at great prices , romantic , small but not overly crowed , excellent",1,0.07523506879806519,0.004368394613265991,0.9203965067863464,True
+price,1,"excellent tapas at great prices , romantic , small but not overly crowed , excellent",1,0.024044716730713844,0.012300009839236736,0.9636552929878235,True
+ambience,1,"excellent tapas at great prices , romantic , small but not overly crowed , excellent",1,0.013778183609247208,0.001473603886552155,0.9847481846809387,True
+food,1,"the chocolate raspberry cake is heavenly- not too sweet , but full of flavor .",1,0.02760932594537735,0.0033438680693507195,0.9690468311309814,True
+service,1,"our waiter was helpful and charming , the food was perfect , and the wine was good , too .",1,0.0028161753434687853,0.0010322101879864931,0.9961516261100769,True
+food,1,"our waiter was helpful and charming , the food was perfect , and the wine was good , too .",1,0.0020801606588065624,0.0005052045453339815,0.9974145889282227,True
+ambience,1,alias is warm and cozy and you do n't get that squished-in feeling you get at 71 clinton .,1,0.09630537778139114,0.051821451634168625,0.8518731594085693,True
+food,1,i have never had a bad meal ( or bad service ) @ pigalle .,-1,0.7226203083992004,0.08441119641065598,0.1929684579372406,False
+service,1,i have never had a bad meal ( or bad service ) @ pigalle .,-1,0.7595740556716919,0.07480739802122116,0.1656186282634735,False
+food,1,best hot dogs in the tri-state area .,1,0.00612086895853281,0.02113175578415394,0.9727474451065063,True
+miscellaneous,-1,this is a typical example of an establishment in which its owners do not know anything about the restaurant business !,-1,0.4589696228504181,0.310834139585495,0.2301962524652481,True
+miscellaneous,-1,"i would not recommend meet at all , it is a rip off all the way from the time to step in !",1,0.11672837287187576,0.009521556086838245,0.8737500905990601,False
+miscellaneous,0,went there for a special celebration .,0,0.016588527709245682,0.8676764965057373,0.11573494225740433,True
+ambience,1,the restaurant was quiet and intimate .,1,0.039322931319475174,0.3820308744907379,0.578646183013916,True
+service,1,the service was very attentive and very generous .,1,0.0026150555349886417,0.0022100184578448534,0.9951748847961426,True
+food,1,"we had tons of great food , wine , and desserts .",1,0.004059782717376947,0.010629202239215374,0.9853110313415527,True
+miscellaneous,1,really lovely dining experience in the midst of buzzing midtown area .,1,0.0039602709002792835,0.004807546269148588,0.9912322163581848,True
+miscellaneous,0,"ok , i 've been to dumont a few times now .",0,0.028696967288851738,0.7432049512863159,0.2280980795621872,True
+food,-1,the food really is n't very good and the service is terrible .,1,0.275952011346817,0.009277832694351673,0.7147701978683472,False
+service,-1,the food really is n't very good and the service is terrible .,1,0.30627331137657166,0.006220760755240917,0.6875059604644775,False
+miscellaneous,-1,"maybe it 's that most of dumont 's patrons are younger and have lower expectations , but i can not recommend dumont .",-1,0.5033149123191833,0.11381801217794418,0.3828670382499695,True
+food,1,"not only do they have the best escargot in town , they always try to accomodate our toddler .",1,0.06154791638255119,0.009703611023724079,0.9287484288215637,True
+service,1,"not only do they have the best escargot in town , they always try to accomodate our toddler .",1,0.04465198144316673,0.012802713550627232,0.9425452947616577,True
+miscellaneous,1,"i 've been to sotto voce several time , and i have to say this one place that hits the nail right on the head ever time !",1,0.01059295330196619,0.011396951042115688,0.9780101180076599,True
+food,1,"between my guest and i , we sampled at least 80 % of the menu , and they were all hits .",0,0.03888388350605965,0.49064841866493225,0.4704676568508148,False
+ambience,1,the deco and ambiance was really romantic .,1,0.02989250235259533,0.006546716205775738,0.9635608196258545,True
+miscellaneous,1,this is the best unknown restaurant in and around new york .,1,0.022595005109906197,0.07287023216485977,0.9045346975326538,True
+food,1,just go in and sample the greatest french food west of daniel .,1,0.012210698798298836,0.21471862494945526,0.7730706930160522,True
+food,1,"for someone who used to hate indian food , baluchi 's has changed my mid .",0,0.11642556637525558,0.867100179195404,0.01647418551146984,False
+food,1,"finally a curry that i can eat , enjoy and not suffer from gastritis from 3 hours later .",1,0.1746945083141327,0.1748601496219635,0.6504454016685486,True
+food,1,"all are great - poori , naan , paratha all fresh .",1,0.0019253607606515288,0.005294762551784515,0.9927799105644226,True
+food,1,try the homemade breads .,1,0.02444216050207615,0.06896552443504333,0.9065923094749451,True
+food,1,"this place has beautiful sushi , and it 's delicious cheap .",1,0.00818657223135233,0.009705265052616596,0.9821081757545471,True
+price,1,"this place has beautiful sushi , and it 's delicious cheap .",1,0.002127385698258877,0.0013273399090394378,0.9965452551841736,True
+food,1,it also has lots of other korean dishes that are affordable and just as yummy .,1,0.022256840020418167,0.03162563219666481,0.9461175203323364,True
+price,1,it also has lots of other korean dishes that are affordable and just as yummy .,1,0.02657337486743927,0.04005496948957443,0.9333716630935669,True
+food,0,i went for restaurant week and ordered off the prix fixe menu,0,0.12039879709482193,0.805908739566803,0.07369241863489151,True
+service,1,"not only was the waiter efficient and courteous , but also extremely helpful .",1,0.048553258180618286,0.0017146705649793148,0.9497320652008057,True
+price,-1,it took a bigger bite from my wallet than my appetite - i would not reccomend this to anyone that i would want to talk to me again ! !,1,0.17075660824775696,0.003492725547403097,0.8257507085800171,False
+food,-1,it took a bigger bite from my wallet than my appetite - i would not reccomend this to anyone that i would want to talk to me again ! !,1,0.21961790323257446,0.00762313324958086,0.7727589011192322,False
+miscellaneous,-1,it took a bigger bite from my wallet than my appetite - i would not reccomend this to anyone that i would want to talk to me again ! !,1,0.28408339619636536,0.003115228144451976,0.7128013968467712,False
+ambience,1,"this place is classy , chic , the service is warm and hospitable , and the food is outstanding .",1,0.004720364231616259,0.002473935717716813,0.9928057789802551,True
+service,1,"this place is classy , chic , the service is warm and hospitable , and the food is outstanding .",1,0.001735421596094966,0.0007439277251251042,0.9975206255912781,True
+food,1,"this place is classy , chic , the service is warm and hospitable , and the food is outstanding .",1,0.0070918346755206585,0.0010049616685137153,0.9919032454490662,True
+miscellaneous,0,i read about this place in time out magazine .,0,0.01394967082887888,0.5087177753448486,0.4773325026035309,True
+miscellaneous,1,it 's a great find in astoria .,1,0.01165277324616909,0.07318401336669922,0.9151632785797119,True
+food,1,"great burgers , grilled cheeses and french fries .",1,0.0074547589756548405,0.01197507418692112,0.9805701375007629,True
+food,1,the yellowfin tuna and calf 's liver are my favorites !,1,0.010798092931509018,0.008152280934154987,0.9810495972633362,True
+food,1,sushi so fresh that it crunches in your mouth .,1,0.010640955530107021,0.010580604895949364,0.9787784814834595,True
+price,-1,but make sure you have enough room on your credit card as the bill will leave a big dent in your wallet .,-1,0.6455170512199402,0.014189589768648148,0.340293288230896,True
+ambience,1,despite the 5th ave address there are no frills whick i also love .,0,0.018530497327446938,0.5038241744041443,0.4776453673839569,False
+food,1,they bring a sauce cart up to your table and offer you up to 7 or 8 choices of sauces for your steak ( i tried them all ) .,1,0.21847552061080933,0.005819531623274088,0.7757049202919006,True
+food,1,"not only was the sushi fresh , they also served other entrees allowed each guest something to choose from and we all left happy ( try the duck !",1,0.3468480706214905,0.00854868721216917,0.6446033120155334,True
+service,-1,"after i paid for my purchase , i noticed they had not given me utensils so i could eat my pie .",-1,0.5364134907722473,0.06423680484294891,0.3993496894836426,True
+food,-1,likewise if you like really thin crust or really big slices then nick and joe 's may not be your favorite .,1,0.20295491814613342,0.0047430070117115974,0.7923020124435425,False
+miscellaneous,-1,it 's always quiet because it 's awful .,-1,0.6217738389968872,0.03300325199961662,0.3452228307723999,True
+food,-1,"no green beans , no egg , no anchovy dressing , no nicoise olives , no red onion .",-1,0.9216871857643127,0.0610717311501503,0.01724100671708584,True
+food,0,"build a meal with side orders like amazin ' greens salads , buffalo chicken kickers and cinna stix .",1,0.0016105034155771136,0.02271808125078678,0.9756714105606079,False
+food,1,"thick fries , meaty chili and stuffed baked potatoes round out a menu that includes a cool , ultra-thick chocolate frosty .",1,0.0023911255411803722,0.001149162882938981,0.9964596629142761,True
+food,0,i always find myself asking the waiter to make something bland and different than what is on the menu .,-1,0.6132702231407166,0.06326260417699814,0.3234671950340271,False
+service,-1,"good cake but : it was not the best cake i 've ever had , and definately not worth standing outside on the sidewalk being herded like cattle by indifferent and overworked employees .",-1,0.8009328842163086,0.006618688814342022,0.1924484670162201,True
+food,0,"the closest that i got was the cherry marscapone , but they were out of it that day .",1,0.07459766417741776,0.11141662299633026,0.8139857053756714,False
+food,1,"the homage to india is most evident in the delectable roti canai appetizer , a fried pancake served with pungent curry dipping sauce , while the mango chicken offers a surprisingly sophisticated , fresh take on sweet-and-sour .",1,0.0011636358685791492,0.0030249343253672123,0.9958114624023438,True
+miscellaneous,1,i have to say the place was awesome .,1,0.02060147374868393,0.05774189159274101,0.921656608581543,True
+food,-1,the ground chickpea soup we sampled as a starter tasted somewhat thin .,1,0.21381282806396484,0.3668413460254669,0.41934582591056824,False
+food,-1,"we requested they re-slice the sushi , and it was returned to us in small cheese-like cubes .",-1,0.4218014180660248,0.2498343586921692,0.3283642530441284,True
+service,-1,"the service , however , is a peg or two below the quality of food ( horrible bartenders ) , and the clientele , for the most part , are rowdy , loud-mouthed commuters ( this could explain the bad attitudes from the staff ) getting loaded for an ac/dc concert or a knicks game .",-1,0.7984517812728882,0.01052732765674591,0.1910208761692047,True
+food,1,"the service , however , is a peg or two below the quality of food ( horrible bartenders ) , and the clientele , for the most part , are rowdy , loud-mouthed commuters ( this could explain the bad attitudes from the staff ) getting loaded for an ac/dc concert or a knicks game .",-1,0.7909780144691467,0.007103657815605402,0.2019183188676834,False
+ambience,-1,"the service , however , is a peg or two below the quality of food ( horrible bartenders ) , and the clientele , for the most part , are rowdy , loud-mouthed commuters ( this could explain the bad attitudes from the staff ) getting loaded for an ac/dc concert or a knicks game .",-1,0.7173032164573669,0.01521388255059719,0.2674828767776489,True
+food,1,"if you 're in the neighborhood , definitely stop by for a great meal .",1,0.07193392515182495,0.04981863126158714,0.8782473802566528,True
+food,0,"unfortunately , with our show tickets , we did n't have time to sample any desserts .",-1,0.6817638874053955,0.06344029307365417,0.2547958493232727,False
+miscellaneous,1,"the restaurant could use a little paint , but all in all a great sushi place !",1,0.033182621002197266,0.007254206109791994,0.9595631957054138,True
+ambience,-1,make more tables- perhaps a rooftop bar ?,0,0.35117223858833313,0.42906782031059265,0.2197599709033966,False
+ambience,1,"the decoration was feeling like we was on the cairo , actually the street is part of that adventure .",1,0.3702957034111023,0.20426015555858612,0.4254441261291504,True
+miscellaneous,1,"the decoration was feeling like we was on the cairo , actually the street is part of that adventure .",1,0.305921733379364,0.2667088210582733,0.4273694157600403,True
+ambience,1,"although small , it has beautiful ambience , excellent food ( the catfish is delicious - if ya do n't mind it a lil salty ) and attentive service .",1,0.004950690548866987,0.002978696022182703,0.9920706152915955,True
+food,1,"although small , it has beautiful ambience , excellent food ( the catfish is delicious - if ya do n't mind it a lil salty ) and attentive service .",1,0.004327534232288599,0.0032469728030264378,0.9924254417419434,True
+service,1,"although small , it has beautiful ambience , excellent food ( the catfish is delicious - if ya do n't mind it a lil salty ) and attentive service .",1,0.005597920622676611,0.006333325989544392,0.9880687594413757,True
+miscellaneous,0,i did n't go there for food so i ca n't comment .,-1,0.5394128561019897,0.25337016582489014,0.20721697807312012,False
+miscellaneous,1,"my friends and i go once a week ( minimum , we live in the area ) and everytime ca n't resist walking out ready to burst .",1,0.019472921267151833,0.17651277780532837,0.8040143251419067,True
+food,1,"stick to the items the place does best , brisket , ribs , wings , cajun shrimp is good , not great .",1,0.003984050825238228,0.001539334887638688,0.9944766163825989,True
+ambience,1,"hip boutiques and bars on ludlow add to the artsy , laid-back atmosphere at this israeli-style takeout and eat-in burger joint .",1,0.014550411142408848,0.005242131184786558,0.9802075028419495,True
+ambience,0,"young neighborhood trendies graze at the counter during the day , while chic , art-house drinkers with heavy doses of the munchies pile in late at night .",1,0.08304060250520706,0.032905757427215576,0.884053647518158,False
+miscellaneous,0,bring your date and a bottle of wine !,1,0.007898255251348019,0.009173265658318996,0.9829283952713013,False
+miscellaneous,1,"not only is this the best thai restaurant i have been to , but it also ranks as one of my favorite places to dine .",1,0.041567325592041016,0.08450016379356384,0.8739324808120728,True
+miscellaneous,1,do n't be put off by another reviewers extremely negative review .,-1,0.7719902396202087,0.06872912496328354,0.1592806577682495,False
+food,1,"my chelsea 's impressive and creative menu includes modern , westernized japanese dishes such as foie gras unagi napolean , jap style hamburger steak , spicy cod roe spaghetti , black cod with miso base , and rack of lamb in black truffle sauce , to name a few .",1,0.001703190035186708,0.02629087306559086,0.9720059633255005,True
+food,1,"his food is excellent ( and not expensive by nyc standards- no entrees over $ 30 , most appetizers $ 12 to 14 ) .",1,0.2479197233915329,0.053369104862213135,0.6987112164497375,True
+price,1,"his food is excellent ( and not expensive by nyc standards- no entrees over $ 30 , most appetizers $ 12 to 14 ) .",1,0.33010628819465637,0.06533712148666382,0.6045566201210022,True
+food,1,the food is consistant and good but how it got name best diner in manhattan is beyond me .,1,0.0068562226369977,0.007845457643270493,0.9852982759475708,True
+food,1,"the pasta primavera was outstanding as well , lots of fresh veggies .",1,0.0012001954019069672,0.002680053235962987,0.9961197376251221,True
+food,1,"do n't get me wrong - sushi was good , just not fantastic .",1,0.3984743058681488,0.022259023040533066,0.5792667269706726,True
+food,1,being puerto rican i know a thing or two about flan and this place serves one of the best ( i hope mom does n't read this ! ) .,1,0.012894250452518463,0.17912986874580383,0.8079758286476135,True
+food,1,"been to the one in brooklyn for over 25 years , now i dont have to go over the bridge for the best pizza ... .hanx",1,0.01547096949070692,0.12929797172546387,0.8552310466766357,True
+food,1,had dinner here on a friday and the food was great .,1,0.009076052345335484,0.12041313201189041,0.8705108165740967,True
+miscellaneous,1,had dinner here on a friday and the food was great .,1,0.008891741745173931,0.08638931065797806,0.9047189354896545,True
+food,1,"we recently spent new year 's eve at the restaurant , and had a great experience , from the wine to the dessert menu .",1,0.011188601143658161,0.030043719336390495,0.9587676525115967,True
+miscellaneous,1,"we recently spent new year 's eve at the restaurant , and had a great experience , from the wine to the dessert menu .",1,0.009042246267199516,0.03639421984553337,0.954563558101654,True
+ambience,1,"highly recommended ... as stated , i have n't dined *in* the restaurant but stopped by there to pick up takeout and it seems a very relaxing place ; also , the bar looks nice .",1,0.05324017256498337,0.023022236302495003,0.9237375855445862,True
+miscellaneous,1,"highly recommended ... as stated , i have n't dined *in* the restaurant but stopped by there to pick up takeout and it seems a very relaxing place ; also , the bar looks nice .",1,0.038894034922122955,0.011151875369250774,0.9499541521072388,True
+ambience,1,"the ambiance was fine , a little loud but still nice and romantic .",1,0.07720176130533218,0.009194910526275635,0.9136033058166504,True
+price,1,"but , the filet mignon was not very good at all cocktail hour includes free appetizers ( nice non-sushi selection ) .",1,0.003400939516723156,0.003397613298147917,0.9932014346122742,True
+service,-1,it took about 2 1/2 hours to be served our 2 courses .,0,0.3495901823043823,0.3876267075538635,0.26278313994407654,False
+ambience,0,who said go when the place is quiet during the day ?,-1,0.6197860240936279,0.09410227090120316,0.2861117422580719,False
+ambience,-1,can be a bit busy around peak times because of the size .,-1,0.5481719970703125,0.19849082827568054,0.25333717465400696,True
+food,1,"i was on jury duty , rode my bike up centre street on my lunch break and came across this great little place with awesome chicken tacos and hibiscus lemonade .",1,0.0016187831060960889,0.0025637929793447256,0.9958174824714661,True
+ambience,1,"i was on jury duty , rode my bike up centre street on my lunch break and came across this great little place with awesome chicken tacos and hibiscus lemonade .",1,0.0011915086070075631,0.0009468313655816019,0.9978616833686829,True
+miscellaneous,0,"i was on jury duty , rode my bike up centre street on my lunch break and came across this great little place with awesome chicken tacos and hibiscus lemonade .",1,0.002735082758590579,0.0025357550475746393,0.994729220867157,False
+food,0,good place to hang out during the day after shopping or to grab a simple soup or classic french dish over a glass of wine .,1,0.13958008587360382,0.007466378156095743,0.8529535531997681,False
+miscellaneous,1,good place to hang out during the day after shopping or to grab a simple soup or classic french dish over a glass of wine .,1,0.07773593068122864,0.004995760042220354,0.9172683358192444,True
+ambience,1,very nice touch that very much fits the place .,1,0.012695647776126862,0.004588242154568434,0.9827160835266113,True
+ambience,1,"however , there is just something so great about being outdoors , in great landscaping , enjoying a casual drink that makes going to this place worthwhile .",1,0.025787068530917168,0.004393869545310736,0.9698190689086914,True
+miscellaneous,0,we were seated promptly in close proximity to the dance floor .,1,0.11154273897409439,0.33545172214508057,0.5530055165290833,False
+miscellaneous,0,"if you are here as a pre-show meal , hop in a cab and take the extra 10 minutes to go to the uptown location .",1,0.0681358203291893,0.03596170246601105,0.8959024548530579,False
+ambience,1,a plus was the good mix of people in their twenties that provided for great eye-candy while i was there .,1,0.019426152110099792,0.022801125422120094,0.9577726721763611,True
+miscellaneous,0,it 's best to go on a cold night with a close friend or a good book .,1,0.00521442387253046,0.05000777170062065,0.9447777271270752,False
+service,-1,"slow service , but when you 're hanging around with groups of 10 or 20 , who really notices ?",-1,0.49831193685531616,0.17537915706634521,0.32630887627601624,True
+food,1,the sauce is excellent ( very fresh ) with dabs of real mozzarella .,1,0.002030416624620557,0.004792473744601011,0.993177056312561,True
+food,-1,"do n't ever bother - the drinks were awful , but it was the people who work there that really made this the worst experience at dining .",-1,0.8197340369224548,0.008878212422132492,0.17138776183128357,True
+service,-1,"do n't ever bother - the drinks were awful , but it was the people who work there that really made this the worst experience at dining .",-1,0.879548192024231,0.0020420667715370655,0.11840981990098953,True
+ambience,-1,"the room is a little plain , but it 's difficult to make such a small place exciting and i would not suggest that as a reason not to go .",-1,0.5258820056915283,0.06591494381427765,0.408203125,True
+price,1,prices even outside of restaurant week were great .,-1,0.5745030045509338,0.05442957580089569,0.3710673749446869,False
+ambience,1,"a small , outdoor eating area makes for a private , comfortable space to study alone or meet up with friends .",0,0.00417410908266902,0.6321866512298584,0.363639235496521,False
+miscellaneous,0,before the place did n't call my attention .,-1,0.7973878383636475,0.07474709302186966,0.12786506116390228,False
+service,1,"and all the [ female ] servers are cute too , which is always nice .",1,0.007352478336542845,0.003033566987141967,0.989613950252533,True
+food,1,"the best dessert , a chocolate and peanut butter tart , is n't particularly hawaiian , but it 's a small world when it comes to sweets .",1,0.04188369959592819,0.0020799716003239155,0.9560363292694092,True
+food,1,"for an appetizer , their calamari is a winner .",1,0.06246694549918175,0.2071986049413681,0.7303344011306763,True
+service,1,satay is one of those favorite haunts on washington where the service and food is always on the money .,1,0.09310439974069595,0.07330642640590668,0.8335891962051392,True
+food,1,satay is one of those favorite haunts on washington where the service and food is always on the money .,1,0.12256961315870285,0.05334552377462387,0.8240848779678345,True
+ambience,0,after dinner i heard music playing and discovered that there is a lounge downstairs .,0,0.004442572593688965,0.7156935334205627,0.2798638939857483,True
+ambience,1,"but now that it 's under new ownership and has been renovated , it looks great .",1,0.15271814167499542,0.04626641795039177,0.8010154366493225,True
+ambience,1,"the room is a gorgeous , bi-level space and the long bar perfect for a drink .",1,0.0062058973126113415,0.004179166164249182,0.9896149635314941,True
+miscellaneous,1,now we moved out of the state and every visit to nyc includes a stop here .,0,0.010059111751616001,0.6909031271934509,0.29903772473335266,False
+food,-1,"two complaints- their appetizer selection stinks , it would be nice to get some mozzarella sticks on the menu .",1,0.17723090946674347,0.049156155437231064,0.7736129760742188,False
+miscellaneous,-1,i do n't remember what we had ; nothing was memorable .,1,0.30637243390083313,0.037096813321113586,0.6565307974815369,False
+food,-1,it is bland and nothing extrodinary .,-1,0.6763545274734497,0.05426846817135811,0.26937705278396606,True
+service,1,i was especially impressed during the bday party when the waitstaff went above and beyond in helping me decorate and bring out a bday cake as well as offering prompt and friendly service to a 15 person party .,1,0.0035423634108155966,0.00047372255357913673,0.9959839582443237,True
+food,0,the chicken and falafel platters were nondescript combinations with fresh leaf salad .,1,0.04112822189927101,0.045624472200870514,0.9132473468780518,False
+miscellaneous,0,"every time i visit nyc , i come here .",1,0.008218908682465553,0.08173224329948425,0.9100488424301147,False
+miscellaneous,0,"i 've been coming here regularly since it opened , about 2 years ago .",0,0.026218976825475693,0.6312274932861328,0.3425535261631012,True
+ambience,1,"the atmosphere takes you to that place , the place many dream of .",1,0.05216742679476738,0.021895024925470352,0.9259375333786011,True
+service,-1,"several times and put up with the waiters ' bad manners , knowing that their job is n't easy .",-1,0.48605361580848694,0.1407739669084549,0.373172402381897,True
+food,1,"the service is great ( maybe even borderline nagging but at least you get attention ) , the desserts are excellent and the coffee is so very good ...",1,0.30237606167793274,0.005282426252961159,0.6923415064811707,True
+miscellaneous,-1,we were seated next to a couple whose kitchen was being renovated and we agreed since we 're all foodies who eat out a lot - that this was n't a place we 'd return to .,1,0.0921843871474266,0.07639911025762558,0.8314164876937866,False
+food,1,they are served on focacchia bread and are to die for .,-1,0.6358579397201538,0.08661839365959167,0.2775237262248993,False
+food,1,"the new menu has a few creative items , they were smart enough to keep some of the old favorites ( but they raised the prices ) , the staff is friendly most of the time , but i must agree with the person that wrote about their favorite words : no , ca n't , sorry ... , boy , they wo n't bend the rules for anyone .",1,0.18357867002487183,0.10005860775709152,0.7163627743721008,True
+price,-1,"the new menu has a few creative items , they were smart enough to keep some of the old favorites ( but they raised the prices ) , the staff is friendly most of the time , but i must agree with the person that wrote about their favorite words : no , ca n't , sorry ... , boy , they wo n't bend the rules for anyone .",1,0.2761649787425995,0.127041295170784,0.5967937111854553,False
+food,1,it ' only open for lunch but the food is so good !,1,0.01619642600417137,0.012007372453808784,0.9717962145805359,True
+miscellaneous,0,it ' only open for lunch but the food is so good !,1,0.022628245875239372,0.01651107706129551,0.9608607292175293,False
+food,1,if you like seafood and/or greek food you will love this place though it is not limited to just these things .,1,0.27147164940834045,0.13393287360668182,0.5945954918861389,True
+food,0,"`` the menu includes pub fare -- burgers , steaks and shepherds pie -- and even a portabella lasagna for those black sheep known as `` vegetarians .",1,0.0034874016419053078,0.025138458237051964,0.9713740944862366,False
+food,0,how can they survive serving mediocre food at exorbitant prices ? !,-1,0.9869937300682068,0.0060713160783052444,0.006934946868568659,False
+price,-1,how can they survive serving mediocre food at exorbitant prices ? !,-1,0.9814498424530029,0.0038627206813544035,0.01468741800636053,True
+food,0,the food was mediocre and the service was severely slow .,-1,0.9679555892944336,0.01098924595862627,0.021055150777101517,False
+service,-1,the food was mediocre and the service was severely slow .,-1,0.9910768270492554,0.0020954350475221872,0.006827761884778738,True
+food,0,i have eaten here on a different occasion - the food is mediocre for the prices .,-1,0.4585481286048889,0.3043290674686432,0.23712284862995148,False
+price,-1,i have eaten here on a different occasion - the food is mediocre for the prices .,-1,0.49111881852149963,0.30489909648895264,0.20398208498954773,True
+food,1,i 'm looking forward to going back soon and eventually trying most everything on the menu !,1,0.03108140267431736,0.015484239906072617,0.9534343481063843,True
+miscellaneous,1,i 'm looking forward to going back soon and eventually trying most everything on the menu !,1,0.02681797556579113,0.017788926139473915,0.9553930759429932,True
+miscellaneous,1,i just had my first visit to this place and ca n't wait to go back and slowly work my way through the menu .,1,0.14521653950214386,0.006918894127011299,0.8478646278381348,True
+service,-1,i asked repeatedly what the status of the meal was and was pretty much grunted at by the unbelievably rude waiter .,-1,0.9882414937019348,0.007197615224868059,0.004560871981084347,True
+miscellaneous,-1,i asked repeatedly what the status of the meal was and was pretty much grunted at by the unbelievably rude waiter .,-1,0.9672967195510864,0.01159996259957552,0.02110331505537033,True
+food,0,i stopped by for some brunch today and had the vegan cranberry pancakes and some rice milk .,0,0.006104750093072653,0.6011821627616882,0.3927130699157715,True
+service,1,sweet irish bartender is always happy and able to bring a smile to my friends a my face .,1,0.0016255941009148955,0.0016233515925705433,0.996751070022583,True
+miscellaneous,1,i always find myself sitting next to someone in the theatre industry- interesting to hear ideas hashed out while having a quick bite to eat .,1,0.012783104553818703,0.18074044585227966,0.8064764142036438,True
+service,-1,its good to go there for drinks if you do n't want to get drunk because you 'll be lucky if you can get one drink an hour the service is so bad .,1,0.4368537664413452,0.02636753022670746,0.5367786884307861,False
+service,-1,"anyway , the owner was fake .",-1,0.7298239469528198,0.10133567452430725,0.1688404232263565,True
+service,1,owner is pleasant and entertaining .,1,0.005349435843527317,0.005161441396921873,0.9894891381263733,True
+food,-1,"i have never in my life sent back food before , but i simply had to , and the waiter argued with me over this .",1,0.2662651836872101,0.045089974999427795,0.6886448264122009,False
+service,-1,"i have never in my life sent back food before , but i simply had to , and the waiter argued with me over this .",1,0.2574448883533478,0.036797575652599335,0.7057575583457947,False
+ambience,1,"although the restaurant itself is nice , i prefer not to go for the food .",1,0.08133181184530258,0.2145441472530365,0.7041239738464355,True
+food,-1,"although the restaurant itself is nice , i prefer not to go for the food .",1,0.07538304477930069,0.19911159574985504,0.7255053520202637,False
+food,1,"creamy appetizers -- taramasalata , eggplant salad , and greek yogurt ( with cuccumber , dill , and garlic ) taste excellent when on warm pitas .",1,0.0033482732251286507,0.008520903997123241,0.9881308078765869,True

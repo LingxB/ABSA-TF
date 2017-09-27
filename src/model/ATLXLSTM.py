@@ -232,11 +232,11 @@ class ATLXLSTM(ATLSTM):
             self.saver.save(sess, self.model_path + self.model_name)
 
 
-    def predict(self, test_data, verbose=1):
+    def predict(self, test_data, use_second_lexicon=False, verbose=1):
         with tf.Session(graph=self.graph) as sess:
             ckpt = tf.train.get_checkpoint_state(self.model_path)
             self.saver.restore(sess, ckpt.model_checkpoint_path)
-            X_test, asp_test, lx_test, y_test = self.dm.input_ready(test_data, tokenize=True)
+            X_test, asp_test, lx_test, y_test = self.dm.input_ready(test_data, tokenize=True, use_second_lexicon=use_second_lexicon)
             test_pred, test_loss, test_acc = sess.run([self.pred, self.loss, self.accuracy],
                                                       feed_dict=self._feed_dict_with_lx(X_test, asp_test, lx_test, y_test))
             if verbose == 1:
