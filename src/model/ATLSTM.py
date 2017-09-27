@@ -29,6 +29,7 @@ class ATLSTM(object):
         self.initializer = tf.random_uniform_initializer(-self.epsilon, self.epsilon)
         self.model_name = kwargs.pop('model_name', 'ATLSTM')
         self.model_path = kwargs.pop('model_path', './models/')+'_'.join(ctime().replace(':','-').split())+'/'
+        self.seed = kwargs.get('seed', int(1000*time()))
         self.kwargs = kwargs
         self.graph = None
 
@@ -108,6 +109,7 @@ class ATLSTM(object):
 
         self.graph = tf.Graph()
         with self.graph.as_default():
+            tf.set_random_seed(self.seed)
             # Placeholders
             with tf.name_scope('inputs'):
                 self.inputs = [tf.placeholder(tf.int32, shape=(None,), name='inp_token_t%i' % i) for i in
@@ -158,6 +160,13 @@ class ATLSTM(object):
 
     def train(self, train_data, epochs, val_data=None, verbose=1, **kwargs):
         self.optimizer = kwargs.get('optimizer', tf.train.AdagradOptimizer(0.01))
+        # Random shuffle
+        random_shuffle = kwargs.get('ramdom_shuffle', False)
+        if random_shuffle:
+            _train_data = train_data.sample(frac=1, random_state=self.seed)
+        else:
+            _train_data = train_data.copy()
+
         # Create graph
         if self.graph is None:
             self._create_graph()
@@ -180,7 +189,7 @@ class ATLSTM(object):
                 start = time()
                 print('Epoch %i/%i' % (epoch+1, epochs))
                 # Training
-                generator = self.dm.batch_gen(train_data)
+                generator = self.dm.batch_gen(_train_data)
                 epoch_loss = []
                 epoch_acc = []
                 for _X, _asp, _y in generator:
