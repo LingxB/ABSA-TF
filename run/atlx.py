@@ -33,7 +33,7 @@ model = ATLXLSTM(datamanager=dm,
                  cell_num=300,
                  layer_num=1,
                  trainable=True,
-                 seed=44)
+                 seed=726*104)
 
 model.train(train_data=train, epochs=27, val_data=dev)
 
@@ -49,3 +49,9 @@ dev['PRED'] = dev_pred.argmax(axis=1)-1
 dev = dev.join(pd.DataFrame(dev_pred, columns=['P-1','P0','P+1']))
 dev['T/F'] = dev.CLS==dev.PRED
 dev.to_csv(model.model_path+'dev_results.csv', index=False)
+
+train_pred = model.predict(test_data=train)
+train['PRED'] = train_pred.argmax(axis=1)-1
+train = train.join(pd.DataFrame(train_pred, columns=['P-1','P0','P+1']))
+train['T/F'] = train.CLS==train.PRED
+train.to_csv(model.model_path+'train_results.csv', index=False)
