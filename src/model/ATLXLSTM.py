@@ -116,6 +116,7 @@ class ATLXLSTM(ATLSTM):
 
         self.graph = tf.Graph()
         with self.graph.as_default():
+            tf.set_random_seed(self.seed)
             # Placeholders
             with tf.name_scope('inputs'):
                 self.inputs = [tf.placeholder(tf.int32, shape=(None,), name='inp_token_t%i' % i)
@@ -172,6 +173,12 @@ class ATLXLSTM(ATLSTM):
 
     def train(self, train_data, epochs, val_data=None, verbose=1, **kwargs):
         self.optimizer = kwargs.get('optimizer', tf.train.AdagradOptimizer(0.01))
+        # Random shuffle
+        random_shuffle = kwargs.get('ramdom_shuffle', False)
+        if random_shuffle:
+            _train_data = train_data.sample(frac=1, random_state=self.seed)
+        else:
+            _train_data = train_data.copy()
         # Create graph
         if self.graph is None:
             self._create_graph_with_lx()
@@ -179,7 +186,7 @@ class ATLXLSTM(ATLSTM):
         if not os.path.exists(self.model_path):
             os.makedirs(self.model_path)
         # Write word embedding tsv
-        self.dm.write_embedding_tsv(self.model_path) # TODO: Add polarity tsv
+        self.dm.write_embedding_tsv(self.model_path)
 
         with tf.Session(graph=self.graph) as sess:
             # Create train/val writer
@@ -194,7 +201,7 @@ class ATLXLSTM(ATLSTM):
                 start = time()
                 print('Epoch %i/%i' % (epoch + 1, epochs))
                 # Training
-                generator = self.dm.batch_gen(train_data)
+                generator = self.dm.batch_gen(_train_data)
                 epoch_loss = []
                 epoch_acc = []
                 for _X, _asp, _lx, _y in generator:
