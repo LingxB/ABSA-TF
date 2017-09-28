@@ -17,6 +17,7 @@ class ATLXLSTM(ATLSTM):
         self.lx_embedding_size = lx_embedding_size
         self.lx_embedding_initilaizer = lx_emb_initializer
         self.num_polarities = len(self.dm.lx_idx_code)
+        self.concat_emblx = kwargs.get('concat_emblx', False)
 
 
     def _embedding_with_lx(self, X, asp, lx):
@@ -53,6 +54,12 @@ class ATLXLSTM(ATLSTM):
                                            initializer=lx_init,
                                            trainable=trainable)
             lx_emb_inputs = [tf.nn.embedding_lookup(lx_embedding, i) for i in lx]
+
+            if self.concat_emblx:
+                _emb = tf.stack(emb_inputs, axis=1) #[batch,N,d]
+                _lx = tf.stack(lx_emb_inputs, axis=1) #[batch,N,dl]
+                _concat = tf.concat([_emb,_lx], axis=-1) #[batch,N,d+dl]
+                emb_inputs = tf.unstack(_concat, axis=1) #[[batch,d1+dl1],[batch,d2+dl2],...]
 
             return emb_inputs, asp_emb_inputs, lx_emb_inputs
 
@@ -134,7 +141,8 @@ class ATLXLSTM(ATLSTM):
 
             # Embedding
             emb_inputs, asp_emb_inputs, lx_emb_inputs = self._embedding_with_lx(self.inputs, self.asp_inputs, self.lx_inputs)
-
+            # self.__emb, self.__asp, self.__lx = emb_inputs, asp_emb_inputs, lx_emb_inputs
+            # self.optimizer = tf.train.AdagradOptimizer(0.01)
             # LSTM encoder
             enc_outputs, enc_state = rnn.static_rnn(cell, emb_inputs, dtype='float32')
 
