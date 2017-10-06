@@ -108,7 +108,7 @@ class ATLXLSTM(ATLSTM):
 
             h_star = tf.tanh(tf.add(tf.matmul(_r, Wp), tf.matmul(hN, Wx)))  # [batch, d]
 
-            h_star = tf.nn.dropout(h_star, self.dropout_keep_prob)
+            h_star = tf.nn.dropout(h_star, self.dropout_keep_prob) # TODO: dropout only for training
 
         return h_star
 
@@ -157,7 +157,7 @@ class ATLXLSTM(ATLSTM):
             # Train ops
             with tf.name_scope('train_ops'):
                 cross_entropy = tf.reduce_mean(
-                    tf.nn.softmax_cross_entropy_with_logits(labels=self.labels, logits=output))
+                    tf.nn.softmax_cross_entropy_with_logits(labels=self.labels, logits=output)) # TODO: use sparse
 
                 # L2 Regularizer
                 reg_params = [param for param in tf.trainable_variables() if not 'embedding' in param.name]
