@@ -41,19 +41,35 @@ class ATLXLSTM(ATLSTM):
             asp_emb_inputs = tf.nn.embedding_lookup(asp_embedding, asp)
             # Lexcion embedding
             if self.lx_embedding_initilaizer == 'random':
-                lx_init = self.initializer
-                trainable = True
+                lx_embedding = tf.get_variable('lx_embedding', (self.num_polarities, self.lx_embedding_size),
+                                               dtype=tf.float32,
+                                               initializer=self.initializer,
+                                               trainable=True)
             elif self.lx_embedding_initilaizer == 'fixed':
                 values = np.array([[0]*self.lx_embedding_size,[-1]*self.lx_embedding_size,[1]*self.lx_embedding_size], dtype='float32')
                 lx_init = tf.constant_initializer(values)
-                trainable = False
+                lx_embedding = tf.get_variable('lx_embedding', (self.num_polarities, self.lx_embedding_size),
+                                               dtype=tf.float32,
+                                               initializer=lx_init,
+                                               trainable=False)
+            elif self.lx_embedding_initilaizer == 'fixed_trainable':
+                values = np.array([[0],[-1],[1]], dtype='float32')
+                fixed_lx_init = tf.constant_initializer(values)
+                fixed_embedding = tf.get_variable('fixed_lx_embedding', (self.num_polarities, 1),
+                                                  dtype=tf.float32, initializer=fixed_lx_init, trainable=False)
+                lx_embedding = tf.get_variable('trainable_lx_embedding', (self.num_polarities, self.lx_embedding_size-1),
+                                                      dtype=tf.float32, initializer=self.initializer, trainable=True)
             else:
                 raise KeyError('lx_emb_initializer %s not implemented.'%self.lx_embedding_initilaizer)
 
-            lx_embedding = tf.get_variable('lx_embedding', (self.num_polarities, self.lx_embedding_size), dtype=tf.float32,
-                                           initializer=lx_init,
-                                           trainable=trainable)
-            lx_emb_inputs = [tf.nn.embedding_lookup(lx_embedding, i) for i in lx]
+            if self.lx_embedding_initilaizer == 'fixed_trainable':
+                fixed_emb_inputs = [tf.nn.embedding_lookup(fixed_embedding, i) for i in lx]
+                trainable_emb_inputs = [tf.nn.embedding_lookup(lx_embedding, i) for i in lx]
+                _fixed = tf.stack(fixed_emb_inputs, axis=1)
+                _trainable = tf.stack(trainable_emb_inputs, axis=1)
+                lx_emb_inputs = tf.unstack(tf.concat([_fixed,_trainable], axis=-1), axis=1)
+            else:
+                lx_emb_inputs = [tf.nn.embedding_lookup(lx_embedding, i) for i in lx]
 
             if self.concat_emblx:
                 _emb = tf.stack(emb_inputs, axis=1) #[batch,N,d]

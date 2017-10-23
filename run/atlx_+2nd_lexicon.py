@@ -33,11 +33,11 @@ dm.set_max_len(79)
 model = ATLXLSTM(datamanager=dm,
                  embedding_size=300,
                  aspect_embedding_size=100,
-                 lx_embedding_size=1,
-                 lx_emb_initializer='fixed',
+                 lx_embedding_size=5,
+                 lx_emb_initializer='fixed_trainable',
                  cell_num=300,
                  layer_num=1,
-                 trainable=True,
+                 trainable=False,
                  concat_emblx=True
                  #seed=726*104
                  )
@@ -59,7 +59,7 @@ test['T/F_2nd'] = test.CLS==test['PRED_2nd']
 test.to_csv(model.model_path+'test_results.csv', index=False)
 
 
-
+# ATLX+ 1d fixed-trainable
 # Epoch 1/30
 # Tain 	loss:1.29353917 	acc:61.76%
 # Val 	loss:1.31700027 	acc:62.12%
@@ -187,3 +187,5 @@ test.to_csv(model.model_path+'test_results.csv', index=False)
 # INFO:tensorflow:Restoring parameters from ./models/Thu_Sep_28_00-17-43_2017/ATLXLSTM
 # Using second lexicon.
 # Test 	loss:0.87524927 	acc:81.71%
+
+df = pd.read_csv('S:\ebao\ABSA-TF/trained_models/nontrainable_baseline_Wed_Sep_27_18-11-04_2017/test_results.csv')
