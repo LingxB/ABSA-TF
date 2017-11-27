@@ -21,6 +21,8 @@ in_lexicon = corpus_vocab[_in_lexicon]
 
 # Filted lexicon 371 POS, 362 NEG, 733 TOTAL, all words exist in corpus vocab
 filted_lexicon = lexicon.loc[in_lexicon]
+filted_lexicon.to_csv('data/Lexicon/full_lexicon.csv', encoding='utf-8')
+pd.read_csv('data/Lexicon/full_lexicon.csv', index_col=[0], encoding='utf-8')
 
 # Randomly sample 500 words
 sample_lexicon = filted_lexicon.sample(500, random_state=44)
