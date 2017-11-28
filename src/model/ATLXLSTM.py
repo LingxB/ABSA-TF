@@ -124,7 +124,7 @@ class ATLXLSTM(ATLSTM):
 
             h_star = tf.tanh(tf.add(tf.matmul(_r, Wp), tf.matmul(hN, Wx)))  # [batch, d]
 
-            h_star = tf.nn.dropout(h_star, self.dropout_keep_prob) # TODO: dropout only for training
+            #h_star = tf.nn.dropout(h_star, self.dropout_keep_prob) # TODO: dropout only for training
 
         return h_star
 
@@ -233,7 +233,6 @@ class ATLXLSTM(ATLSTM):
                                                                        feed_dict=self._feed_dict_with_lx(_X, _asp, _lx, _y))
                     epoch_loss.append(train_loss)
                     epoch_acc.append(train_acc)
-                    train_writer.add_summary(train_summary, epoch * self.dm.n_batchs + 1)
                     if verbose == 2:
                         print('\rTain \tloss:%4.8f \tacc:%4.2f%%' % (train_loss, train_acc), end='')
                 if verbose == 2:
@@ -242,12 +241,14 @@ class ATLXLSTM(ATLSTM):
                 if verbose == 1:
                     print('Tain \tloss:%4.8f \tacc:%4.2f%%' % (np.mean(epoch_loss), np.mean(epoch_acc)))
 
+                train_writer.add_summary(train_summary, epoch)
+
                 # Testing
                 if val_data is not None:
                     X_, asp_, lx_, y_ = self.dm.input_ready(val_data, tokenize=True)
                     val_summary, test_loss, test_acc = sess.run([self.summary_op, self.loss, self.accuracy],
                                                                 feed_dict=self._feed_dict_with_lx(X_, asp_, lx_, y_))
-                    val_writer.add_summary(val_summary, epoch * self.dm.n_batchs + 1)
+                    val_writer.add_summary(val_summary, epoch)
                     print('Val \tloss:%4.8f \tacc:%4.2f%%' % (test_loss, test_acc))
 
                 end = time()
